@@ -1,0 +1,371 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "role": "user",
+      "token": "user_token_1",
+      "password": "password1",
+      "image": "https://example.com/images/users/john.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Monmen",
+      "email": "momen@example.com",
+      "role": "user",
+      "token": "user_token_7",
+      "password": "password2",
+      "image": "https://example.com/images/users/momen.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Monmen",
+      "email": "momen@example.com",
+      "role": "user",
+      "token": "user_token_2",
+      "password": "password3",
+      "image": "https://example.com/images/users/momen2.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Bob Johnson",
+      "email": "bob@example.com",
+      "role": "user",
+      "token": "user_token_3",
+      "password": "password4",
+      "image": "https://example.com/images/users/bob.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Charlie Brown",
+      "email": "charlie@example.com",
+      "role": "user",
+      "token": "user_token_4",
+      "password": "password5",
+      "image": "https://example.com/images/users/charlie.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Diana Prince",
+      "email": "diana@example.com",
+      "role": "user",
+      "token": "user_token_5",
+      "password": "password6",
+      "image": "https://example.com/images/users/diana.jpg"
+    }
+  ],
+  "courses": [
+    {
+      "id": "1",
+      "title": "Introduction to JavaScript",
+      "description": "Learn the basics of JavaScript, the most popular programming language for web development.",
+      "price": 100,
+      "discount": 0,
+      "instructor": "Jane Doe",
+      "category": "Programming",
+      "duration": "4 weeks",
+      "image": "https://example.com/images/javascript.jpg",
+      "free": false,
+      "paid": true
+    },
+    {
+      "id": "2",
+      "title": "Advanced React",
+      "description": "Take your React skills to the next level with advanced concepts and best practices.",
+      "price": 200,
+      "discount": 20,
+      "instructor": "John Doe",
+      "category": "Web Development",
+      "duration": "6 weeks",
+      "image": "https://example.com/images/react.jpg",
+      "free": false,
+      "paid": true
+    },
+    {
+      "id": "3",
+      "title": "Data Science with Python",
+      "description": "Master data science concepts and tools, including Python, pandas, and machine learning.",
+      "price": 300,
+      "discount": 50,
+      "instructor": "Alice Smith",
+      "category": "Data Science",
+      "duration": "8 weeks",
+      "image": "https://example.com/images/python.jpg",
+      "free": false,
+      "paid": true
+    },
+    {
+      "id": "4",
+      "title": "UX/UI Design Principles",
+      "description": "Learn the fundamentals of user experience and user interface design.",
+      "price": 0,
+      "discount": 0,
+      "instructor": "Bob Johnson",
+      "category": "Design",
+      "duration": "5 weeks",
+      "image": "https://example.com/images/ux-ui.jpg",
+      "free": true,
+      "paid": false
+    },
+    {
+      "id": "5",
+      "title": "Machine Learning with TensorFlow",
+      "description": "Understand machine learning concepts and implement them using TensorFlow.",
+      "price": 350,
+      "discount": 0,
+      "instructor": "Charlie Brown",
+      "category": "Artificial Intelligence",
+      "duration": "10 weeks",
+      "image": "https://example.com/images/tensorflow.jpg",
+      "free": false,
+      "paid": true
+    },
+    {
+      "id": "6",
+      "title": "Cybersecurity Basics",
+      "description": "Learn the basics of cybersecurity to protect systems and data.",
+      "price": 180,
+      "discount": 30,
+      "instructor": "Diana Prince",
+      "category": "Security",
+      "duration": "6 weeks",
+      "image": "https://example.com/images/cybersecurity.jpg",
+      "free": false,
+      "paid": true
+    },
+    {
+      "id": "4f05",
+      "title": "custom",
+      "description": "ssss",
+      "price": 19.2,
+      "instructor": "abo hassan",
+      "category": "defign",
+      "duration": "week 4",
+      "image": "./assets/images/async thunk.png"
+    },
+    {
+      "id": "c679",
+      "title": "custom",
+      "description": "ssss22",
+      "price": 19.2,
+      "instructor": "abo hassan"
+    }
+  ],
+  "carts": [
+    {
+      "userId": 1,
+      "items": [
+        {
+          "courseId": 1,
+          "quantity": 1,
+          "price": 100
+        },
+        {
+          "courseId": 3,
+          "quantity": 1,
+          "price": 300
+        }
+      ],
+      "totalPrice": 400,
+      "id": "9f45"
+    },
+    {
+      "userId": 3,
+      "items": [
+        {
+          "courseId": 2,
+          "quantity": 1,
+          "price": 200
+        }
+      ],
+      "totalPrice": 200,
+      "id": "2f83"
+    },
+    {
+      "userId": 4,
+      "items": [
+        {
+          "courseId": 5,
+          "quantity": 1,
+          "price": 350
+        }
+      ],
+      "totalPrice": 350,
+      "id": "1d9b"
+    },
+    {
+      "userId": 5,
+      "items": [
+        {
+          "courseId": 6,
+          "quantity": 1,
+          "price": 180
+        }
+      ],
+      "totalPrice": 180,
+      "id": "6a48"
+    }
+  ],
+  "wishlists": [
+    {
+      "userId": 1,
+      "items": [
+        {
+          "courseId": 2,
+          "title": "Advanced React",
+          "description": "Take your React skills to the next level with advanced concepts and best practices.",
+          "price": 200,
+          "image": "https://example.com/images/react.jpg"
+        },
+        {
+          "courseId": 5,
+          "title": "Machine Learning with TensorFlow",
+          "description": "Understand machine learning concepts and implement them using TensorFlow.",
+          "price": 350,
+          "image": "https://example.com/images/tensorflow.jpg"
+        }
+      ],
+      "id": "20bd"
+    },
+    {
+      "userId": 4,
+      "items": [
+        {
+          "courseId": 1,
+          "title": "Introduction to JavaScript",
+          "description": "Learn the basics of JavaScript, the most popular programming language for web development.",
+          "price": 100,
+          "image": "https://example.com/images/javascript.jpg"
+        },
+        {
+          "courseId": 4,
+          "title": "UX/UI Design Principles",
+          "description": "Learn the fundamentals of user experience and user interface design.",
+          "price": 150,
+          "image": "https://example.com/images/ux-ui.jpg"
+        }
+      ],
+      "id": "9c4e"
+    },
+    {
+      "userId": 6,
+      "items": [
+        {
+          "courseId": 3,
+          "title": "Data Science with Python",
+          "description": "Master data science concepts and tools, including Python, pandas, and machine learning.",
+          "price": 300,
+          "image": "https://example.com/images/python.jpg"
+        },
+        {
+          "courseId": 6,
+          "title": "Cybersecurity Basics",
+          "description": "Learn the basics of cybersecurity to protect systems and data.",
+          "price": 180,
+          "image": "https://example.com/images/cybersecurity.jpg"
+        }
+      ],
+      "id": "81d7"
+    }
+  ],
+  "enrollments": [
+    {
+      "userId": 1,
+      "courseId": 1,
+      "status": "completed",
+      "progress": 100,
+      "rating": 5,
+      "id": "be87"
+    },
+    {
+      "userId": 1,
+      "courseId": 3,
+      "status": "in-progress",
+      "progress": 50,
+      "rating": null,
+      "id": "c78f"
+    },
+    {
+      "userId": 3,
+      "courseId": 2,
+      "status": "not started",
+      "progress": 0,
+      "rating": null,
+      "id": "49a6"
+    },
+    {
+      "userId": 4,
+      "courseId": 5,
+      "status": "in-progress",
+      "progress": 20,
+      "rating": null,
+      "id": "d154"
+    }
+  ],
+  "dashboard": {
+    "totalUsers": 6,
+    "totalCourses": 8,
+    "totalEnrollments": 4,
+    "totalRevenue": 1130,
+    "popularCourses": [
+      {
+        "courseId": 1,
+        "title": "Introduction to JavaScript",
+        "enrollments": 2
+      },
+      {
+        "courseId": 3,
+        "title": "Data Science with Python",
+        "enrollments": 1
+      },
+      {
+        "courseId": 2,
+        "title": "Advanced React",
+        "enrollments": 1
+      },
+      {
+        "courseId": 5,
+        "title": "Machine Learning with TensorFlow",
+        "enrollments": 1
+      }
+    ],
+    "recentUsers": [
+      {
+        "id": "6",
+        "name": "Diana Prince",
+        "email": "diana@example.com",
+        "role": "user",
+        "image": "https://example.com/images/users/diana.jpg"
+      },
+      {
+        "id": "5",
+        "name": "Charlie Brown",
+        "email": "charlie@example.com",
+        "role": "user",
+        "image": "https://example.com/images/users/charlie.jpg"
+      },
+      {
+        "id": "4",
+        "name": "Bob Johnson",
+        "email": "bob@example.com",
+        "role": "user",
+        "image": "https://example.com/images/users/bob.jpg"
+      },
+      {
+        "id": "3",
+        "name": "Monmen",
+        "email": "momen@example.com",
+        "role": "user",
+        "image": "https://example.com/images/users/momen2.jpg"
+      },
+      {
+        "id": "2",
+        "name": "Monmen",
+        "email": "momen@example.com",
+        "role": "user",
+        "image": "https://example.com/images/users/momen.jpg"
+      }
+    ]
+  }
+}

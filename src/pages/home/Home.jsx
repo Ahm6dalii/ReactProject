@@ -1,15 +1,15 @@
 import React from 'react'
-import toast, { Toaster } from 'react-hot-toast';
+import { useSelector } from 'react-redux'
+
+
 export default function Home() {
-  const notify = () =>toast.success('Successfully created!');
-  ;
+ const api=useSelector(state=>state.apiLink.link)
+ console.log(api);
+ 
+  
+  
   return (
     <>
     <div>Home</div>
-    <div>
-      <button onClick={notify}>Make me a toast</button>
-      <Toaster />
-    </div>
-    </>
-  )
-}
+</>
+)}
