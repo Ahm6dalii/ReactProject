@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.btnMain{
+    @apply bg-[#967dff] text-white hover:border hover:bg-[#d9d2f8] hover:text-[#7c5cff] hover:border-[#967dff]
+}
+
+.modal-box{
+    --tw-scale-x:.9 !important;
+}
+.mx-bg{
+    mix-blend-mode: multiply;
+}
