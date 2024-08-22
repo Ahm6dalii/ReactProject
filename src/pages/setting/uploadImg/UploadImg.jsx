@@ -11,6 +11,7 @@ export default function UploadImg() {
   const { user } = useSelector((state) => state.auth);
   const apiLink = useSelector((state) => state.apiLink.link);
   const { translation } = useSelector((state) => state.lang);
+  let [loading, setLoading] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -18,19 +19,22 @@ export default function UploadImg() {
   const [imgUrl, setImgUrl] = useState([]);
 
   const upadeUser = async (userU) => {
+    setLoading(true)
     console.log(user);
 
     try {
       const response = await axios.patch(`${apiLink}/users/${userU.id}`, userU);
       console.log(response);
-
-      return response.data;
+      setLoading(false)
     } catch (error) {
+      setLoading(false)
       console.error("Error creating user:", error);
     }
   };
 
   const handleClick = () => {
+    console.log('dsds');
+    setLoading(true)
     if (img !== null) {
       const imgRef = ref(imageDb, `files/${v4()}`);
       uploadBytes(imgRef, img).then((value) => {
@@ -44,26 +48,14 @@ export default function UploadImg() {
         console.log({ ...user, image });
         upadeUser({ ...user, image });
         setTimeout(() => {
+          setLoading(false)
           document.getElementById("upload").close();
         }, 500);
       });
     }
   };
 
-  const [fileName, setFileName] = useState(translation?.noFile&&'No file chosen');
 
-  const handleButtonClick = () => {
-    document.getElementById('fileInput').click();
-  };
-
-  const handleFileChange = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      setFileName(file.name);
-    } else {
-      setFileName(translation?.noFile);
-    }
-  };
 
   return (
     <>
@@ -74,34 +66,11 @@ export default function UploadImg() {
           accept="image/*"
           onChange={(e) => setImg(e.target.files[0])}
         />
-        <button className="btnSecondary" onClick={handleClick}>
-          {translation?.upload}
+        <button disabled={!img} className="btnSecondary" onClick={handleClick}>
+          {  loading?<i className="fa fa-spinner fa-spin"></i>: `${translation?.upload}`}
         </button>
         <br />
-        {/* <div className="flex justify-evenly items-center">
-      <input
-        type="file"
-        id="fileInput"
-        style={{ display: 'none' }} // Hide the actual input
-        onChange={handleFileChange}
-      />
-      <button className="border border- p-1 " type="button" onClick={handleButtonClick}>
-       {translation?.fileName}
-      </button>
-      <span style={{ marginLeft: '10px' }}>{fileName}</span>
-      <button className="btnSecondary" onClick={handleClick}>
-          {translation?.upload}
-        </button>
-    </div> */}
-        <br />
 
-
-        {imgUrl.map((dataVal) => (
-          <div>
-            <img src={dataVal} height="200px" width="200px" />
-            <br />
-          </div>
-        ))}
       </div>
     </>
   );

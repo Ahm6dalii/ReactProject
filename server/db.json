@@ -14,8 +14,10 @@
       "name": "not worek",
       "email": "momen@example.com",
 
-      "phone": "01054819521"
+]
+      "phone": "01054819521",
 
+      
       "role": "user",
       "token": "user_token_7",
       "password": "password2",
@@ -61,7 +63,9 @@
       "email": "diana@example.com",
       "role": "user",
       "token": "user_token_5",
-      "password": "password6",
+
+      "password": "password6"
+
     },
     {
       "id": "87b2",
@@ -646,9 +650,10 @@
       "discount": 20,
       "instructor": "Sophia Garcia",
       "category": "Data Science",
+
       "duration": "5 weeks",
       "duration": "7 weeks",
-      "image": "https://www.fsm.ac.in/blog/wp-content/uploads/2022/07/FUqHEVVUsAAbZB0-1024x580.jpg"
+      "image": "https://www.fsm.ac.in/blog/wp-content/uploads/2022/07/FUqHEVVUsAAbZB0-1024x580.jpg",
       "free": false,
       "paid": true,
       "prerequisites": "Basic knowledge of statistics",

@@ -23,7 +23,7 @@ export const En={
     formName:"Enter Your Name",
     formNameReq:"Name is required",
     formNameErrMin:"Name must be greater than 2 character",
-    formNameErrMax:"Name must be less than 10 character",
+    formNameErrMax:"Name must be less than 15 character",
     formPhone:"Enter Your Phone",
     formPhoneReq:"Phone is required",
     formPhoneErr:"Enter Valid Phone",
@@ -40,6 +40,13 @@ export const En={
     formAccExist:"Account Aleardy Exist",
     formRegister:"Register",
     formLogin:"Login",
+
+    formFname:"Your first name",
+    formLname:" Your last name",
+    formPhoneLabel:"Your Phone",
+    formEmailLabel:"Your Email",
+    formProfession:"Profession",
+    formProfessionLabel:"Your Profession",
     accCreated:"Account Created Succefully",
     accFailed:"Faild Created Account",
     changeImage:"Change Image",
@@ -51,7 +58,14 @@ export const En={
     setting:"setting",
     upload:"Upload",
     fileName:"Choose Your File",
-    noFile:"No file chosen"
+    noFile:"No file chosen",
+    save:"Save",
+    // toast
+    imgRemoveSuccful:"Profile Photo Removed Successfuly",
+    fail:"Fail",
+    areYouSure:"Are You Sure",
+    yes:"Yes",
+    no:"no"
 
    
 }   

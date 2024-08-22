@@ -1,11 +1,11 @@
-import { useFormik } from "formik";
 import React, { useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
-import * as Yup from "yup";
 import AlertError from "../../components/alertError/AlertError";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
+import * as Yup from "yup";
+import { useFormik } from "formik";
 
 export default function Register() {
   const {translation}=useSelector(state=>state.lang)
@@ -28,6 +28,7 @@ const  apiLink=useSelector(state=>state.apiLink.link)
     })
     ;
   }
+  
   const createUser = async (user,resetForm ) => {
 await axios.post(`${apiLink}/users`, user).then((res)=>{
 toast.success(translation.accCreated)
