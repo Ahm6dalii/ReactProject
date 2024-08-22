@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { Link, Outlet } from 'react-router-dom'
-
+import { Link, NavLink, Outlet } from 'react-router-dom'
+import  "./setting.css"
 export default function Setting() {
     const {translation}=useSelector(state=>state.lang)
 
@@ -11,15 +11,15 @@ export default function Setting() {
   <aside className="hidden py-4 md:w-1/3 lg:w-1/4 md:block">
     <div className="sticky flex flex-col gap-2 p-4 text-sm border-r border-indigo-100 top-12">
       <h2 className="pl-3 mb-4 text-2xl font-semibold">{translation?.setting}</h2>
-      <Link to="/setting" className="flex items-center px-3 py-2.5 font-bold bg-white  text-indigo-900 border rounded-full">
+      <NavLink to="/setting" className="flex items-center px-3 py-2.5 font-bold bg-white  text-indigo-900 ">
        {translation?.publicProfile}
-      </Link>
-      <Link to="/setting/account" className="flex items-center px-3 py-2.5 font-semibold  hover:text-indigo-900 hover:border hover:rounded-full">
+      </NavLink>
+      <NavLink to="/setting/account" className="flex items-center px-3 py-2.5 font-semibold  hover:text-indigo-900 hover:border hover:rounded-full">
       {translation?.accountSetting}
-      </Link>
-      <Link href="#" className="flex items-center px-3 py-2.5 font-semibold hover:text-indigo-900 hover:border hover:rounded-full  ">
+      </NavLink>
+      <NavLink href="/mycourse" className="flex items-center px-3 py-2.5 font-semibold hover:text-indigo-900 hover:border hover:rounded-full  ">
       {translation?.myCourse}
-      </Link>
+      </NavLink>
       
     </div>
   </aside>

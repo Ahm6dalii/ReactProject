@@ -20,7 +20,7 @@ export const Ar = {
     formName: "أدخل اسمك",
     formNameReq: "الاسم مطلوب",
     formNameErrMin: "يجب أن يكون الاسم أكثر من حرفين",
-    formNameErrMax: "يجب أن يكون الاسم أقل من 10 احرف",
+    formNameErrMax: "يجب أن يكون الاسم أقل من 15 احرف",
     formPhone: "أدخل رقم هاتفك",
     formPhoneReq: "الهاتف مطلوب",
     formPhoneErr: "أدخل رقم هاتف صحيح",
@@ -36,6 +36,12 @@ export const Ar = {
     formMailOrPassErr: "بريد إلكتروني أو كلمة مرور غير صحيحة",
     formAccExist: "الحساب موجود بالفعل",
     formRegister: "تسجيل",
+    formFname: "اسمك الأول",
+formLname: "اسمك الأخير",
+formPhoneLabel: "رقم هاتفك",
+formEmailLabel: "بريدك الإلكتروني",
+formProfession: "المهنة",
+formProfessionLabel: "مهنتك",
     formLogin: "دخول",
     accCreated:"تم أنشاء الحساب بنجاح",
     accFailed:"فشل أنشاء الحساب",
@@ -46,6 +52,20 @@ export const Ar = {
     publicProfile: "الملف الشخصي العام",
     accountSetting: "إعدادات الحساب",
     myCourse: "دوراتي",
-    setting: "الإعدادات"
+    setting: "الإعدادات",
+upload: "رفع",
+fileName: "اختر ملفك",
+noFile: "لم يتم اختيار أي ملف",
+save: "حفظ",
+
+// model
+imgRemoveSuccful: "تمت إزالة صورة الملف الشخصي بنجاح",
+fail: "فشل",
+areYouSure: "هل أنت متأكد؟",
+yes: "نعم",
+no: "لا"
+
+
+
 
 }

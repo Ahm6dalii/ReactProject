@@ -46,24 +46,23 @@ dispatch(changeLang(e.target.value.toLowerCase()))
     {/* navbar links large screen */}
     <div className="   ms-auto hidden sm:flex">
     <ul className="flex gap-4 font-light menu-horizontal px-1">
-      <li><NavLink to='/'>{translation.home}</NavLink></li>
-      <li><NavLink to='/courses'>{translation.courses}</NavLink></li>
-      <li><NavLink to='/contact'>{translation.contact}</NavLink></li>
-      <li><NavLink to='/about'>{translation.about}</NavLink></li>
-      
+      <li><NavLink to='/'>{translation?.home}</NavLink></li>
+      <li><NavLink to='/courses'>{translation?.courses}</NavLink></li>
+      <li><NavLink to='/contact'>{translation?.contact}</NavLink></li>
+      <li><NavLink to='/about'>{translation?.about}</NavLink></li>     
     </ul>
   </div>
 
 {/* Language */}
 <select className="select py-[1px] px-2 w-[60px]  max-w-xs ms-auto dark:text-black dark:bg-slate-300" onChange={handleChangeLang}>
-  <option selected={language=='en'}>EN</option>
-  <option selected={language=='ar'}>AR</option>
+  <option value={'en'} selected={language=='en'}>EN</option>
+  <option value={'ar'} selected={language=='ar'}>AR</option>
 </select>
 
 {/* Dark mood button */}
 <label className="swap swap-rotate mx-2  ">
   {/* this hidden checkbox controls the state */}
-  <input type="checkbox" checked={mode=='light'} className="theme-controller"   onChange={() => {}}
+<input type="checkbox" checked={mode=='light'} className="theme-controller"   onChange={() => {}}
  value="synthwave" onClick={()=>dispatch(changeMode(mode=='light'?'dark':'light'))} />
 
   {mode=='light'&&
@@ -85,9 +84,6 @@ dispatch(changeLang(e.target.value.toLowerCase()))
   </svg>
 
 }
-  
-  
- 
 </label>
 {
 user?

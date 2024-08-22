@@ -2,51 +2,51 @@
   "users": [
     {
       "id": "1",
-      "name": "John Doe",
+      "name": "John  do",
       "email": "john@example.com",
       "role": "user",
-      "phone": "01002452521",
+      "token": "user_token_1",
       "password": "password1",
-      "image": "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+      "image": "https://example.com/images/users/john.jpg"
     },
     {
       "id": "2",
       "name": "not worek",
       "email": "momen@example.com",
-      "role": "admin",
+
+      "phone": "01054819521",
+
+      "role": "user",
       "token": "user_token_7",
       "password": "password2",
-      "image": "https://example.com/images/users/momen.jpg",
-      "phone": "01054819521"
-
+      "image": "https://example.com/images/users/momen.jpg"
     },
     {
       "id": "3",
       "name": "Monmen",
       "email": "momen@example.com",
       "role": "user",
-      "phone": "01004674741",
+      "token": "user_token_2",
       "password": "password3",
-      "image": "https://images.pexels.com/photos/5397723/pexels-photo-5397723.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      "image": "https://example.com/images/users/momen2.jpg"
     },
     {
-
       "id": "4",
       "name": "Bob Johnson",
       "email": "bob@example.com",
       "role": "user",
-      "phone": "01005785851",
+      "token": "user_token_3",
       "password": "password4",
-      "image": "https://images.pexels.com/photos/5397723/pexels-photo-5397723.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      "image": "https://example.com/images/users/bob.jpg"
     },
     {
       "id": "5",
       "name": "Charlie Brown",
       "email": "charlie@example.com",
       "role": "user",
-      "phone": "01006896961",
+      "token": "user_token_4",
       "password": "password5",
-      "image": "https://images.pexels.com/photos/5704849/pexels-photo-5704849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      "image": "https://example.com/images/users/charlie.jpg"
     },
     {
       "id": "226e",
@@ -56,14 +56,12 @@
       "password": "Ahmedmemol"
     },
     {
-
       "id": "6",
       "name": "Diana Prince",
       "email": "diana@example.com",
       "role": "user",
-      "phone": "01007907071",
-      "password": "password6",
-      "image": "https://images.pexels.com/photos/5704849/pexels-photo-5704849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      "token": "user_token_5",
+      "password": "password6"
     },
     {
       "id": "87b2",
@@ -124,15 +122,6 @@
       "name": "Nader",
       "phone": "01097842331",
       "email": "ali551@gmail.com",
-      "role": "user",
-      "password": "123456",
-      "image": ""
-    },
-    {
-      "id": "74a8",
-      "name": "Nader",
-      "phone": "01097842331",
-      "email": "ali51@gmail.com",
       "role": "user",
       "password": "123456",
       "image": ""
@@ -264,15 +253,6 @@
       "image": ""
     },
     {
-      "id": "f1be",
-      "name": "Ahmed Ali",
-      "phone": "01018184111",
-      "email": "ali333@gmail.com",
-      "role": "user",
-      "password": "123456",
-      "image": ""
-    },
-    {
       "id": "3708",
       "name": "Ahmed Ali",
       "phone": "01018184111",
@@ -298,9 +278,18 @@
       "role": "user",
       "password": "123456",
       "image": ""
+    },
+    {
+      "id": "1ee3",
+      "role": "PAID",
+      "name": "Michelle",
+      "phone": "01122546414",
+      "email": "punkmohamed22@gmail.com",
+      "password": "123123"
+
     }
   ],
-  "courses":  [
+  "courses": [
     {
       "id": "1",
       "title": "Introduction to JavaScript",
@@ -310,7 +299,8 @@
       "instructor": "Jane Doe",
       "category": "Programming",
       "duration": "4 weeks",
-      "image": "https://miro.medium.com/v2/resize:fit:1400/1*LyZcwuLWv2FArOumCxobpA.png",
+
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqBdd4smVdYp3KnVWG7FypaFEJbm7h_GSdiQWw-BDu77Dz3U6zVbXL2VC_0jZ1s9PjAGY&usqp=CAU",
       "free": false,
       "paid": false,
       "prerequisites": "None",
@@ -364,7 +354,8 @@
       "instructor": "John Smith",
       "category": "Web Design",
       "duration": "5 weeks",
-      "image": "https://th.bing.com/th/id/OIP.cZ-GWi35VLmoqAgpj7OkbQHaEK?rs=1&pid=ImgDetMain",
+
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvxKj6oJGIWbs_wQDXV7m92aB7CN2uJ6uWWQ&s",
       "free": true,
       "paid": false,
       "prerequisites": "Basic understanding of HTML and CSS",
@@ -424,7 +415,8 @@
       "instructor": "Alice Johnson",
       "category": "Programming",
       "duration": "6 weeks",
-      "image": "https://th.bing.com/th/id/OIP.2RKkaaJMRWkVplNprvP9FwHaE8?rs=1&pid=ImgDetMain",
+
+      "image": "https://th.bing.com/th/id/R.ed69f15bcd4f01786cbc57b9637e942d?rik=aQACqy2jcXVUgA&pid=ImgRaw&r=0",
       "free": false,
       "paid": false,
       "prerequisites": "None",
@@ -478,7 +470,8 @@
       "instructor": "David Brown",
       "category": "Machine Learning",
       "duration": "7 weeks",
-      "image": "https://img.freepik.com/free-vector/machine-learning-isometric-composition-with-text-cubes-with-code-robotic-head-chip-with-academic-hat-vector-illustration_1284-82015.jpg?t=st=1724275912~exp=1724279512~hmac=2feb0e340272790e87c8c42b14f97a21f4f5d2f7916f8aee00725515541be221&w=740",
+
+      "image": "https://th.bing.com/th/id/R.a9ac5ef1c4c30a2340c62a8c5dfb75f0?rik=mADaWCCyx8yXHA&pid=ImgRaw&r=0",
       "free": true,
       "paid": false,
       "prerequisites": "Basic statistics and programming knowledge",
@@ -528,11 +521,12 @@
       "title": "React.js Essentials",
       "description": "A comprehensive guide to learning React.js and building modern web applications.",
       "price": 130,
-      "discount": 10,
-      "instructor": "Sarah Lee",
-      "category": "Web Development",
-      "duration": "4 weeks",
-      "image": "https://shots.codepen.io/room_js/pen/LJvQVm-800.jpg?version=1556227078",
+
+      "discount": 20,
+      "instructor": "Emily Davis",
+      "category": "Marketing",
+      "duration": "5 weeks",
+      "image": "https://sofitgrow.com/wp-content/uploads/2021/02/digital-marketing.jpg",
       "free": false,
       "paid": true,
       "prerequisites": "Basic HTML, CSS, and JavaScript knowledge",
@@ -598,7 +592,8 @@
       "instructor": "Michael Green",
       "category": "Programming",
       "duration": "6 weeks",
-      "image": "https://th.bing.com/th/id/R.e7f6399c7acfdf6c3ed28631275683ad?rik=NBHys0iUf0Yz5w&pid=ImgRaw&r=0",
+
+      "image": "https://th.bing.com/th/id/OIP.HcgyylJvM47owd1M1qWKqwHaD3?rs=1&pid=ImgDetMain",
       "free": true,
       "paid": false,
       "prerequisites": "Basic understanding of JavaScript",
@@ -651,8 +646,8 @@
       "discount": 20,
       "instructor": "Sophia Garcia",
       "category": "Data Science",
-      "duration": "5 weeks",
-      "image": "https://th.bing.com/th/id/OIP.UveR32_sfv_fOtPVI46GkQHaEK?rs=1&pid=ImgDetMain",
+      "duration": "7 weeks",
+      "image": "https://www.fsm.ac.in/blog/wp-content/uploads/2022/07/FUqHEVVUsAAbZB0-1024x580.jpg",
       "free": false,
       "paid": true,
       "prerequisites": "Basic knowledge of statistics",
@@ -705,14 +700,16 @@
     },
     {
       "id": "8",
-      "title": "Basics of SQL",
-      "description": "Learn the basics of SQL for querying databases and managing data.",
-      "price": 90,
-      "discount": 30,
-      "instructor": "James Wright",
-      "category": "Database",
-      "duration": "3 weeks",
-      "image": "https://th.bing.com/th/id/OIP.tKDUtdfeZCoOPn1iwiJUoAHaGI?rs=1&pid=ImgDetMain",
+
+      "title": "Introduction to Cybersecurity",
+      "description": "Learn about the fundamentals of cybersecurity and protecting information.",
+      "price": 170,
+      "discount": 20,
+      "instructor": "Laura Martinez",
+      "category": "Cybersecurity",
+      "duration": "6 weeks",
+      "image": "https://th.bing.com/th/id/R.a3c02ed9ccaa783f83f894efdd9d3041?rik=RHXL%2flCFZzNBCw&pid=ImgRaw&r=0&sres=1&sresct=1",
+
       "free": true,
       "paid": false,
       "prerequisites": "None",
@@ -763,10 +760,12 @@
       "description": "A comprehensive bootcamp covering full-stack web development skills.",
       "price": 200,
       "discount": 25,
-      "instructor": "Linda Roberts",
-      "category": "Web Development",
-      "duration": "8 weeks",
-      "image": "https://th.bing.com/th/id/R.71ef909ba66823d334cadff00c93afa8?rik=oSXM3wcAOtrxiQ&pid=ImgRaw&r=0",
+
+      "instructor": "Robert White",
+      "category": "Blockchain",
+      "duration": "6 weeks",
+      "image": "https://th.bing.com/th/id/R.66e4f3eeb7b9114b97c2f159beabdcc1?rik=Y2xRSSVk8jThbQ&pid=ImgRaw&r=0",
+
       "free": false,
       "paid": true,
       "prerequisites": "Basic programming knowledge",
@@ -825,9 +824,11 @@
       "discount": 10,
       "instructor": "Robert Harris",
       "category": "Cloud Computing",
-      "duration": "4 weeks",
-      "image": "https://th.bing.com/th/id/OIP.UZHyqsYF0-l-kFlwnQCYzgHaEK?rs=1&pid=ImgDetMain",
-      "free": true,
+
+      "duration": "5 weeks",
+      "image": "https://th.bing.com/th/id/OIP.mYf55M8ZyzWrWGJ5ZiN2YQHaE7?rs=1&pid=ImgDetMain",
+      "free": false,
+
       "paid": false,
       "prerequisites": "None",
       "level": "Beginner",
@@ -852,7 +853,27 @@
           "userName": "Michael Adams",
           "comment": "Useful content but a bit basic.",
           "rating": 4
-        },
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "title": "Introduction to Game Development",
+      "description": "Learn the basics of game development using Unity.",
+      "price": 180,
+      "discount": 30,
+      "instructor": "Ryan Scott",
+      "category": "Game Development",
+      "duration": "6 weeks",
+      "image": "https://www.hrkgame.com/media/screens/intro-to-game-development-with-unity/.thumbnails/IntroGameDevelopmentUnity_800x450.jpg/IntroGameDevelopmentUnity_800x450-800x500.jpg",
+      "free": true,
+      "paid": false,
+      "prerequisites": "Basic programming knowledge",
+      "level": "Intermediate",
+      "syllabus": "Unity Basics, Game Mechanics, Asset Management, Scripting, Game Publishing",
+      "rating": 4.7,
+      "reviews": [
+
         {
           "userId": "3",
           "userName": "Nina Roberts",
@@ -877,10 +898,11 @@
       "description": "Basics of cybersecurity and how to protect information systems.",
       "price": 140,
       "discount": 20,
-      "instructor": "David Moore",
-      "category": "Cybersecurity",
-      "duration": "5 weeks",
-      "image": "https://th.bing.com/th/id/R.a3c02ed9ccaa783f83f894efdd9d3041?rik=RHXL%2flCFZzNBCw&pid=ImgRaw&r=0&sres=1&sresct=1",
+
+      "instructor": "Sophie Brown",
+      "category": "AI",
+      "duration": "7 weeks",
+      "image": "https://th.bing.com/th/id/R.ea3e2b3d93bbdae73cdc93ba949b02e3?rik=FdEmk5tc6PhKaw&pid=ImgRaw&r=0",
       "free": false,
       "paid": true,
       "prerequisites": "None",
@@ -934,7 +956,8 @@
       "instructor": "Rachel Wilson",
       "category": "DevOps",
       "duration": "4 weeks",
-      "image": "https://th.bing.com/th/id/OIP.kd8r3kGm8-StA37eCM0ohAHaFj?rs=1&pid=ImgDetMain",
+
+      "image": "https://siamcomputing.com/wp-content/uploads/2021/10/An-Introduction-To-Web-Development-1.png",
       "free": true,
       "paid": false,
       "prerequisites": "Basic understanding of Linux and command-line tools",
@@ -980,15 +1003,16 @@
       }
     },
     {
-      "id": "13",
-      "title": "Introduction to Blockchain",
-      "description": "Understand blockchain technology and its applications.",
-      "price": 120,
-      "discount": 20,
-      "instructor": "Ethan King",
-      "category": "Blockchain",
-      "duration": "6 weeks",
-      "image": "https://th.bing.com/th/id/R.1407e135a0c6b64bb8791dced5718001?rik=xpfTYS%2bb34%2fVsQ&pid=ImgRaw&r=0",
+
+      "id": "14",
+      "title": "Introduction to Mobile App Development",
+      "description": "Learn the basics of mobile app development for iOS and Android.",
+      "price": 140,
+      "discount": 10,
+      "instructor": "Jake Turner",
+      "category": "Mobile Development",
+      "duration": "5 weeks",
+      "image": "https://th.bing.com/th/id/OIP.O4b29g448P1Js7pElwG6-AHaFC?rs=1&pid=ImgDetMain",
       "free": false,
       "paid": true,
       "prerequisites": "Basic understanding of cryptocurrencies",
@@ -1157,6 +1181,7 @@
       "category": "Design",
       "duration": "4 weeks",
       "image": "https://th.bing.com/th/id/OIP.JWStOGfx3DvZDDphuMNvgQHaE0?rs=1&pid=ImgDetMain",
+
       "free": true,
       "paid": false,
       "prerequisites": "None",
@@ -1210,7 +1235,8 @@
       "instructor": "Sarah Kim",
       "category": "Programming",
       "duration": "6 weeks",
-      "image": "https://gemslearninginstitute.com/wp-content/uploads/2023/04/Python-1-768x602.jpg",
+
+      "image": "https://th.bing.com/th/id/OIP.B4AKIwhYDsM2A4W1I5bu6QHaE8?rs=1&pid=ImgDetMain",
       "free": false,
       "paid": true,
       "prerequisites": "None",
@@ -1275,6 +1301,7 @@
     },
     {
       "id": "17",
+
       "title": "Advanced JavaScript",
       "description": "Dive deep into advanced JavaScript concepts and techniques.",
       "price": 200,
@@ -1296,6 +1323,7 @@
       ],
       "rating": 4.8,
       "reviews_count": 5,
+
       "reviews": [
         {
           "userId": "59",
@@ -1348,8 +1376,9 @@
       "instructor": "Michael Anderson",
       "category": "Design",
       "duration": "6 weeks",
-      "image": "https://example.com/images/responsive-design.jpg",
-      "free": true,
+
+      "image": "https://venngage-wordpress.s3.amazonaws.com/uploads/2021/02/DataVisualizationInfographicsBlogheader.png",
+      "free": false,
       "paid": false,
       "prerequisites": "Basic HTML and CSS knowledge",
       "level": "Beginner",
@@ -1408,7 +1437,6 @@
       "instructor": "James Lee",
       "category": "Data Science",
       "duration": "8 weeks",
-      "image": "https://th.bing.com/th/id/R.b05695ecf17e5aadb9817a35ce8fbd3d?rik=%2fWg0xQoFWkonUQ&pid=ImgRaw&r=0",
       "paid": true,
       "prerequisites": "Basic JavaScript knowledge",
       "level": "Intermediate",
@@ -1421,6 +1449,10 @@
       ],
       "rating": 4.9,
       "reviews_count": 5,
+
+   
+      "image": "https://th.bing.com/th/id/R.5f9f75bbcd0124783d9c9e3bcb48c405?rik=wHy9Pk2oD50Tiw&pid=ImgRaw&r=0",
+
       "reviews": [
         {
           "userId": "68",
@@ -1473,9 +1505,12 @@
       "instructor": "Karen Wilson",
       "category": "Cybersecurity",
       "duration": "7 weeks",
-      "image": "https://www.qatar-tribune.com/uploads/imported_images/portals/0/easygalleryimages/1/22101/Cyber-security-services-qatar_2.jpg",
       "free": false,
       "paid": true,
+
+
+      "image": "https://th.bing.com/th/id/R.bb4b6d39ecba3391801269cff357f1bb?rik=CBZmOH9Ii%2bVMog&pid=ImgRaw&r=0",
+      
       "prerequisites": "None",
       "level": "Beginner",
       "syllabus": "Cyber Threats, Security Protocols, Risk Management, Incident Response",
@@ -1545,7 +1580,8 @@
       "instructor": "Robert Harris",
       "category": "Backend",
       "duration": "6 weeks",
-      "image": "https://asdzxcv.com/resources/img/logo/rest_api.png",
+
+      "image": "https://www.instaloverz.com/wp-content/uploads/2021/10/1.jpg",
       "free": false,
       "paid": true,
       "prerequisites": "Basic Node.js knowledge",
@@ -1617,7 +1653,6 @@
       "instructor": "Angela Martinez",
       "category": "DevOps",
       "duration": "5 weeks",
-      "image": "https://th.bing.com/th/id/OIP.qF_OLrprJEPhZgw1DzTriAHaEK?rs=1&pid=ImgDetMain",
       "free": false,
       "paid": true,
       "prerequisites": "None",
@@ -1631,6 +1666,9 @@
       ],
       "rating": 4.5,
       "reviews_count": 4,
+ 
+      "image": "https://th.bing.com/th/id/R.7d30036da29ac727abbbb7b36e0dca66?rik=sCvxnr6olCCwBw&riu=http%3a%2f%2faeroboticsglobal.com%2fwp-content%2fuploads%2f2019%2f03%2fIntroduction-to-Robotics-and-Its-Types.png&ehk=q2mZ6y6xipK8h42JSGW9vSWcRKXurYjg1kulpVDle44%3d&risl=&pid=ImgRaw&r=0",
+
       "reviews": [
         {
           "userId": "85",
@@ -1677,8 +1715,9 @@
       "instructor": "Brian Thompson",
       "category": "Database",
       "duration": "5 weeks",
-      "image": "https://th.bing.com/th/id/R.43424cd6265d34a25bec7611a1c82021?rik=chz8sG8R8rG67w&pid=ImgRaw&r=0",
-      "free": true,
+
+      "image": "https://th.bing.com/th/id/OIP.B2AFYsZ-4DVUmvfhyYWwywHaDe?w=768&h=361&rs=1&pid=ImgDetMain",
+      "free": false,
       "paid": false,
       "prerequisites": "None",
       "level": "Beginner",
@@ -1743,7 +1782,6 @@
       "instructor": "Jessica Garcia",
       "category": "Programming",
       "duration": "7 weeks",
-      "image": "https://cdn.windowsreport.com/wp-content/uploads/2017/05/java_jar-on-windows-10.png",
       "free": false,
       "paid": true,
       "prerequisites": "None",
@@ -1755,6 +1793,9 @@
         "Work with data structures and algorithms",
         "Handle exceptions and errors"
       ],
+
+      "image": "https://wordpress.deeplearning.ai/wp-content/uploads/2022/10/NLP-Social-Graphic-Cover-VF.png",
+   
       "rating": 4.7,
       "reviews_count": 5,
       "reviews": [
@@ -1809,7 +1850,10 @@
       "instructor": "John Robinson",
       "category": "Programming",
       "duration": "6 weeks",
-      "image": "https://admin.tops-int.com/storage/media/editor_images/23190.jpg",
+      
+
+  
+      "image": "https://th.bing.com/th/id/OIP.N_QdDeqH1HpkKP2PR8ECaQHaEK?rs=1&pid=ImgDetMain",
       "free": false,
       "paid": true,
       "prerequisites": "Basic HTML and CSS knowledge",
@@ -1869,7 +1913,9 @@
       "instructor": "Alice Walker",
       "category": "Data Science",
       "duration": "8 weeks",
-      "image": "https://www.electronicsmedia.info/wp-content/uploads/2021/06/2-1.png",
+
+      "image": "https://th.bing.com/th/id/OIP.rX3M3fKa_tfS9EEBqz1RkgHaF-?rs=1&pid=ImgDetMain",
+
       "free": false,
       "paid": true,
       "prerequisites": "Basic programming knowledge",
@@ -1938,10 +1984,10 @@
       "description": "Learn how to build modern web applications using Vue.js.",
       "price": 170,
       "discount": 20,
+
       "instructor": "Natalie Adams",
       "category": "Frontend",
       "duration": "7 weeks",
-      "image": "https://th.bing.com/th/id/R.3ab8c22a6a2ed634f822de6ca3982f38?rik=q4sj6hT7BwMFFw&pid=ImgRaw&r=0",
       "free": false,
       "paid": true,
       "prerequisites": "Basic HTML, CSS, and JavaScript knowledge",
@@ -1955,6 +2001,11 @@
       ],
       "rating": 4.7,
       "reviews_count": 5,
+
+   
+      "image": "https://th.bing.com/th/id/OIP.1m9Y-lPmkKdiBakcWxT32wHaEK?rs=1&pid=ImgDetMain",
+ 
+
       "reviews": [
         {
           "userId": "109",
@@ -2000,6 +2051,7 @@
     },
     {
       "id": "28",
+
       "title": "Digital Marketing Fundamentals",
       "description": "Learn the essentials of digital marketing and online advertising.",
       "price": 190,
@@ -2007,7 +2059,8 @@
       "instructor": "Sarah Lewis",
       "category": "Marketing",
       "duration": "6 weeks",
-      "image": "https://th.bing.com/th/id/OIP.xMlvIA1S6H3JCDDfHJrN6QHaE3?rs=1&pid=ImgDetMain",
+
+      "image": "https://th.bing.com/th/id/OIP.VweJuj7drkYkoR3bnj_v2QAAAA?rs=1&pid=ImgDetMain",
       "free": false,
       "paid": true,
       "prerequisites": "None",
@@ -2063,6 +2116,19 @@
         ],
         "certificate_of_completion": true
       }
+    },
+    {
+      "id": "0446",
+      "instructor": "dqwd",
+      "title": "dqwd",
+      "category": "dqwd",
+      "duration": "dqw",
+      "typeOfCourse": "FREE",
+      "syllabus": "qwdw",
+      "image": {},
+      "level": "Intermediate",
+      "prerequisites": "qdqwdqwd",
+      "description": "qwdqwd"
     }
   ],
   "carts": [

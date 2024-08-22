@@ -7,27 +7,18 @@ import { useSelector } from 'react-redux';
 export default function (refetchTrigger) {
    const link= useSelector(state=>state.apiLink.link)
 
-    function getUser(){
-        return axios.get(`${link}/users`);
-    }
-    
-    const { data, error, isLoading, refetch }=useQuery({
-        queryKey: ['usersData'],
-        queryFn:getUser,
-        enabled:!!link,
-        refetchOnWindowFocus: false, 
-        refetchInterval: 60000, 
-        onSuccess: () => {
-         toast.success("from hoook")
-        },
-      })
-
-      useEffect(()=>{
-        if (refetchTrigger) {
-          refetch();
-        }
-      },[refetchTrigger, refetch])
-   
+   const getUser=async()=>{
+    setUserExist(false)
+    await axios.get(`${apiLink}/users`)
+    .then((res=>{
+      console.log(res,'ssdsss');  
+      setAllUser(res.data)
+    })).catch(err=>{
+      console.log(err);
+      
+    })
+    ;
+  }
 
   return   { data, error, isLoading, refetch }
 }
