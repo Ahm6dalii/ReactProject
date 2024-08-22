@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import ECommerce from './Dashboard/ECommerce';
-import Alerts from './UiElements/Alerts';
 import UsersList from './accounts/users/usersList';
 import AdminsList from './accounts/admins/adminsList';
 import PageTitle from './../components/PageTitle';
@@ -83,15 +82,6 @@ const Admin = () => {
                         <>
                             <PageTitle title="Users list page" />
                             <UsersList />
-                        </>
-                    }
-                />
-                <Route
-                    path="ui/alerts"
-                    element={
-                        <>
-                            <PageTitle title="Alerts page" />
-                            <Alerts />
                         </>
                     }
                 />

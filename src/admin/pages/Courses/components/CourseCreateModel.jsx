@@ -1,7 +1,7 @@
 
 import CourseForm from './CourseForm'
 // eslint-disable-next-line react/prop-types
-const CourseCreateModel = ({ courseId, course, display }) => {
+const CourseCreateModel = ({ courseId, course, display, style }) => {
     return (
 
         <>
@@ -9,7 +9,7 @@ const CourseCreateModel = ({ courseId, course, display }) => {
                 display ? <button className="hover:text-primary" onClick={() => document.getElementById(`${courseId}`).showModal()}>
                     <i className="fa-regular fa-pen-to-square"></i>
                 </button>
-                    : <button className=" text-xl  text-white bg-indigo-900 py-2 px-4 rounded-xl shadow-lg" onClick={() => document.getElementById(`${courseId}`).showModal()}>{courseId ? 'Edit' : 'Create'}</button>
+                    : <button className={style} onClick={() => document.getElementById(`${courseId}`).showModal()}>{courseId ? 'Edit' : 'Create'}</button>
             }
             <dialog id={`${courseId}`} className="modal">
                 <div className="modal-box w-8/12 max-w-5xl dark:bg-black">

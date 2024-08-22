@@ -6,16 +6,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import { logOutUser } from '../../../redux/reducers/userAuthSlice';
 
 const DropdownUser = () => {
-  const {user}=useSelector(state=>state.auth)
-  const dispatch=useDispatch();
-  const navigate=useNavigate()
+  const { user } = useSelector(state => state.auth)
+  const dispatch = useDispatch();
+  const navigate = useNavigate()
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const logOut=()=>{
-    dispatch( logOutUser())
+  const logOut = () => {
+    dispatch(logOutUser())
     navigate('/')
-   }
-  
+  }
+
 
   return (
     <ClickOutside onClick={() => setDropdownOpen(false)} className="relative">
@@ -26,13 +26,13 @@ const DropdownUser = () => {
       >
         <span className="hidden text-right lg:block">
           <span className="block text-sm font-medium text-black dark:text-white">
-    {user?.name}
+            {user?.name}
           </span>
           <span className="block text-xs">Super Admin</span>
         </span>
 
         <span className="h-12 w-12 rounded-full overflow-hidden">
-          <img src={user.image||"https://th.bing.com/th/id/OIP.OYbzbbyzogwtriubL2pP0AHaHa?rs=1&pid=ImgDetMain"} alt="User" />
+          <img src={user?.image || "https://th.bing.com/th/id/OIP.OYbzbbyzogwtriubL2pP0AHaHa?rs=1&pid=ImgDetMain"} alt="User" />
         </span>
 
         <svg
