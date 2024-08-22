@@ -42,6 +42,16 @@ export const En={
     formLogin:"Login",
     accCreated:"Account Created Succefully",
     accFailed:"Faild Created Account",
+    changeImage:"Change Image",
+    userUpdated:"User Upated Successfuly",
+    deleteImg:"Delete Image",
+    publicProfile:"Public Profile",
+    accountSetting:"Account Setting",
+    myCourse:"My Course",
+    setting:"setting",
+    upload:"Upload",
+    fileName:"Choose Your File",
+    noFile:"No file chosen"
 
    
 }   

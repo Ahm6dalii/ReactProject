@@ -14,5 +14,9 @@
   "license": "ISC",
   "devDependencies": {
     "json-server": "^1.0.0-beta.1"
+  },
+  "dependencies": {
+    "firebase": "^10.13.0",
+    "uuid": "^10.0.0"
   }
 }
