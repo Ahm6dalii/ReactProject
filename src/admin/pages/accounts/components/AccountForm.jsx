@@ -7,6 +7,9 @@ import toast, { Toaster } from "react-hot-toast";
 import { useMutation, useQuery, useQueryClient } from "react-query";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import ErrorMessage from "../../../components/ErrorMessage";
+import MessageSuccess from "../../../components/MessageSuccess";
+import AlertMessage from "../../../components/AlertMessage";
 
 const validationSchema = Yup.object().shape({
     name: Yup.string()
@@ -35,6 +38,7 @@ const AccountForm = ({ userId, info }) => {
     const [userExist, setUserExist] = useState(false);
     const [loading, setLoading] = useState(false);
 
+
     const { data } = useQuery(
         'users', () => axios.get(`${apiLink}/users`),
         {
@@ -43,11 +47,13 @@ const AccountForm = ({ userId, info }) => {
     )
     const allUser = data?.data
 
-    const { mutate: createUser } = useMutation(
+    const { mutate: createUser, error: createError, isSuccess: isCreateSuccess } = useMutation(
         (user) => axios.post(`${apiLink}/users`, user),
         {
             onSuccess: () => {
-                queryClient.invalidateQueries('data');
+
+                queryClient.invalidateQueries('user');
+                queryClient.invalidateQueries('admin');
                 toast.success("User created successfully")
             },
             onError: () => {
@@ -56,11 +62,12 @@ const AccountForm = ({ userId, info }) => {
         }
     )
 
-    const { mutate: updateUser } = useMutation(
+    const { mutate: updateUser, error: updateError, isSuccess: isUpdateSuccess } = useMutation(
         (user) => axios.patch(`${apiLink}/users/${userId}`, user),
         {
             onSuccess: () => {
-                queryClient.invalidateQueries('data');
+                queryClient.invalidateQueries('user');
+                queryClient.invalidateQueries('admin');
                 toast.success("User Updated successfully")
             },
             onError: () => {
@@ -82,6 +89,7 @@ const AccountForm = ({ userId, info }) => {
         setLoading(true);
         if (!userId) {
             const foundUser = allUser.find((user) => user.email === data.email);
+
             if (foundUser) {
                 setUserExist(true);
                 setLoading(false);
@@ -98,11 +106,13 @@ const AccountForm = ({ userId, info }) => {
         setLoading(false);
     };
 
+
     return (
         <>
             <div className="p-7">
+
                 <Toaster position="top-center" reverseOrder={false} />
-                {userExist && <h1>Email already exists</h1>}
+                {userExist && <div className="mb-2"><AlertMessage message={"Email already exists"} email={"change you email"} /></div>}
                 <form onSubmit={handleSubmit(handleRegister)}>
                     <div className="mb-4">
                         <label className="mb-2.5 block font-medium text-black dark:text-white">
@@ -113,10 +123,10 @@ const AccountForm = ({ userId, info }) => {
                                 {...register("role")}
                                 className="relative z-20 w-full appearance-none rounded border border-stroke bg-transparent py-3 px-5 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary text-black dark:text-white"
                             >
-                                <option value="PAID" className="text-body dark:text-bodydark">
+                                <option value="admin" className="text-body dark:text-bodydark">
                                     Admin
                                 </option>
-                                <option value="FREE" className="text-body dark:text-bodydark">
+                                <option value="user" className="text-body dark:text-bodydark">
                                     USER
                                 </option>
                             </select>
@@ -270,8 +280,15 @@ const AccountForm = ({ userId, info }) => {
                     >
                         {loading ? "Processing..." : userId ? "Update Account" : "Create Account"}
                     </button>
-                </form>
-            </div>
+                    <div className="my-5">
+                        {createError && <ErrorMessage name={"Account"} type={"created"} message={createError?.message} />}
+                        {updateError && <ErrorMessage name={"Account"} type={"Updated"} message={updateError?.message} />}
+                        {isCreateSuccess && <MessageSuccess name={"Account"} type={"created"} message={"You Successfully created a Account"} />}
+                        {isUpdateSuccess && <MessageSuccess name={"Account"} type={"Updated"} message={"You Successfully updated the Account"} />}
+
+                    </div>
+                </form >
+            </div >
         </>
     )
 }

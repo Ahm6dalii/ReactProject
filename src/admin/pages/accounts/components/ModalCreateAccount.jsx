@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 
 import AccountForm from './AccountForm';
 
-const ModalCreateAccount = ({ userId, info, display }) => {
+const ModalCreateAccount = ({ userId, info, display, style }) => {
     return (
 
         <>
@@ -9,7 +10,7 @@ const ModalCreateAccount = ({ userId, info, display }) => {
                 display ? <button className="hover:text-primary" onClick={() => document.getElementById(`${userId}`).showModal()}>
                     <i className="fa-regular fa-pen-to-square"></i>
                 </button>
-                    : <button className=" text-xl  text-white bg-indigo-900 py-2 px-4 rounded-xl shadow-lg" onClick={() => document.getElementById(`${userId}`).showModal()}>{userId ? 'Edit' : 'Create'}</button>
+                    : <button className={style} onClick={() => document.getElementById(`${userId}`).showModal()}>{userId ? 'Edit' : 'Create'}</button>
             }
             <dialog id={`${userId}`} className="modal">
                 <div className="modal-box w-6/12 max-w-5xl dark:bg-black">

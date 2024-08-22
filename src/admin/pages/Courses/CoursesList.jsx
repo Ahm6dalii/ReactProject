@@ -23,14 +23,13 @@ const CoursesList = () => {
     return (
         <>
             <Breadcrumb pageName="courses" />
-            <div>CoursesList</div>
-            <div className="flex align-middle justify-center gap-10">
+            <div className="flex align-middle justify-center gap-10 my-5">
                 {/* <SortByType />
                 <Sortby />
                 <SortbyCategories />
                 <button className="btn mt-8 px-5 dark:bg-boxdark dark:text-white text-white bg-boxdark-2 ">Reset</button> */}
+                <CourseCreateModel style={" text-xl  text-white bg-indigo-900 py-2 px-4 rounded-xl shadow-lg"} />
             </div>
-            <CourseCreateModel />
             <div className=" flex justify-between align-middle">
                 <div className="relative w-full max-w-xl mx-auto bg-white dark:border-strokedark dark:bg-boxdark rounded-full z-40 ">
                     <input onChange={handleSearch} value={searchValue} placeholder="Search ..." className="rounded-full w-full h-16 bg-transparent py-2 pl-8 pr-32 outline-none border-2 border-gray-100 shadow-md hover:outline-none focus:ring-teal-200 focus:border-teal-200" type="text" name="query" id="query" />

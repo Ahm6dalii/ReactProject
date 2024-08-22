@@ -42,7 +42,7 @@ const Pagination = ({ currentPage, setCurrentPage, courses }) => {
                 </svg>
                 Previous
             </button>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 hidden sm:flex">
                 {[...Array(pages).keys()].map(pageNumber => (
                     <button
                         key={pageNumber}

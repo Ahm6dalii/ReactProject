@@ -22,7 +22,7 @@ export default {
     },
     extend: {
       colors: {
-        Main:"#967dff",
+        Main: "#967dff",
         current: 'currentColor',
         transparent: 'transparent',
         white: '#FFFFFF',
@@ -260,8 +260,8 @@ export default {
   },
 
   plugins: [
-   daisyui
+    daisyui
   ],
-  
+
 }
 

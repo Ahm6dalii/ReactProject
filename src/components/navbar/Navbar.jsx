@@ -13,30 +13,29 @@ import UploadDialog from '../uploadImgDialog/UploadDialog'
 export default function Navbar() {
   const location = useLocation()
   const { pathname } = location
- const {user}=useSelector(state=>state.auth)
- const {language}=useSelector(state=>state.lang)
- const {translation}=useSelector(state=>state.lang)
- const {mode}=useSelector(state=>state.mode)
- console.log(mode);
- 
- const dispatch=useDispatch()
+  const { user } = useSelector(state => state.auth)
+  const { language } = useSelector(state => state.lang)
+  const { translation } = useSelector(state => state.lang)
+  const { mode } = useSelector(state => state.mode)
+  console.log(mode);
 
- const handleChangeLang=(e)=>{
-console.log(e.target.value);
-dispatch(changeLang(e.target.value.toLowerCase()))
+  const dispatch = useDispatch()
 
- }
+  const handleChangeLang = (e) => {
+    console.log(e.target.value);
+    dispatch(changeLang(e.target.value.toLowerCase()))
 
- const logOut=()=>{
-  dispatch( logOutUser())
-  
- }
+  }
+
+  const logOut = () => {
+    dispatch(logOutUser())
+
+  }
 
 
- 
+
   return (
     <div className={pathname.startsWith('/admin/') || pathname.startsWith('/admin') ? 'hidden' : ''}>
-
     <div className='dark:bg-slate-800 dark:text-white bg-base-100 shadow'>
     <div className="max-w-screen-xl m-auto navbar   ">
     <div className="flex-none">
@@ -176,23 +175,8 @@ user?
             strokeWidth="2"
             d="M4 6h16M4 12h16M4 18h7" />
         </svg>
+
       </div>
-      <ul
-        tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow dark:bg-slate-200 dark:text-black">
-        <li><Link to=''>Homepage</Link></li>
-        <li><Link to=''>Portfolio</Link></li>
-        <li><Link to=''>About</Link></li>
-        
-       {!user&& <>
-        <li className='sm:hidden'><button className="btn btnMain mx-1" onClick={()=>document.getElementById(`signUp`).showModal()}>{translation.signUp}</button></li>
-        <li className='sm:hidden'><button className="btn bg-transparent shadow-none border-0 mx-1 dark:text-white dark:hover:text-[#7c5cff] hover:text-[#7c5cff] hover:bg-[#d9d2f8]" onClick={()=>document.getElementById(`signIn`).showModal()}>{translation.signIn}</button></li>
-       </>} 
-      </ul>
     </div>
-  </div>
-  </div>
-    </div>
-    </div>
-  )
+  );
 }

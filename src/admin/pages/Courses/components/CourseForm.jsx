@@ -3,9 +3,12 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import axios from "axios"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
+import toast, { Toaster } from "react-hot-toast";
 import { useMutation, useQueryClient } from "react-query"
 import { useSelector } from "react-redux"
 import * as yup from 'yup'
+import MessageSuccess from "../../../components/MessageSuccess";
+import ErrorMessage from './../../../components/ErrorMessage';
 const CourseForm = ({ course, courseId }) => {
     const [paidorNot, setPaidorNot] = useState("")
     const api = useSelector(state => state.apiLink.link)
@@ -36,6 +39,10 @@ const CourseForm = ({ course, courseId }) => {
         {
             onSuccess: () => {
                 queryClient.invalidateQueries('data')
+                toast.success("Course created successfully")
+            },
+            onError: () => {
+                toast.error("Failed to create Course");
             }
         }
     )
@@ -46,7 +53,11 @@ const CourseForm = ({ course, courseId }) => {
         },
         {
             onSuccess: () => {
-                queryClient.invalidateQueries('data')
+                queryClient.invalidateQueries('data');
+                toast.success("Course updated successfully")
+            },
+            onError: () => {
+                toast.error("Failed to update Course");
             }
         }
     )
@@ -81,6 +92,7 @@ const CourseForm = ({ course, courseId }) => {
 
     return (
         <>
+            <Toaster position="top-center" reverseOrder={false} />
             <form onSubmit={handleSubmit(submitTheForm)}>
                 <div className="p-6.5">
                     <div className="mb-4.5 flex flex-col gap-6 xl:flex-row">
@@ -336,9 +348,10 @@ const CourseForm = ({ course, courseId }) => {
                         </button>
                     </div>
                     {(isCreating || isUpdating) && <p>Processing...</p>}
-                    {(createError || updateError) && <p className="text-red-500">{createError?.message || updateError?.message}</p>}
-                    {isCreateSuccess && <p>Course created successfully!</p>}
-                    {isUpdateSuccess && <p>Course updated successfully!</p>}
+                    {createError && <ErrorMessage name={"Course"} type={"created"} message={createError?.message} />}
+                    {updateError && <ErrorMessage name={"Course"} type={"Updated"} message={updateError?.message} />}
+                    {isCreateSuccess && <MessageSuccess name={"Course"} type={"created"} message={"You Successfully created a Course"} />}
+                    {isUpdateSuccess && <MessageSuccess name={"Course"} type={"Updated"} message={"You Successfully updated the Course"} />}
                 </div>
             </form>
         </>

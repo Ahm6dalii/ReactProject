@@ -72,7 +72,7 @@ const CoursesCards = ({ searchValue }) => {
                                         <p>{course.category}</p>
                                     </div>
                                     <div className="mt-3   flex justify-center align-middle gap-15">
-                                        <CourseCreateModel courseId={course.id} course={course} />
+                                        <CourseCreateModel courseId={course.id} course={course} style={" text-xl  text-white bg-indigo-900 py-2 px-4 rounded-xl shadow-lg"} />
                                         <Modal id={course.id} text={course.title} handleDelete={handleDelete} />
                                     </div>
                                 </div>
