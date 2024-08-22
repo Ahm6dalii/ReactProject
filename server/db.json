@@ -1,6 +1,15 @@
 {
   "users": [
     {
+      "id": "1",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "role": "user",
+      "phone": "01002452521",
+      "password": "password1",
+      "image": "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+    },
+    {
       "id": "2",
       "name": "not worek",
       "email": "momen@example.com",
@@ -9,24 +18,35 @@
       "password": "password2",
       "image": "https://example.com/images/users/momen.jpg",
       "phone": "01054819521"
+
     },
     {
       "id": "3",
       "name": "Monmen",
       "email": "momen@example.com",
       "role": "user",
-      "token": "user_token_2",
+      "phone": "01004674741",
       "password": "password3",
-      "image": "https://example.com/images/users/momen2.jpg"
+      "image": "https://images.pexels.com/photos/5397723/pexels-photo-5397723.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+
+      "id": "4",
+      "name": "Bob Johnson",
+      "email": "bob@example.com",
+      "role": "user",
+      "phone": "01005785851",
+      "password": "password4",
+      "image": "https://images.pexels.com/photos/5397723/pexels-photo-5397723.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
       "id": "5",
       "name": "Charlie Brown",
       "email": "charlie@example.com",
       "role": "user",
-      "token": "user_token_4",
+      "phone": "01006896961",
       "password": "password5",
-      "image": "https://example.com/images/users/charlie.jpg"
+      "image": "https://images.pexels.com/photos/5704849/pexels-photo-5704849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
       "id": "226e",
@@ -36,12 +56,248 @@
       "password": "Ahmedmemol"
     },
     {
-      "id": "c09a",
-      "name": "ahmed ali",
-      "phone": "01122536316",
-      "email": "ahmedali@gmail.com",
-      "password": "Ahmedm3mol",
-      "role": "admin"
+
+      "id": "6",
+      "name": "Diana Prince",
+      "email": "diana@example.com",
+      "role": "user",
+      "phone": "01007907071",
+      "password": "password6",
+      "image": "https://images.pexels.com/photos/5704849/pexels-photo-5704849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "87b2",
+      "name": "Ahmed Ali",
+      "phone": "01018184111",
+      "email": "ali@gmail.com",
+      "role": "user",
+      "password": "123456",
+      "image": "https://randomuser.me/api/portraits/men/47.jpg"
+    },
+    {
+      "id": "af32",
+      "name": "Ahmed Ali",
+      "phone": "01018184111",
+      "email": "ali22@gmail.com",
+      "role": "user",
+      "password": "123456",
+      "image": "https://images.pexels.com/photos/4096867/pexels-photo-4096867.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "ea42",
+      "name": "nader",
+      "phone": "01018184111",
+      "email": "nader@gmail.com",
+      "role": "user",
+      "password": "123456",
+      "image": "https://images.pexels.com/photos/6147118/pexels-photo-6147118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "9f65",
+      "name": "Ahmed Ali",
+      "phone": "01018184111",
+      "email": "ali555@gmail.com",
+      "role": "user",
+      "password": "123456",
+      "image": "https://images.pexels.com/photos/6147118/pexels-photo-6147118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "61ff",
+      "name": "Nader",
+      "phone": "01202120251",
+      "email": "aa@aa.com",
+      "role": "user",
+      "password": "123456",
+      "image": ""
+    },
+    {
+      "id": "7c29",
+      "name": "Nader",
+      "phone": "01097842331",
+      "email": "ali55@gmail.com",
+      "role": "user",
+      "password": "123456",
+      "image": ""
+    },
+    {
+      "id": "5f2e",
+      "name": "Nader",
+      "phone": "01097842331",
+      "email": "ali551@gmail.com",
+      "role": "user",
+      "password": "123456",
+      "image": ""
+    },
+    {
+      "id": "74a8",
+      "name": "Nader",
+      "phone": "01097842331",
+      "email": "ali51@gmail.com",
+      "role": "user",
+      "password": "123456",
+      "image": ""
+    },
+    {
+      "id": "df11",
+      "name": "Nader",
+      "phone": "01097842331",
+      "email": "ali52@gmail.com",
+      "role": "user",
+      "password": "123456",
+      "image": ""
+    },
+    {
+      "id": "0f5b",
+      "name": "Ahmed Ali",
+      "phone": "01097842331",
+      "email": "ali11@gmail.com",
+      "role": "user",
+      "password": "123456",
+      "image": ""
+    },
+    {
+      "id": "58f5",
+      "name": "Ahmed Ali",
+      "phone": "01097842331",
+      "email": "ali21@gmail.com",
+      "role": "user",
+      "password": "123456",
+      "image": ""
+    },
+    {
+      "id": "79f0",
+      "name": "Ahmed Ali",
+      "phone": "01097842331",
+      "email": "ali23@gmail.com",
+      "role": "user",
+      "password": "123456",
+      "image": ""
+    },
+    {
+      "id": "4144",
+      "name": "Ahmed Ali",
+      "phone": "01097842331",
+      "email": "ali25@gmail.com",
+      "role": "user",
+      "password": "123456",
+      "image": ""
+    },
+    {
+      "id": "63c7",
+      "name": "Ahmed Ali",
+      "phone": "01097842331",
+      "email": "ali27@gmail.com",
+      "role": "user",
+      "password": "123456",
+      "image": ""
+    },
+    {
+      "id": "b058",
+      "name": "Ahmed Ali",
+      "phone": "01018184111",
+      "email": "ali33@gmail.com",
+      "role": "user",
+      "password": "123456",
+      "image": ""
+    },
+    {
+      "id": "38b7",
+      "name": "Ahmed Ali",
+      "phone": "01018184111",
+      "email": "ali89@gmail.com",
+      "role": "user",
+      "password": "123456",
+      "image": ""
+    },
+    {
+      "id": "d6b1",
+      "name": "Ahmed Ali",
+      "phone": "01018184111",
+      "email": "ali99@gmail.com",
+      "role": "user",
+      "password": "123456",
+      "image": ""
+    },
+    {
+      "id": "fa53",
+      "name": "Ahmed Ali",
+      "phone": "01018184111",
+      "email": "ali95@gmail.com",
+      "role": "user",
+      "password": "123456",
+      "image": ""
+    },
+    {
+      "id": "6371",
+      "name": "Ahmed Ali",
+      "phone": "01018184111",
+      "email": "ali93@gmail.com",
+      "role": "user",
+      "password": "123456",
+      "image": ""
+    },
+    {
+      "id": "3518",
+      "name": "Ahmed Ali",
+      "phone": "01018184111",
+      "email": "ali91@gmail.com",
+      "role": "user",
+      "password": "123456",
+      "image": ""
+    },
+    {
+      "id": "e64e",
+      "name": "Ahmed Ali",
+      "phone": "01018184111",
+      "email": "ali911@gmail.com",
+      "role": "user",
+      "password": "123456",
+      "image": ""
+    },
+    {
+      "id": "57d5",
+      "name": "Ahmed Ali",
+      "phone": "01018184111",
+      "email": "ali910@gmail.com",
+      "role": "user",
+      "password": "123456",
+      "image": ""
+    },
+    {
+      "id": "f1be",
+      "name": "Ahmed Ali",
+      "phone": "01018184111",
+      "email": "ali333@gmail.com",
+      "role": "user",
+      "password": "123456",
+      "image": ""
+    },
+    {
+      "id": "3708",
+      "name": "Ahmed Ali",
+      "phone": "01018184111",
+      "email": "ali66@gmail.com",
+      "role": "user",
+      "password": "123456",
+      "image": ""
+    },
+    {
+      "id": "3c64",
+      "name": "momen sale",
+      "phone": "01020002524",
+      "email": "momen@gmail.com",
+      "role": "user",
+      "password": "123456",
+      "image": ""
+    },
+    {
+      "id": "7376",
+      "name": "mohamed ",
+      "phone": "01018184111",
+      "email": "mohamed@gmail.com",
+      "role": "user",
+      "password": "123456",
+      "image": ""
     }
   ],
   "courses": [

@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 import daisyui from "daisyui"
 import defaultTheme from "tailwindcss/defaultTheme"
+import { color } from "framer-motion"
 export default {
   content: [
     "./index.html",
@@ -9,6 +10,7 @@ export default {
   ],
   darkMode: 'class',
   theme: {
+
     fontFamily: {
       satoshi: ['Satoshi', 'sans-serif'],
     },
@@ -20,6 +22,7 @@ export default {
     },
     extend: {
       colors: {
+        Main:"#967dff",
         current: 'currentColor',
         transparent: 'transparent',
         white: '#FFFFFF',
@@ -252,10 +255,13 @@ export default {
         'spin-2': 'spin 2s linear infinite',
         'spin-3': 'spin 3s linear infinite',
       },
+
     },
   },
+
   plugins: [
-    daisyui
+   daisyui
   ],
+  
 }
 
