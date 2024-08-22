@@ -11,12 +11,14 @@
     },
     {
       "id": "2",
-      "name": "Monmen",
+      "name": "not worek",
       "email": "momen@example.com",
-      "role": "user",
-      "phone": "01003563631",
+      "role": "PAID",
+      "token": "user_token_7",
       "password": "password2",
-      "image": "https://images.pexels.com/photos/8159657/pexels-photo-8159657.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      "image": "https://example.com/images/users/momen.jpg",
+      "phone": "01054819521"
+
     },
     {
       "id": "3",
@@ -28,6 +30,7 @@
       "image": "https://images.pexels.com/photos/5397723/pexels-photo-5397723.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
+
       "id": "4",
       "name": "Bob Johnson",
       "email": "bob@example.com",
@@ -46,6 +49,14 @@
       "image": "https://images.pexels.com/photos/5704849/pexels-photo-5704849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
+      "id": "226e",
+      "name": "Michelle G",
+      "phone": "01122546414",
+      "email": "punkmohamed@gmail.com",
+      "password": "Ahmedmemol"
+    },
+    {
+
       "id": "6",
       "name": "Diana Prince",
       "email": "diana@example.com",
@@ -291,222 +302,6 @@
   ],
   "courses": [
     {
-      "id": "1",
-      "title": "Introduction to JavaScript",
-      "description": "Learn the basics of JavaScript, the most popular programming language for web development.",
-      "price": 100,
-      "discount": 20,
-      "instructor": "Jane Doe",
-      "category": "Programming",
-      "duration": "4 weeks",
-      "image": "https://example.com/images/javascript.jpg",
-      "free": false,
-      "paid": false,
-      "prerequisites": "None",
-      "level": "Beginner",
-      "syllabus": "Basics of JavaScript, Variables, Data Types, Functions, DOM Manipulation",
-      "rating": 4.5,
-      "reviews": [
-        {
-          "userId": "1",
-          "comment": "Great course for beginners!",
-          "rating": 5
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "title": "Advanced CSS Techniques",
-      "description": "Deep dive into advanced CSS techniques and responsive design.",
-      "price": 120,
-      "discount": 15,
-      "instructor": "John Smith",
-      "category": "Web Design",
-      "duration": "5 weeks",
-      "image": "https://example.com/images/css-techniques.jpg",
-      "free": true,
-      "paid": false,
-      "prerequisites": "Basic understanding of HTML and CSS",
-      "level": "Intermediate",
-      "syllabus": "Flexbox, Grid Layout, Responsive Design, Advanced Selectors, Animations",
-      "rating": 4.6,
-      "reviews": [
-        {
-          "userId": "2",
-          "comment": "Very useful for improving CSS skills.",
-          "rating": 5
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "title": "Introduction to Python Programming",
-      "description": "Learn the fundamentals of Python programming and its applications.",
-      "price": 140,
-      "discount": 10,
-      "instructor": "Alice Johnson",
-      "category": "Programming",
-      "duration": "6 weeks",
-      "image": "https://example.com/images/python.jpg",
-      "free": false,
-      "paid": false,
-      "prerequisites": "None",
-      "level": "Beginner",
-      "syllabus": "Python Basics, Control Flow, Data Structures, Functions, File Handling",
-      "rating": 4.7,
-      "reviews": [
-        {
-          "userId": "1",
-          "comment": "Excellent for learning Python from scratch.",
-          "rating": 5
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "title": "Introduction to Machine Learning",
-      "description": "An overview of machine learning concepts and algorithms.",
-      "price": 160,
-      "discount": 25,
-      "instructor": "David Brown",
-      "category": "Machine Learning",
-      "duration": "7 weeks",
-      "image": "https://example.com/images/machine-learning.jpg",
-      "free": true,
-      "paid": false,
-      "prerequisites": "Basic statistics and programming knowledge",
-      "level": "Intermediate",
-      "syllabus": "Supervised Learning, Unsupervised Learning, Neural Networks, Model Evaluation, Real-World Applications",
-      "rating": 4.8,
-      "reviews": [
-        {
-          "userId": "2",
-          "comment": "Great introduction to machine learning concepts.",
-          "rating": 5
-        }
-      ]
-    },
-    {
-      "id": "5",
-      "title": "Introduction to Digital Marketing",
-      "description": "Learn the basics of digital marketing strategies and tools.",
-      "price": 130,
-      "discount": 20,
-      "instructor": "Emily Davis",
-      "category": "Marketing",
-      "duration": "5 weeks",
-      "image": "https://example.com/images/digital-marketing.jpg",
-      "free": false,
-      "paid": false,
-      "prerequisites": "None",
-      "level": "Beginner",
-      "syllabus": "SEO, Content Marketing, Social Media Strategies, PPC Advertising, Analytics",
-      "rating": 4.4,
-      "reviews": [
-        {
-          "userId": "1",
-          "comment": "Useful for understanding digital marketing basics.",
-          "rating": 4
-        }
-      ]
-    },
-    {
-      "id": "6",
-      "title": "Introduction to Graphic Design",
-      "description": "Learn the principles of graphic design and using design tools.",
-      "price": 150,
-      "discount": 15,
-      "instructor": "Michael Lee",
-      "category": "Design",
-      "duration": "6 weeks",
-      "image": "https://example.com/images/graphic-design.jpg",
-      "free": true,
-      "paid": false,
-      "prerequisites": "None",
-      "level": "Beginner",
-      "syllabus": "Design Principles, Typography, Color Theory, Adobe Photoshop, Adobe Illustrator",
-      "rating": 4.6,
-      "reviews": [
-        {
-          "userId": "2",
-          "comment": "Great course for beginners in graphic design.",
-          "rating": 5
-        }
-      ]
-    },
-    {
-      "id": "7",
-      "title": "Introduction to Data Science",
-      "description": "Learn the essentials of data science and analysis techniques.",
-      "price": 180,
-      "discount": 30,
-      "instructor": "Sarah Adams",
-      "category": "Data Science",
-      "duration": "7 weeks",
-      "image": "https://example.com/images/data-science.jpg",
-      "free": false,
-      "paid": false,
-      "prerequisites": "Basic statistics and programming knowledge",
-      "level": "Intermediate",
-      "syllabus": "Data Wrangling, Statistical Analysis, Machine Learning, Data Visualization, Project Work",
-      "rating": 4.7,
-      "reviews": [
-        {
-          "userId": "1",
-          "comment": "Comprehensive introduction to data science.",
-          "rating": 5
-        }
-      ]
-    },
-    {
-      "id": "8",
-      "title": "Introduction to Cybersecurity",
-      "description": "Learn about the fundamentals of cybersecurity and protecting information.",
-      "price": 170,
-      "discount": 20,
-      "instructor": "Laura Martinez",
-      "category": "Cybersecurity",
-      "duration": "6 weeks",
-      "image": "https://example.com/images/cybersecurity.jpg",
-      "free": true,
-      "paid": false,
-      "prerequisites": "Basic understanding of IT",
-      "level": "Intermediate",
-      "syllabus": "Network Security, Threat Analysis, Cryptography, Security Protocols, Ethical Hacking",
-      "rating": 4.6,
-      "reviews": [
-        {
-          "userId": "2",
-          "comment": "Essential for understanding cybersecurity.",
-          "rating": 5
-        }
-      ]
-    },
-    {
-      "id": "9",
-      "title": "Introduction to Blockchain Technology",
-      "description": "Understand the basics of blockchain and its applications.",
-      "price": 190,
-      "discount": 25,
-      "instructor": "Robert White",
-      "category": "Blockchain",
-      "duration": "6 weeks",
-      "image": "https://example.com/images/blockchain.jpg",
-      "free": false,
-      "paid": false,
-      "prerequisites": "None",
-      "level": "Beginner",
-      "syllabus": "Blockchain Basics, Cryptocurrencies, Smart Contracts, Blockchain Security, Real-World Applications",
-      "rating": 4.5,
-      "reviews": [
-        {
-          "userId": "1",
-          "comment": "Great course for understanding blockchain concepts.",
-          "rating": 4
-        }
-      ]
-    },
-    {
       "id": "10",
       "title": "Introduction to Cloud Computing",
       "description": "Learn about cloud computing services, models, and technologies.",
@@ -527,30 +322,6 @@
           "userId": "2",
           "comment": "Good overview of cloud computing technologies.",
           "rating": 4
-        }
-      ]
-    },
-    {
-      "id": "11",
-      "title": "Introduction to Game Development",
-      "description": "Learn the basics of game development using Unity.",
-      "price": 180,
-      "discount": 30,
-      "instructor": "Ryan Scott",
-      "category": "Game Development",
-      "duration": "6 weeks",
-      "image": "https://example.com/images/game-development.jpg",
-      "free": true,
-      "paid": false,
-      "prerequisites": "Basic programming knowledge",
-      "level": "Intermediate",
-      "syllabus": "Unity Basics, Game Mechanics, Asset Management, Scripting, Game Publishing",
-      "rating": 4.7,
-      "reviews": [
-        {
-          "userId": "1",
-          "comment": "Fantastic introduction to game development with Unity.",
-          "rating": 5
         }
       ]
     },
@@ -587,11 +358,13 @@
       "instructor": "Mia Parker",
       "category": "Web Development",
       "duration": "4 weeks",
-      "image": "https://example.com/images/web-development.jpg",
+      "image": {
+        "0": {}
+      },
       "free": true,
       "paid": false,
       "prerequisites": "None",
-      "level": "Beginner",
+      "level": "Intermediate",
       "syllabus": "HTML Basics, CSS Styling, JavaScript Basics, Responsive Design, Web Hosting",
       "rating": 4.5,
       "reviews": [
@@ -600,7 +373,8 @@
           "comment": "Perfect for beginners in web development.",
           "rating": 5
         }
-      ]
+      ],
+      "typeOfCourse": "PAID"
     },
     {
       "id": "14",
@@ -961,6 +735,92 @@
           "rating": 5
         }
       ]
+    },
+    {
+      "id": "c4d6",
+      "title": "react js",
+      "description": "learn all about react ",
+      "typeOfCourse": "free",
+      "instructor": "ahmed ali",
+      "category": "front end",
+      "duration": "5h",
+      "prerequisites": "java script ",
+      "level": "beginner",
+      "syllabus": "ay7aga",
+      "image": {
+        "0": {}
+      }
+    },
+    {
+      "id": "e9d6",
+      "title": "update teste",
+      "description": "update teste",
+      "typeOfCourse": "free",
+      "instructor": "update teste",
+      "category": "update teste",
+      "duration": "update teste",
+      "prerequisites": "update teste",
+      "level": "intermediate",
+      "syllabus": "update teste",
+      "image": {}
+    },
+    {
+      "id": "db76",
+      "discount": 0,
+      "price": 200,
+      "image": {},
+      "typeOfCourse": "PAID",
+      "syllabus": "dwddd",
+      "level": "Intermediate",
+      "prerequisites": "dqwd",
+      "duration": "iugiu",
+      "category": "guuig",
+      "instructor": "duqwdgu",
+      "description": "dwdwd",
+      "title": "guigdiu"
+    },
+    {
+      "id": "62e3",
+      "discount": 2,
+      "price": 20,
+      "image": {},
+      "typeOfCourse": "PAID",
+      "syllabus": "dqwd",
+      "level": "Beginner",
+      "prerequisites": "qwdqwd",
+      "duration": "dwd",
+      "category": "wdw",
+      "instructor": "dwdw",
+      "description": "dqwd",
+      "title": "dwqd"
+    },
+    {
+      "id": "4fc1",
+      "instructor": "dwd",
+      "title": "dwd",
+      "category": "dwdw",
+      "duration": "wdwd",
+      "typeOfCourse": "FREE",
+      "syllabus": "qwdwqd",
+      "image": {},
+      "level": "Beginner",
+      "prerequisites": "dqwd",
+      "description": "dqwdqwd"
+    },
+    {
+      "id": "b1dd",
+      "discount": 20,
+      "price": 20,
+      "image": {},
+      "typeOfCourse": "PAID",
+      "syllabus": "dqwd",
+      "level": "Beginner",
+      "prerequisites": "wd",
+      "duration": "dwd",
+      "category": "dwdw",
+      "instructor": "dwqd",
+      "description": "d",
+      "title": "dwd"
     }
   ],
   "carts": [
