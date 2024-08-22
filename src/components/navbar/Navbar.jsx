@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import './navebar.css'
@@ -13,29 +12,30 @@ import UploadDialog from '../uploadImgDialog/UploadDialog'
 export default function Navbar() {
   const location = useLocation()
   const { pathname } = location
-  const { user } = useSelector(state => state.auth)
-  const { language } = useSelector(state => state.lang)
-  const { translation } = useSelector(state => state.lang)
-  const { mode } = useSelector(state => state.mode)
-  console.log(mode);
+ const {user}=useSelector(state=>state.auth)
+ const {language}=useSelector(state=>state.lang)
+ const {translation}=useSelector(state=>state.lang)
+ const {mode}=useSelector(state=>state.mode)
+ console.log(mode);
+ 
+ const dispatch=useDispatch()
 
-  const dispatch = useDispatch()
+ const handleChangeLang=(e)=>{
+console.log(e.target.value);
+dispatch(changeLang(e.target.value.toLowerCase()))
 
-  const handleChangeLang = (e) => {
-    console.log(e.target.value);
-    dispatch(changeLang(e.target.value.toLowerCase()))
+ }
 
-  }
-
-  const logOut = () => {
-    dispatch(logOutUser())
-
-  }
+ const logOut=()=>{
+  dispatch( logOutUser())
+  
+ }
 
 
-
+ 
   return (
     <div className={pathname.startsWith('/admin/') || pathname.startsWith('/admin') ? 'hidden' : ''}>
+
     <div className='dark:bg-slate-800 dark:text-white bg-base-100 shadow'>
     <div className="max-w-screen-xl m-auto navbar   ">
     <div className="flex-none">
@@ -45,23 +45,24 @@ export default function Navbar() {
     {/* navbar links large screen */}
     <div className="   ms-auto hidden sm:flex">
     <ul className="flex gap-4 font-light menu-horizontal px-1">
-      <li><NavLink to='/'>{translation?.home}</NavLink></li>
-      <li><NavLink to='/courses'>{translation?.courses}</NavLink></li>
-      <li><NavLink to='/contact'>{translation?.contact}</NavLink></li>
-      <li><NavLink to='/about'>{translation?.about}</NavLink></li>     
+      <li><NavLink to='/'>{translation.home}</NavLink></li>
+      <li><NavLink to='/courses'>{translation.courses}</NavLink></li>
+      <li><NavLink to='/contact'>{translation.contact}</NavLink></li>
+      <li><NavLink to='/about'>{translation.about}</NavLink></li>
+      
     </ul>
   </div>
 
 {/* Language */}
 <select className="select py-[1px] px-2 w-[60px]  max-w-xs ms-auto dark:text-black dark:bg-slate-300" onChange={handleChangeLang}>
-  <option value={'en'} selected={language=='en'}>EN</option>
-  <option value={'ar'} selected={language=='ar'}>AR</option>
+  <option selected={language=='en'}>EN</option>
+  <option selected={language=='ar'}>AR</option>
 </select>
 
 {/* Dark mood button */}
 <label className="swap swap-rotate mx-2  ">
   {/* this hidden checkbox controls the state */}
-<input type="checkbox" checked={mode=='light'} className="theme-controller"   onChange={() => {}}
+  <input type="checkbox" checked={mode=='light'} className="theme-controller"   onChange={() => {}}
  value="synthwave" onClick={()=>dispatch(changeMode(mode=='light'?'dark':'light'))} />
 
   {mode=='light'&&
@@ -83,6 +84,9 @@ export default function Navbar() {
   </svg>
 
 }
+  
+  
+ 
 </label>
 {
 user?
@@ -175,8 +179,23 @@ user?
             strokeWidth="2"
             d="M4 6h16M4 12h16M4 18h7" />
         </svg>
-
       </div>
+      <ul
+        tabIndex={0}
+        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow dark:bg-slate-200 dark:text-black">
+        <li><Link to=''>Homepage</Link></li>
+        <li><Link to=''>Portfolio</Link></li>
+        <li><Link to=''>About</Link></li>
+        
+       {!user&& <>
+        <li className='sm:hidden'><button className="btn btnMain mx-1" onClick={()=>document.getElementById(`signUp`).showModal()}>{translation.signUp}</button></li>
+        <li className='sm:hidden'><button className="btn bg-transparent shadow-none border-0 mx-1 dark:text-white dark:hover:text-[#7c5cff] hover:text-[#7c5cff] hover:bg-[#d9d2f8]" onClick={()=>document.getElementById(`signIn`).showModal()}>{translation.signIn}</button></li>
+       </>} 
+      </ul>
     </div>
-  );
+  </div>
+  </div>
+    </div>
+    </div>
+  )
 }

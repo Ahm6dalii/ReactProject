@@ -13,7 +13,7 @@ let store=configureStore({
         apiLink:apiLinkReducer,
         auth:userAuthReducer,
         lang:languageReducer,
-        mode:modeReducer
+        mode:modeReducer,
         cart: cartReducer,
           wishlist: wishlistReducer,
     }

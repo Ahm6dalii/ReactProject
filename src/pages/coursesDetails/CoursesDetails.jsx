@@ -1,11 +1,11 @@
 
 import React, { useEffect, useState } from "react";
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { useSelector } from "react-redux";
 import axios from "axios";
 
 const CoursesDetails = () => {
-
+    const {id}=useParams()
     // const courseDetails=useGetCourseById(5)
     // console.log(courseDetails);
     const  apiLink=useSelector((state)=>state.apiLink.link)
@@ -25,7 +25,7 @@ const CoursesDetails = () => {
       };
 
       useEffect(()=>{
-        getCourseById(15)
+        getCourseById(id)
       },[])
       
     return <>

@@ -5,6 +5,7 @@ import {
 } from "../../redux/reducers/wishlistSlice";
 import { addToCart, removeFromCart } from "../../redux/reducers/cartSlice";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 /* eslint-disable react/prop-types */
 export default function CardOfCourses(props) {
@@ -47,11 +48,14 @@ export default function CardOfCourses(props) {
             {props.level}
           </h3>
           <div className="relative">
+            <Link to={`/course/${props.id}`}>
             <img
               className="w-full rounded-xl h-40 object-cover"
               src={props.course.image}
               alt={props.course.title}
             />
+            </Link>
+           
             <p className="absolute top-0 bg-yellow-300 text-gray-800 font-bold py-1 px-3 rounded-br-lg rounded-tl-lg ">
               <del>${props.price}</del>
             </p>
