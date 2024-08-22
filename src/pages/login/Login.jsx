@@ -47,12 +47,20 @@ export default function Login() {
           return
          }
         console.log(foundedUser);
+        const {password,role,...userData}=foundedUser   
+
         if(foundedUser.role=="admin")
         {
-          setLoading(false)
+          setTimeout(() => {
+            dispatch(setUser(userData))
+            setLoading(false)
+            resetForm()
+            document.getElementById('signIn').close()
+            navigate('/admin')
+           }, 2000);
+
               return
         }else{
-          const {password,role,...userData}=foundedUser   
           setTimeout(() => {
             dispatch(setUser(userData))
             setLoading(false)

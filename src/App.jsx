@@ -10,12 +10,12 @@ import Layout from './pages/layout/Layout'
 import Admin from './admin/pages/Admin'
 
 import Register from './pages/register/Register'
-import Login from './pages/login/login'
 import ProtectedRoot from './pages/protectedRoot/ProtectedRoot'
 import CoursesDetails from './pages/coursesDetails/CoursesDetails'
 import Setting from './pages/setting/Setting'
 import ProfileSetting from './pages/setting/profileSetting/ProfileSetting'
 import AccountSetting from './pages/setting/accountSetting/AccountSetting'
+import Login from './pages/login/Login'
 
 function App() {
 
