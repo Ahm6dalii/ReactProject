@@ -72,7 +72,7 @@
       "email": "ali@gmail.com",
       "role": "user",
       "password": "123456",
-      "image": "https://randomuser.me/api/portraits/men/47.jpg"
+      "image": "https://firebasestorage.googleapis.com/v0/b/e-learing-6119b.appspot.com/o/files%2Fd72711b7-8152-40b1-bf7d-5ab4f297dc29?alt=media&token=5f589c95-499f-4830-89d0-927bd7b28774"
     },
     {
       "id": "af32",
@@ -302,58 +302,708 @@
   ],
   "courses": [
     {
-      "id": "10",
-      "title": "Introduction to Cloud Computing",
-      "description": "Learn about cloud computing services, models, and technologies.",
-      "price": 160,
-      "discount": 25,
-      "instructor": "Laura Wilson",
-      "category": "Cloud Computing",
-      "duration": "5 weeks",
-      "image": "https://example.com/images/cloud-computing.jpg",
+      "id": "1",
+      "title": "Introduction to JavaScript",
+      "description": "Learn the basics of JavaScript, the most popular programming language for web development.",
+      "price": 100,
+      "discount": 20,
+      "instructor": "Jane Doe",
+      "category": "Programming",
+      "duration": "4 weeks",
+      "image": "https://miro.medium.com/v2/resize:fit:1400/1*LyZcwuLWv2FArOumCxobpA.png",
       "free": false,
       "paid": false,
-      "prerequisites": "Basic understanding of IT concepts",
+      "prerequisites": "None",
       "level": "Beginner",
-      "syllabus": "Cloud Computing Basics, IaaS, PaaS, SaaS, Cloud Security, Case Studies",
-      "rating": 4.4,
+      "syllabus": "Basics of JavaScript, Variables, Data Types, Functions, DOM Manipulation",
+      "what_you_will_learn": [
+        "Understand JavaScript syntax and fundamental concepts",
+        "Write JavaScript code for dynamic web content",
+        "Manipulate the DOM using JavaScript",
+        "Implement basic interactivity in web pages"
+      ],
+      "rating": 4.5,
+      "reviews_count": 3,
       "reviews": [
         {
+          "userId": "1",
+          "userName": "Alice Smith",
+          "comment": "Great course for beginners!",
+          "rating": 5
+        },
+        {
           "userId": "2",
-          "comment": "Good overview of cloud computing technologies.",
+          "userName": "Bob Johnson",
+          "comment": "Clear explanations, but could use more examples.",
+          "rating": 4
+        },
+        {
+          "userId": "3",
+          "userName": "Carol Davis",
+          "comment": "Good introduction, but a bit too basic for me.",
           "rating": 4
         }
-      ]
+      ],
+      "includes": {
+        "hours_of_video": 20,
+        "articles": 15,
+        "downloadable_resources": 5,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
     },
     {
-      "id": "12",
-      "title": "Introduction to Artificial Intelligence",
-      "description": "Learn the fundamentals of artificial intelligence and its applications.",
-      "price": 190,
-      "discount": 20,
-      "instructor": "Sophie Brown",
-      "category": "AI",
-      "duration": "7 weeks",
-      "image": "https://example.com/images/ai.jpg",
-      "free": false,
+      "id": "2",
+      "title": "Advanced CSS Techniques",
+      "description": "Deep dive into advanced CSS techniques and responsive design.",
+      "price": 120,
+      "discount": 15,
+      "instructor": "John Smith",
+      "category": "Web Design",
+      "duration": "5 weeks",
+      "image": "https://th.bing.com/th/id/OIP.cZ-GWi35VLmoqAgpj7OkbQHaEK?rs=1&pid=ImgDetMain",
+      "free": true,
       "paid": false,
-      "prerequisites": "Basic knowledge of programming and statistics",
+      "prerequisites": "Basic understanding of HTML and CSS",
       "level": "Intermediate",
-      "syllabus": "AI Basics, Machine Learning, Neural Networks, AI Applications, Ethical Considerations",
-      "rating": 4.8,
+      "syllabus": "Flexbox, Grid Layout, Responsive Design, Advanced Selectors, Animations",
+      "what_you_will_learn": [
+        "Master Flexbox and Grid for modern layouts",
+        "Create responsive designs for various devices",
+        "Utilize advanced CSS selectors and pseudo-classes",
+        "Implement CSS animations for interactive designs"
+      ],
+      "rating": 4.6,
+      "reviews_count": 4,
       "reviews": [
         {
           "userId": "2",
-          "comment": "In-depth introduction to AI concepts.",
+          "userName": "Emily Clark",
+          "comment": "Very useful for improving CSS skills.",
+          "rating": 5
+        },
+        {
+          "userId": "3",
+          "userName": "Frank Miller",
+          "comment": "Detailed and well-explained content.",
+          "rating": 4
+        },
+        {
+          "userId": "4",
+          "userName": "Grace Lee",
+          "comment": "Good course, but some topics were too advanced.",
+          "rating": 4
+        },
+        {
+          "userId": "5",
+          "userName": "Henry Walker",
+          "comment": "Helped me understand responsive design better.",
           "rating": 5
         }
-      ]
+      ],
+      "includes": {
+        "hours_of_video": 18,
+        "articles": 12,
+        "downloadable_resources": 7,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
+    },
+    {
+      "id": "3",
+      "title": "Introduction to Python Programming",
+      "description": "Learn the fundamentals of Python programming and its applications.",
+      "price": 140,
+      "discount": 10,
+      "instructor": "Alice Johnson",
+      "category": "Programming",
+      "duration": "6 weeks",
+      "image": "https://th.bing.com/th/id/OIP.2RKkaaJMRWkVplNprvP9FwHaE8?rs=1&pid=ImgDetMain",
+      "free": false,
+      "paid": false,
+      "prerequisites": "None",
+      "level": "Beginner",
+      "syllabus": "Python Basics, Control Flow, Data Structures, Functions, File Handling",
+      "what_you_will_learn": [
+        "Write Python programs for various applications",
+        "Understand Python syntax and control flow",
+        "Work with data structures like lists, dictionaries, and sets",
+        "Implement functions and file handling in Python"
+      ],
+      "rating": 4.7,
+      "reviews_count": 3,
+      "reviews": [
+        {
+          "userId": "1",
+          "userName": "Ivy Green",
+          "comment": "Excellent for learning Python from scratch.",
+          "rating": 5
+        },
+        {
+          "userId": "2",
+          "userName": "Jack Brown",
+          "comment": "Well-structured and easy to follow.",
+          "rating": 5
+        },
+        {
+          "userId": "3",
+          "userName": "Kathy Wilson",
+          "comment": "Good content, but a bit fast-paced.",
+          "rating": 4
+        }
+      ],
+      "includes": {
+        "hours_of_video": 22,
+        "articles": 10,
+        "downloadable_resources": 6,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
+    },
+    {
+      "id": "4",
+      "title": "Introduction to Machine Learning",
+      "description": "An overview of machine learning concepts and algorithms.",
+      "price": 160,
+      "discount": 25,
+      "instructor": "David Brown",
+      "category": "Machine Learning",
+      "duration": "7 weeks",
+      "image": "https://img.freepik.com/free-vector/machine-learning-isometric-composition-with-text-cubes-with-code-robotic-head-chip-with-academic-hat-vector-illustration_1284-82015.jpg?t=st=1724275912~exp=1724279512~hmac=2feb0e340272790e87c8c42b14f97a21f4f5d2f7916f8aee00725515541be221&w=740",
+      "free": true,
+      "paid": false,
+      "prerequisites": "Basic statistics and programming knowledge",
+      "level": "Intermediate",
+      "syllabus": "Supervised Learning, Unsupervised Learning, Neural Networks, Model Evaluation, Real-World Applications",
+      "what_you_will_learn": [
+        "Understand key machine learning algorithms",
+        "Implement machine learning models in Python",
+        "Analyze and evaluate model performance",
+        "Apply machine learning techniques to real-world problems"
+      ],
+      "rating": 4.8,
+      "reviews_count": 3,
+      "reviews": [
+        {
+          "userId": "1",
+          "userName": "Laura Martinez",
+          "comment": "In-depth and challenging course, loved it!",
+          "rating": 5
+        },
+        {
+          "userId": "2",
+          "userName": "Michael Johnson",
+          "comment": "Great overview, but some concepts were difficult to grasp.",
+          "rating": 4
+        },
+        {
+          "userId": "3",
+          "userName": "Nancy Lee",
+          "comment": "Excellent instructor, very knowledgeable.",
+          "rating": 5
+        }
+      ],
+      "includes": {
+        "hours_of_video": 24,
+        "articles": 8,
+        "downloadable_resources": 4,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
+    },
+    {
+      "id": "5",
+      "title": "React.js Essentials",
+      "description": "A comprehensive guide to learning React.js and building modern web applications.",
+      "price": 130,
+      "discount": 10,
+      "instructor": "Sarah Lee",
+      "category": "Web Development",
+      "duration": "4 weeks",
+      "image": "https://shots.codepen.io/room_js/pen/LJvQVm-800.jpg?version=1556227078",
+      "free": false,
+      "paid": true,
+      "prerequisites": "Basic HTML, CSS, and JavaScript knowledge",
+      "level": "Beginner",
+      "syllabus": "React Components, State Management, React Hooks, Routing",
+      "what_you_will_learn": [
+        "Build reusable components with React",
+        "Manage state effectively with React Hooks",
+        "Implement routing in React applications",
+        "Understand the React lifecycle methods"
+      ],
+      "rating": 4.9,
+      "reviews_count": 5,
+      "reviews": [
+        {
+          "userId": "4",
+          "userName": "Olivia Adams",
+          "comment": "Fantastic course, very well explained.",
+          "rating": 5
+        },
+        {
+          "userId": "5",
+          "userName": "Peter Nelson",
+          "comment": "The best React course I've taken.",
+          "rating": 5
+        },
+        {
+          "userId": "6",
+          "userName": "Quincy Baker",
+          "comment": "Very thorough and engaging.",
+          "rating": 4
+        },
+        {
+          "userId": "7",
+          "userName": "Rachel Scott",
+          "comment": "Great content, but the pace was a bit fast.",
+          "rating": 4
+        },
+        {
+          "userId": "8",
+          "userName": "Steve Young",
+          "comment": "I learned a lot, highly recommended!",
+          "rating": 5
+        }
+      ],
+      "includes": {
+        "hours_of_video": 30,
+        "articles": 20,
+        "downloadable_resources": 8,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
+    },
+    {
+      "id": "6",
+      "title": "Advanced JavaScript Concepts",
+      "description": "Dive deeper into advanced JavaScript concepts and techniques.",
+      "price": 110,
+      "discount": 15,
+      "instructor": "Michael Green",
+      "category": "Programming",
+      "duration": "6 weeks",
+      "image": "https://th.bing.com/th/id/R.e7f6399c7acfdf6c3ed28631275683ad?rik=NBHys0iUf0Yz5w&pid=ImgRaw&r=0",
+      "free": true,
+      "paid": false,
+      "prerequisites": "Basic understanding of JavaScript",
+      "level": "Intermediate",
+      "syllabus": "Closures, Prototypes, Async Programming, JavaScript Engines",
+      "what_you_will_learn": [
+        "Understand closures and prototypes",
+        "Work with asynchronous JavaScript",
+        "Explore JavaScript engines and performance",
+        "Apply advanced JavaScript concepts in real-world projects"
+      ],
+      "rating": 4.5,
+      "reviews_count": 3,
+      "reviews": [
+        {
+          "userId": "1",
+          "userName": "Tina Lee",
+          "comment": "Great for deepening JavaScript knowledge.",
+          "rating": 5
+        },
+        {
+          "userId": "2",
+          "userName": "Ursula Martin",
+          "comment": "Challenging but rewarding course.",
+          "rating": 4
+        },
+        {
+          "userId": "3",
+          "userName": "Victor Harris",
+          "comment": "Good course, but could use more practical examples.",
+          "rating": 4
+        }
+      ],
+      "includes": {
+        "hours_of_video": 21,
+        "articles": 13,
+        "downloadable_resources": 6,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
+    },
+    {
+      "id": "7",
+      "title": "Intro to Data Science",
+      "description": "An introduction to data science and its applications in various fields.",
+      "price": 150,
+      "discount": 20,
+      "instructor": "Sophia Garcia",
+      "category": "Data Science",
+      "duration": "5 weeks",
+      "image": "https://th.bing.com/th/id/OIP.UveR32_sfv_fOtPVI46GkQHaEK?rs=1&pid=ImgDetMain",
+      "free": false,
+      "paid": true,
+      "prerequisites": "Basic knowledge of statistics",
+      "level": "Beginner",
+      "syllabus": "Data Analysis, Data Visualization, Statistical Methods, Machine Learning Basics",
+      "what_you_will_learn": [
+        "Perform data analysis and visualization",
+        "Apply statistical methods to real data",
+        "Understand basic machine learning concepts",
+        "Use data science tools and techniques effectively"
+      ],
+      "rating": 4.7,
+      "reviews_count": 4,
+      "reviews": [
+        {
+          "userId": "4",
+          "userName": "William King",
+          "comment": "Fantastic course with practical insights.",
+          "rating": 5
+        },
+        {
+          "userId": "5",
+          "userName": "Xena Clark",
+          "comment": "Informative but could be more interactive.",
+          "rating": 4
+        },
+        {
+          "userId": "6",
+          "userName": "Yara Davis",
+          "comment": "Good for a start in data science.",
+          "rating": 4
+        },
+        {
+          "userId": "7",
+          "userName": "Zachary Allen",
+          "comment": "Comprehensive overview with useful examples.",
+          "rating": 5
+        }
+      ],
+      "includes": {
+        "hours_of_video": 19,
+        "articles": 11,
+        "downloadable_resources": 5,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
+    },
+    {
+      "id": "8",
+      "title": "Basics of SQL",
+      "description": "Learn the basics of SQL for querying databases and managing data.",
+      "price": 90,
+      "discount": 30,
+      "instructor": "James Wright",
+      "category": "Database",
+      "duration": "3 weeks",
+      "image": "https://th.bing.com/th/id/OIP.tKDUtdfeZCoOPn1iwiJUoAHaGI?rs=1&pid=ImgDetMain",
+      "free": true,
+      "paid": false,
+      "prerequisites": "None",
+      "level": "Beginner",
+      "syllabus": "SQL Queries, Joins, Aggregations, Data Manipulation",
+      "what_you_will_learn": [
+        "Write basic SQL queries for data retrieval",
+        "Understand and use SQL joins",
+        "Perform data aggregations and manipulations",
+        "Apply SQL in real-world scenarios"
+      ],
+      "rating": 4.6,
+      "reviews_count": 3,
+      "reviews": [
+        {
+          "userId": "1",
+          "userName": "Anna Lee",
+          "comment": "Perfect for getting started with SQL.",
+          "rating": 5
+        },
+        {
+          "userId": "2",
+          "userName": "Brian Foster",
+          "comment": "Useful content, but too basic for my needs.",
+          "rating": 4
+        },
+        {
+          "userId": "3",
+          "userName": "Catherine Brown",
+          "comment": "Good course, well-organized.",
+          "rating": 4
+        }
+      ],
+      "includes": {
+        "hours_of_video": 15,
+        "articles": 9,
+        "downloadable_resources": 4,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
+    },
+    {
+      "id": "9",
+      "title": "Web Development Bootcamp",
+      "description": "A comprehensive bootcamp covering full-stack web development skills.",
+      "price": 200,
+      "discount": 25,
+      "instructor": "Linda Roberts",
+      "category": "Web Development",
+      "duration": "8 weeks",
+      "image": "https://th.bing.com/th/id/R.71ef909ba66823d334cadff00c93afa8?rik=oSXM3wcAOtrxiQ&pid=ImgRaw&r=0",
+      "free": false,
+      "paid": true,
+      "prerequisites": "Basic programming knowledge",
+      "level": "Intermediate",
+      "syllabus": "HTML, CSS, JavaScript, Node.js, Express, MongoDB",
+      "what_you_will_learn": [
+        "Develop full-stack web applications",
+        "Understand both frontend and backend technologies",
+        "Work with databases and server-side frameworks",
+        "Build and deploy real-world projects"
+      ],
+      "rating": 4.8,
+      "reviews_count": 4,
+      "reviews": [
+        {
+          "userId": "4",
+          "userName": "George Carter",
+          "comment": "Intensive and comprehensive course!",
+          "rating": 5
+        },
+        {
+          "userId": "5",
+          "userName": "Helen Mitchell",
+          "comment": "Great for learning full-stack development.",
+          "rating": 5
+        },
+        {
+          "userId": "6",
+          "userName": "Isaac Taylor",
+          "comment": "Very informative, but a bit overwhelming.",
+          "rating": 4
+        },
+        {
+          "userId": "7",
+          "userName": "Jessica White",
+          "comment": "Good content but could be more structured.",
+          "rating": 4
+        }
+      ],
+      "includes": {
+        "hours_of_video": 40,
+        "articles": 25,
+        "downloadable_resources": 10,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
+    },
+    {
+
+      "id": "10",
+      "title": "Introduction to Cloud Computing",
+      "description": "An overview of cloud computing concepts and services.",
+      "price": 110,
+      "discount": 10,
+      "instructor": "Robert Harris",
+      "category": "Cloud Computing",
+      "duration": "4 weeks",
+      "image": "https://th.bing.com/th/id/OIP.UZHyqsYF0-l-kFlwnQCYzgHaEK?rs=1&pid=ImgDetMain",
+      "free": true,
+      "paid": false,
+      "prerequisites": "None",
+      "level": "Beginner",
+      "syllabus": "Cloud Models, Services, Security, Cloud Providers",
+      "what_you_will_learn": [
+        "Understand different cloud computing models",
+        "Explore various cloud services and their applications",
+        "Learn about cloud security and compliance",
+        "Compare major cloud service providers"
+      ],
+      "rating": 4.4,
+      "reviews_count": 3,
+      "reviews": [
+        {
+          "userId": "1",
+          "userName": "Laura Young",
+          "comment": "Good introduction to cloud computing concepts.",
+          "rating": 4
+        },
+        {
+          "userId": "2",
+          "userName": "Michael Adams",
+          "comment": "Useful content but a bit basic.",
+          "rating": 4
+        },
+        {
+          "userId": "3",
+          "userName": "Nina Roberts",
+          "comment": "Informative, but could use more real-world examples.",
+          "rating": 4
+        }
+      ],
+      "includes": {
+        "hours_of_video": 16,
+        "articles": 10,
+        "downloadable_resources": 3,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
+    },
+    {
+      "id": "11",
+      "title": "Introduction to Cybersecurity",
+      "description": "Basics of cybersecurity and how to protect information systems.",
+      "price": 140,
+      "discount": 20,
+      "instructor": "David Moore",
+      "category": "Cybersecurity",
+      "duration": "5 weeks",
+      "image": "https://th.bing.com/th/id/R.a3c02ed9ccaa783f83f894efdd9d3041?rik=RHXL%2flCFZzNBCw&pid=ImgRaw&r=0&sres=1&sresct=1",
+      "free": false,
+      "paid": true,
+      "prerequisites": "None",
+      "level": "Beginner",
+      "syllabus": "Cybersecurity Fundamentals, Threats and Vulnerabilities, Security Measures, Incident Response",
+      "what_you_will_learn": [
+        "Understand the fundamentals of cybersecurity",
+        "Identify common threats and vulnerabilities",
+        "Implement security measures to protect systems",
+        "Respond to and manage security incidents"
+      ],
+      "rating": 4.6,
+      "reviews_count": 3,
+      "reviews": [
+        {
+          "userId": "4",
+          "userName": "Oscar Turner",
+          "comment": "Very insightful and practical.",
+          "rating": 5
+        },
+        {
+          "userId": "5",
+          "userName": "Patricia Davis",
+          "comment": "Good basics but lacks depth in some areas.",
+          "rating": 4
+        },
+        {
+          "userId": "6",
+          "userName": "Quinton Lewis",
+          "comment": "Useful for a beginner in cybersecurity.",
+          "rating": 4
+        }
+      ],
+      "includes": {
+        "hours_of_video": 20,
+        "articles": 14,
+        "downloadable_resources": 5,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
+    },
+    {
+
+      "id": "12",
+      "title": "Introduction to Docker",
+      "description": "Learn how to use Docker for containerization and deploying applications.",
+      "price": 130,
+      "discount": 15,
+      "instructor": "Rachel Wilson",
+      "category": "DevOps",
+      "duration": "4 weeks",
+      "image": "https://th.bing.com/th/id/OIP.kd8r3kGm8-StA37eCM0ohAHaFj?rs=1&pid=ImgDetMain",
+      "free": true,
+      "paid": false,
+      "prerequisites": "Basic understanding of Linux and command-line tools",
+      "level": "Beginner",
+      "syllabus": "Docker Basics, Images and Containers, Docker Compose, Docker Swarm",
+      "what_you_will_learn": [
+        "Understand Docker and containerization",
+        "Work with Docker images and containers",
+        "Use Docker Compose for multi-container applications",
+        "Explore Docker Swarm for orchestration"
+      ],
+      "rating": 4.5,
+      "reviews_count": 3,
+      "reviews": [
+        {
+          "userId": "4",
+          "userName": "Steven Carter",
+          "comment": "Great introduction to Docker.",
+          "rating": 4
+        },
+        {
+          "userId": "5",
+          "userName": "Tracy Adams",
+          "comment": "Useful course but needs more practical examples.",
+          "rating": 4
+        },
+        {
+          "userId": "6",
+          "userName": "Uma Clark",
+          "comment": "Very helpful for getting started with Docker.",
+          "rating": 5
+        }
+      ],
+      "includes": {
+        "hours_of_video": 18,
+        "articles": 12,
+        "downloadable_resources": 4,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
     },
     {
       "id": "13",
-      "title": "Introduction to Web Development",
-      "description": "Learn the basics of web development with HTML, CSS, and JavaScript.",
+      "title": "Introduction to Blockchain",
+      "description": "Understand blockchain technology and its applications.",
       "price": 120,
+      "discount": 20,
+      "instructor": "Ethan King",
+      "category": "Blockchain",
+      "duration": "6 weeks",
+      "image": "https://th.bing.com/th/id/R.1407e135a0c6b64bb8791dced5718001?rik=xpfTYS%2bb34%2fVsQ&pid=ImgRaw&r=0",
+      "free": false,
+      "paid": true,
+      "prerequisites": "Basic understanding of cryptocurrencies",
+      "level": "Intermediate",
+      "syllabus": "Blockchain Basics, Smart Contracts, Cryptocurrencies, Blockchain Platforms",
+      "what_you_will_learn": [
+        "Understand the core concepts of blockchain technology",
+        "Explore the workings of smart contracts",
+        "Learn about various cryptocurrencies",
+        "Get familiar with popular blockchain platforms"
+      ],
+      "rating": 4.7,
+      "reviews_count": 3,
       "discount": 15,
       "instructor": "Mia Parker",
       "category": "Web Development",
@@ -370,370 +1020,1066 @@
       "reviews": [
         {
           "userId": "1",
-          "comment": "Perfect for beginners in web development.",
+          "userName": "Victoria Wright",
+          "comment": "Informative and well-structured course.",
           "rating": 5
+        },
+        {
+          "userId": "2",
+          "userName": "William Johnson",
+          "comment": "Good introduction to blockchain concepts.",
+          "rating": 4
+        },
+        {
+          "userId": "3",
+          "userName": "Xena Clark",
+          "comment": "Interesting content but could be more in-depth.",
+          "rating": 4
         }
       ],
+      "includes": {
+        "hours_of_video": 22,
+        "articles": 11,
+        "downloadable_resources": 6,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
       "typeOfCourse": "PAID"
     },
     {
       "id": "14",
-      "title": "Introduction to Mobile App Development",
-      "description": "Learn the basics of mobile app development for iOS and Android.",
+      "title": "Introduction to Swift Programming",
+      "description": "Learn Swift programming and start developing iOS applications.",
       "price": 140,
-      "discount": 10,
-      "instructor": "Jake Turner",
-      "category": "Mobile Development",
+      "discount": 15,
+      "instructor": "Olivia Martinez",
+      "category": "Programming",
       "duration": "5 weeks",
-      "image": "https://example.com/images/mobile-app-development.jpg",
-      "free": false,
+      "image": "https://webdesignledger.com/wp-content/uploads/2015/10/swift-programming-logo.jpg",
+      "free": true,
       "paid": false,
-      "prerequisites": "Basic programming knowledge",
+      "prerequisites": "Basic understanding of programming concepts",
       "level": "Beginner",
-      "syllabus": "Mobile App Basics, iOS Development, Android Development, UI/UX Design, App Publishing",
+      "syllabus": "Swift Basics, Control Flow, Data Structures, iOS Development",
+      "what_you_will_learn": [
+        "Understand Swift programming syntax and concepts",
+        "Write and debug Swift code",
+        "Develop simple iOS applications using Swift",
+        "Work with data structures and control flow in Swift"
+      ],
       "rating": 4.6,
+      "reviews_count": 3,
       "reviews": [
         {
-          "userId": "2",
-          "comment": "Great course for getting started with mobile app development.",
+          "userId": "4",
+          "userName": "Yvonne Smith",
+          "comment": "Great course for learning Swift.",
           "rating": 5
+        },
+        {
+          "userId": "5",
+          "userName": "Zachary Turner",
+          "comment": "Good basics but needs more depth.",
+          "rating": 4
+        },
+        {
+          "userId": "6",
+          "userName": "Alice Williams",
+          "comment": "Helpful for starting iOS development.",
+          "rating": 4
         }
-      ]
+      ],
+      "includes": {
+        "hours_of_video": 20,
+        "articles": 13,
+        "downloadable_resources": 5,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
     },
     {
       "id": "15",
-      "title": "Introduction to UX/UI Design",
-      "description": "Learn the fundamentals of UX/UI design principles and techniques.",
+      "title": "Data Analysis with R",
+      "description": "Learn data analysis techniques using R programming language.",
       "price": 130,
-      "discount": 20,
-      "instructor": "Olivia Green",
-      "category": "Design",
+      "discount": 10,
+      "instructor": "Mark Johnson",
+      "category": "Data Science",
       "duration": "6 weeks",
-      "image": "https://example.com/images/ux-ui-design.jpg",
-      "free": true,
-      "paid": false,
-      "prerequisites": "None",
-      "level": "Beginner",
-      "syllabus": "UX Design Principles, UI Design Techniques, Wireframing, Prototyping, User Testing",
-      "rating": 4.7,
+      "image": "https://th.bing.com/th/id/OIP.-6L1E4DUoiP9Ok_Bc0__bAHaGY?rs=1&pid=ImgDetMain",
+      "free": false,
+      "paid": true,
+      "prerequisites": "Basic knowledge of statistics",
+      "level": "Intermediate",
+      "syllabus": "Data Manipulation, Visualization, Statistical Analysis, R Packages",
+      "what_you_will_learn": [
+        "Manipulate and analyze data using R",
+        "Create visualizations to interpret data",
+        "Perform statistical analysis with R",
+        "Utilize R packages for data science tasks"
+      ],
+      "rating": 4.8,
+      "reviews_count": 4,
       "reviews": [
         {
           "userId": "1",
-          "comment": "Informative and practical course on UX/UI design.",
+          "userName": "Nina Roberts",
+          "comment": "Excellent course for R programming.",
           "rating": 5
+        },
+        {
+          "userId": "2",
+          "userName": "Oscar Turner",
+          "comment": "Informative but could use more practical exercises.",
+          "rating": 4
+        },
+        {
+          "userId": "3",
+          "userName": "Patricia Davis",
+          "comment": "Very thorough and detailed.",
+          "rating": 5
+        },
+        {
+          "userId": "4",
+          "userName": "Quincy Lewis",
+          "comment": "Good content, but the pace was slow.",
+          "rating": 4
         }
-      ]
+      ],
+      "includes": {
+        "hours_of_video": 25,
+        "articles": 15,
+        "downloadable_resources": 7,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
     },
     {
       "id": "16",
-      "title": "Introduction to Financial Analysis",
-      "description": "Learn the basics of financial analysis and modeling.",
-      "price": 150,
-      "discount": 25,
-      "instructor": "Emily Wilson",
-      "category": "Finance",
-      "duration": "6 weeks",
-      "image": "https://example.com/images/financial-analysis.jpg",
-      "free": false,
+      "title": "UX Design Fundamentals",
+      "description": "Learn the principles and practices of user experience (UX) design.",
+      "price": 130,
+      "discount": 10,
+      "instructor": "Emma Davis",
+      "category": "Design",
+      "duration": "4 weeks",
+      "image": "https://th.bing.com/th/id/OIP.JWStOGfx3DvZDDphuMNvgQHaE0?rs=1&pid=ImgDetMain",
+      "free": true,
       "paid": false,
-      "prerequisites": "Basic understanding of finance and accounting",
-      "level": "Intermediate",
-      "syllabus": "Financial Statements, Ratio Analysis, Forecasting, Financial Modeling, Investment Analysis",
-      "rating": 4.6,
+      "prerequisites": "None",
+      "level": "Beginner",
+      "syllabus": "UX Principles, User Research, Wireframing, Prototyping",
+      "what_you_will_learn": [
+        "Understand core UX principles and methodologies",
+        "Conduct user research and usability testing",
+        "Create wireframes and prototypes",
+        "Apply UX design practices in real-world scenarios"
+      ],
+      "rating": 4.5,
+      "reviews_count": 3,
       "reviews": [
         {
-          "userId": "2",
-          "comment": "Comprehensive course on financial analysis.",
+          "userId": "1",
+          "userName": "Lisa Walker",
+          "comment": "Great introduction to UX design.",
           "rating": 4
+        },
+        {
+          "userId": "2",
+          "userName": "Mike Brown",
+          "comment": "Useful content but could be more interactive.",
+          "rating": 4
+        },
+        {
+          "userId": "3",
+          "userName": "Nancy Allen",
+          "comment": "Informative and practical.",
+          "rating": 5
         }
-      ]
+      ],
+      "includes": {
+        "hours_of_video": 16,
+        "articles": 10,
+        "downloadable_resources": 4,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
+    },
+    {
+      "id": "16",
+      "title": "Introduction to Python",
+      "description": "Learn the basics of Python programming.",
+      "price": 150,
+      "discount": 25,
+      "instructor": "Sarah Kim",
+      "category": "Programming",
+      "duration": "6 weeks",
+      "image": "https://gemslearninginstitute.com/wp-content/uploads/2023/04/Python-1-768x602.jpg",
+      "free": false,
+      "paid": true,
+      "prerequisites": "None",
+      "level": "Beginner",
+      "syllabus": "Basic Syntax, Data Structures, Functions, Modules",
+      "what_you_will_learn": [
+        "Understand Python syntax and semantics",
+        "Work with data structures and functions",
+        "Use modules and libraries",
+        "Develop simple Python applications"
+      ],
+      "rating": 4.6,
+      "reviews_count": 6,
+      "reviews": [
+        {
+          "userId": "53",
+          "userName": "Emma Johnson",
+          "comment": "Great introduction to Python.",
+          "rating": 5
+        },
+        {
+          "userId": "54",
+          "userName": "Jack Miller",
+          "comment": "Very easy to follow and understand.",
+          "rating": 4
+        },
+        {
+          "userId": "55",
+          "userName": "Sophia Lee",
+          "comment": "Helpful for getting started with Python.",
+          "rating": 4
+        },
+        {
+          "userId": "56",
+          "userName": "William Davis",
+          "comment": "Comprehensive and well-structured.",
+          "rating": 5
+        },
+        {
+          "userId": "57",
+          "userName": "Olivia Clark",
+          "comment": "Excellent for beginners.",
+          "rating": 4
+        },
+        {
+          "userId": "58",
+          "userName": "James Wilson",
+          "comment": "Very practical course.",
+          "rating": 5
+        }
+      ],
+      "includes": {
+        "hours_of_video": 20,
+        "articles": 10,
+        "downloadable_resources": 5,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
     },
     {
       "id": "17",
-      "title": "Introduction to Project Management",
-      "description": "Learn the basics of project management and planning.",
-      "price": 140,
-      "discount": 10,
-      "instructor": "David Johnson",
-      "category": "Project Management",
-      "duration": "5 weeks",
-      "image": "https://example.com/images/project-management.jpg",
-      "free": true,
-      "paid": false,
-      "prerequisites": "None",
-      "level": "Beginner",
-      "syllabus": "Project Planning, Scheduling, Risk Management, Budgeting, Project Execution",
-      "rating": 4.5,
+      "title": "Advanced JavaScript",
+      "description": "Dive deep into advanced JavaScript concepts and techniques.",
+      "price": 200,
+      "discount": 20,
+      "instructor": "Linda Thompson",
+      "category": "Programming",
+      "duration": "8 weeks",
+      "image": "https://www.filepicker.io/api/file/oelLjtePT8mPwk4IDGFd",
+      "free": false,
+      "paid": true,
+      "prerequisites": "Basic JavaScript knowledge",
+      "level": "Intermediate",
+      "syllabus": "Asynchronous JavaScript, Closures, Prototypes, Design Patterns",
+      "what_you_will_learn": [
+        "Understand asynchronous JavaScript techniques",
+        "Explore closures and prototypes",
+        "Implement design patterns in JavaScript",
+        "Develop complex JavaScript applications"
+      ],
+      "rating": 4.8,
+      "reviews_count": 5,
       "reviews": [
         {
-          "userId": "1",
-          "comment": "Good introduction to project management techniques.",
+          "userId": "59",
+          "userName": "Noah Brown",
+          "comment": "Excellent course for advanced topics.",
+          "rating": 5
+        },
+        {
+          "userId": "60",
+          "userName": "Ava White",
+          "comment": "Challenging but very rewarding.",
           "rating": 4
+        },
+        {
+          "userId": "61",
+          "userName": "Liam Smith",
+          "comment": "Great for deepening JavaScript knowledge.",
+          "rating": 5
+        },
+        {
+          "userId": "62",
+          "userName": "Mia Taylor",
+          "comment": "Well-explained and practical.",
+          "rating": 4
+        },
+        {
+          "userId": "63",
+          "userName": "Ethan Davis",
+          "comment": "Highly recommended for intermediate developers.",
+          "rating": 5
         }
-      ]
+      ],
+      "includes": {
+        "hours_of_video": 32,
+        "articles": 15,
+        "downloadable_resources": 6,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
     },
     {
       "id": "18",
-      "title": "Introduction to Data Visualization",
-      "description": "Learn the principles and techniques of data visualization.",
-      "price": 160,
-      "discount": 30,
-      "instructor": "Jessica Martinez",
-      "category": "Data Science",
+      "title": "Responsive Web Design",
+      "description": "Learn how to create responsive and adaptive web designs.",
+      "price": 170,
+      "discount": 15,
+      "instructor": "Michael Anderson",
+      "category": "Design",
       "duration": "6 weeks",
-      "image": "https://example.com/images/data-visualization.jpg",
-      "free": false,
+      "image": "https://example.com/images/responsive-design.jpg",
+      "free": true,
       "paid": false,
-      "prerequisites": "Basic understanding of data analysis",
-      "level": "Intermediate",
-      "syllabus": "Data Visualization Basics, Tools and Techniques, Data Storytelling, Creating Dashboards, Best Practices",
+      "prerequisites": "Basic HTML and CSS knowledge",
+      "level": "Beginner",
+      "syllabus": "Media Queries, Flexbox, Grid Layout, Mobile First",
+      "what_you_will_learn": [
+        "Create responsive web designs using media queries",
+        "Implement Flexbox and Grid Layout",
+        "Develop mobile-first design strategies",
+        "Optimize designs for various screen sizes"
+      ],
       "rating": 4.7,
+      "reviews_count": 4,
       "reviews": [
         {
-          "userId": "2",
-          "comment": "Excellent course on visualizing data effectively.",
+          "userId": "64",
+          "userName": "Sophia Anderson",
+          "comment": "Very useful for creating responsive websites.",
           "rating": 5
+        },
+        {
+          "userId": "65",
+          "userName": "Daniel Lee",
+          "comment": "Clear and practical lessons.",
+          "rating": 4
+        },
+        {
+          "userId": "66",
+          "userName": "Emma White",
+          "comment": "Great for understanding responsive design.",
+          "rating": 5
+        },
+        {
+          "userId": "67",
+          "userName": "Lucas Brown",
+          "comment": "Well-structured and informative.",
+          "rating": 4
         }
-      ]
+      ],
+      "includes": {
+        "hours_of_video": 22,
+        "articles": 12,
+        "downloadable_resources": 4,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
     },
     {
       "id": "19",
-      "title": "Introduction to Social Media Marketing",
-      "description": "Learn the fundamentals of social media marketing strategies and tools.",
-      "price": 120,
-      "discount": 15,
-      "instructor": "Michael Thompson",
-      "category": "Marketing",
-      "duration": "5 weeks",
-      "image": "https://example.com/images/social-media-marketing.jpg",
-      "free": false,
-      "paid": false,
-      "prerequisites": "None",
-      "level": "Beginner",
-      "syllabus": "Social Media Platforms, Content Creation, Audience Engagement, Analytics, Paid Advertising",
-      "rating": 4.4,
+      "title": "Data Visualization with D3.js",
+      "description": "Learn how to create interactive data visualizations using D3.js.",
+      "price": 190,
+      "discount": 20,
+      "instructor": "James Lee",
+      "category": "Data Science",
+      "duration": "8 weeks",
+      "image": "https://th.bing.com/th/id/R.b05695ecf17e5aadb9817a35ce8fbd3d?rik=%2fWg0xQoFWkonUQ&pid=ImgRaw&r=0",
+      "paid": true,
+      "prerequisites": "Basic JavaScript knowledge",
+      "level": "Intermediate",
+      "syllabus": "D3 Basics, Data Binding, Scales, SVG Graphics",
+      "what_you_will_learn": [
+        "Understand the basics of D3.js",
+        "Bind data to graphical elements",
+        "Use scales and axes for visualization",
+        "Create interactive SVG graphics"
+      ],
+      "rating": 4.9,
+      "reviews_count": 5,
       "reviews": [
         {
-          "userId": "1",
-          "comment": "Good overview of social media marketing techniques.",
+          "userId": "68",
+          "userName": "Aiden Clark",
+          "comment": "Excellent for learning D3.js.",
+          "rating": 5
+        },
+        {
+          "userId": "69",
+          "userName": "Lily Johnson",
+          "comment": "Very detailed and hands-on.",
+          "rating": 5
+        },
+        {
+          "userId": "70",
+          "userName": "Elijah Smith",
+          "comment": "Great for creating interactive visualizations.",
+          "rating": 4
+        },
+        {
+          "userId": "71",
+          "userName": "Chloe Brown",
+          "comment": "Comprehensive and practical course.",
+          "rating": 5
+        },
+        {
+          "userId": "72",
+          "userName": "Ethan Davis",
+          "comment": "Well-explained and useful.",
           "rating": 4
         }
-      ]
+      ],
+      "includes": {
+        "hours_of_video": 28,
+        "articles": 14,
+        "downloadable_resources": 7,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
     },
     {
       "id": "20",
-      "title": "Introduction to Public Speaking",
-      "description": "Learn the fundamentals of effective public speaking and presentation skills.",
-      "price": 150,
-      "discount": 20,
-      "instructor": "Linda Brown",
-      "category": "Communication",
-      "duration": "4 weeks",
-      "image": "https://example.com/images/public-speaking.jpg",
-      "free": true,
-      "paid": false,
+      "title": "Introduction to Cybersecurity",
+      "description": "Learn the fundamentals of cybersecurity and protecting systems.",
+      "price": 160,
+      "discount": 30,
+      "instructor": "Karen Wilson",
+      "category": "Cybersecurity",
+      "duration": "7 weeks",
+      "image": "https://www.qatar-tribune.com/uploads/imported_images/portals/0/easygalleryimages/1/22101/Cyber-security-services-qatar_2.jpg",
+      "free": false,
+      "paid": true,
       "prerequisites": "None",
       "level": "Beginner",
-      "syllabus": "Speech Preparation, Delivery Techniques, Audience Engagement, Overcoming Nervousness, Presentation Skills",
-      "rating": 4.6,
+      "syllabus": "Cyber Threats, Security Protocols, Risk Management, Incident Response",
+      "what_you_will_learn": [
+        "Understand various cybersecurity threats",
+        "Implement security protocols and best practices",
+        "Manage risk and respond to incidents",
+        "Protect systems and data from attacks"
+      ],
+      "rating": 4.7,
+      "reviews_count": 6,
       "reviews": [
         {
-          "userId": "2",
-          "comment": "Great course for improving public speaking skills.",
+          "userId": "73",
+          "userName": "Matthew Brown",
+          "comment": "A great introduction to cybersecurity.",
           "rating": 5
+        },
+        {
+          "userId": "74",
+          "userName": "Isabella Johnson",
+          "comment": "Informative and well-structured.",
+          "rating": 4
+        },
+        {
+          "userId": "75",
+          "userName": "Mason Lee",
+          "comment": "Very useful for understanding cybersecurity basics.",
+          "rating": 5
+        },
+        {
+          "userId": "76",
+          "userName": "Charlotte Smith",
+          "comment": "Clear and practical.",
+          "rating": 4
+        },
+        {
+          "userId": "77",
+          "userName": "Aiden Clark",
+          "comment": "Comprehensive course on cybersecurity.",
+          "rating": 5
+        },
+        {
+          "userId": "78",
+          "userName": "Avery Davis",
+          "comment": "Good overview of security concepts.",
+          "rating": 4
         }
-      ]
+      ],
+      "includes": {
+        "hours_of_video": 24,
+        "articles": 11,
+        "downloadable_resources": 5,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
     },
     {
       "id": "21",
-      "title": "Introduction to Video Editing",
-      "description": "Learn the basics of video editing using Adobe Premiere Pro.",
-      "price": 160,
+      "title": "Building RESTful APIs with Node.js",
+      "description": "Learn to build RESTful APIs using Node.js and Express.",
+      "price": 180,
       "discount": 25,
-      "instructor": "Daniel Lee",
-      "category": "Video Editing",
+      "instructor": "Robert Harris",
+      "category": "Backend",
       "duration": "6 weeks",
-      "image": "https://example.com/images/video-editing.jpg",
+      "image": "https://asdzxcv.com/resources/img/logo/rest_api.png",
       "free": false,
-      "paid": false,
-      "prerequisites": "None",
-      "level": "Beginner",
-      "syllabus": "Video Editing Basics, Cutting and Trimming, Audio Editing, Effects and Transitions, Exporting and Sharing",
-      "rating": 4.5,
+      "paid": true,
+      "prerequisites": "Basic Node.js knowledge",
+      "level": "Intermediate",
+      "syllabus": "Express.js Basics, REST Principles, Middleware, Authentication",
+      "what_you_will_learn": [
+        "Understand REST principles and API design",
+        "Build APIs using Node.js and Express",
+        "Implement middleware and authentication",
+        "Develop secure and scalable APIs"
+      ],
+      "rating": 4.8,
+      "reviews_count": 6,
       "reviews": [
         {
-          "userId": "2",
-          "comment": "Great for beginners wanting to learn video editing.",
+          "userId": "79",
+          "userName": "James Clark",
+          "comment": "Great for learning API development.",
           "rating": 5
+        },
+        {
+          "userId": "80",
+          "userName": "Alyssa Harris",
+          "comment": "Very detailed and practical course.",
+          "rating": 4
+        },
+        {
+          "userId": "81",
+          "userName": "Michael Brown",
+          "comment": "Excellent for building RESTful APIs.",
+          "rating": 5
+        },
+        {
+          "userId": "82",
+          "userName": "Emily Davis",
+          "comment": "Well-organized and comprehensive.",
+          "rating": 4
+        },
+        {
+          "userId": "83",
+          "userName": "Matthew White",
+          "comment": "Highly recommend for backend developers.",
+          "rating": 5
+        },
+        {
+          "userId": "84",
+          "userName": "Olivia Johnson",
+          "comment": "Great hands-on experience with APIs.",
+          "rating": 4
         }
-      ]
+      ],
+      "includes": {
+        "hours_of_video": 26,
+        "articles": 10,
+        "downloadable_resources": 5,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
     },
     {
       "id": "22",
-      "title": "Introduction to Robotics",
-      "description": "Learn the fundamentals of robotics and automation.",
-      "price": 180,
-      "discount": 30,
-      "instructor": "Helen White",
-      "category": "Robotics",
-      "duration": "7 weeks",
-      "image": "https://example.com/images/robotics.jpg",
-      "free": true,
-      "paid": false,
-      "prerequisites": "Basic understanding of engineering concepts",
-      "level": "Intermediate",
-      "syllabus": "Robotics Basics, Sensors and Actuators, Robotic Programming, Autonomous Systems, Robotics Applications",
-      "rating": 4.7,
+      "title": "Mastering Git and GitHub",
+      "description": "Learn how to use Git and GitHub for version control and collaboration.",
+      "price": 140,
+      "discount": 10,
+      "instructor": "Angela Martinez",
+      "category": "DevOps",
+      "duration": "5 weeks",
+      "image": "https://th.bing.com/th/id/OIP.qF_OLrprJEPhZgw1DzTriAHaEK?rs=1&pid=ImgDetMain",
+      "free": false,
+      "paid": true,
+      "prerequisites": "None",
+      "level": "Beginner",
+      "syllabus": "Git Basics, Branching and Merging, GitHub Features, Collaboration",
+      "what_you_will_learn": [
+        "Understand Git basics and commands",
+        "Use branching and merging techniques",
+        "Explore GitHub features for collaboration",
+        "Manage projects and version control"
+      ],
+      "rating": 4.5,
+      "reviews_count": 4,
       "reviews": [
         {
-          "userId": "1",
-          "comment": "Comprehensive introduction to robotics.",
+          "userId": "85",
+          "userName": "David Wilson",
+          "comment": "Essential course for version control.",
+          "rating": 4
+        },
+        {
+          "userId": "86",
+          "userName": "Emma Martinez",
+          "comment": "Clear and concise instructions.",
+          "rating": 5
+        },
+        {
+          "userId": "87",
+          "userName": "Ethan White",
+          "comment": "Very useful for managing code versions.",
+          "rating": 4
+        },
+        {
+          "userId": "88",
+          "userName": "Sofia Clark",
+          "comment": "Great for understanding Git and GitHub.",
           "rating": 5
         }
-      ]
+      ],
+      "includes": {
+        "hours_of_video": 18,
+        "articles": 8,
+        "downloadable_resources": 3,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
     },
     {
       "id": "23",
-      "title": "Introduction to SQL Databases",
-      "description": "Learn the basics of SQL and database management.",
-      "price": 140,
-      "discount": 20,
-      "instructor": "Thomas Harris",
-      "category": "Database",
-      "duration": "5 weeks",
-      "image": "https://example.com/images/sql-databases.jpg",
-      "free": false,
-      "paid": false,
-      "prerequisites": "Basic understanding of databases",
-      "level": "Beginner",
-      "syllabus": "SQL Basics, Data Querying, Data Manipulation, Database Design, SQL Functions",
-      "rating": 4.6,
-      "reviews": [
-        {
-          "userId": "2",
-          "comment": "Solid introduction to SQL databases.",
-          "rating": 4
-        }
-      ]
-    },
-    {
-      "id": "24",
-      "title": "Introduction to Natural Language Processing",
-      "description": "Learn the basics of natural language processing and its applications.",
-      "price": 150,
-      "discount": 25,
-      "instructor": "Grace Wilson",
-      "category": "AI",
-      "duration": "6 weeks",
-      "image": "https://example.com/images/nlp.jpg",
-      "free": true,
-      "paid": false,
-      "prerequisites": "Basic understanding of AI and programming",
-      "level": "Intermediate",
-      "syllabus": "NLP Basics, Text Processing, Sentiment Analysis, Machine Translation, NLP Applications",
-      "rating": 4.7,
-      "reviews": [
-        {
-          "userId": "1",
-          "comment": "Great course for learning NLP techniques.",
-          "rating": 5
-        }
-      ]
-    },
-    {
-      "id": "25",
-      "title": "Introduction to Ethical Hacking",
-      "description": "Learn the basics of ethical hacking and cybersecurity practices.",
-      "price": 180,
-      "discount": 30,
-      "instructor": "Jack Green",
-      "category": "Cybersecurity",
-      "duration": "7 weeks",
-      "image": "https://example.com/images/ethical-hacking.jpg",
-      "free": false,
-      "paid": false,
-      "prerequisites": "Basic understanding of IT and networking",
-      "level": "Intermediate",
-      "syllabus": "Ethical Hacking Basics, Penetration Testing, Vulnerability Assessment, Cybersecurity Tools, Legal and Ethical Issues",
-      "rating": 4.8,
-      "reviews": [
-        {
-          "userId": "2",
-          "comment": "In-depth course on ethical hacking techniques.",
-          "rating": 5
-        }
-      ]
-    },
-    {
-      "id": "26",
-      "title": "Introduction to DevOps",
-      "description": "Learn the fundamentals of DevOps practices and tools.",
-      "price": 160,
-      "discount": 25,
-      "instructor": "Olivia Scott",
-      "category": "DevOps",
-      "duration": "6 weeks",
-      "image": "https://example.com/images/devops.jpg",
-      "free": false,
-      "paid": false,
-      "prerequisites": "Basic understanding of software development and IT operations",
-      "level": "Intermediate",
-      "syllabus": "DevOps Basics, Continuous Integration, Continuous Deployment, Infrastructure as Code, Monitoring and Logging",
-      "rating": 4.6,
-      "reviews": [
-        {
-          "userId": "1",
-          "comment": "Great introduction to DevOps practices.",
-          "rating": 4
-        }
-      ]
-    },
-    {
-      "id": "27",
-      "title": "Introduction to Agile Methodology",
-      "description": "Learn the fundamentals of Agile project management and methodologies.",
+      "title": "Introduction to SQL",
+      "description": "Learn the fundamentals of SQL and database management.",
       "price": 130,
       "discount": 20,
-      "instructor": "Paul Adams",
-      "category": "Project Management",
+      "instructor": "Brian Thompson",
+      "category": "Database",
       "duration": "5 weeks",
-      "image": "https://example.com/images/agile-methodology.jpg",
+      "image": "https://th.bing.com/th/id/R.43424cd6265d34a25bec7611a1c82021?rik=chz8sG8R8rG67w&pid=ImgRaw&r=0",
       "free": true,
       "paid": false,
       "prerequisites": "None",
       "level": "Beginner",
-      "syllabus": "Agile Principles, Scrum Framework, Kanban, Agile Planning, Continuous Improvement",
-      "rating": 4.5,
+      "syllabus": "SQL Basics, Queries, Joins, Data Management",
+      "what_you_will_learn": [
+        "Understand SQL basics and commands",
+        "Write and execute queries",
+        "Use joins to combine data",
+        "Manage and manipulate database data"
+      ],
+      "rating": 4.6,
+      "reviews_count": 5,
       "reviews": [
         {
-          "userId": "2",
-          "comment": "Useful course for understanding Agile methodologies.",
+          "userId": "89",
+          "userName": "Grace Johnson",
+          "comment": "Great start for learning SQL.",
+          "rating": 5
+        },
+        {
+          "userId": "90",
+          "userName": "Daniel White",
+          "comment": "Clear explanations and practical exercises.",
+          "rating": 4
+        },
+        {
+          "userId": "91",
+          "userName": "Chloe Lee",
+          "comment": "Very helpful for understanding database management.",
+          "rating": 4
+        },
+        {
+          "userId": "92",
+          "userName": "Mason Smith",
+          "comment": "Comprehensive and easy to follow.",
+          "rating": 5
+        },
+        {
+          "userId": "93",
+          "userName": "Ava Wilson",
+          "comment": "Well-structured course for beginners.",
           "rating": 4
         }
-      ]
+      ],
+      "includes": {
+        "hours_of_video": 16,
+        "articles": 7,
+        "downloadable_resources": 4,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
+    },
+    {
+      "id": "24",
+      "title": "Java Programming for Beginners",
+      "description": "Learn the basics of Java programming and object-oriented concepts.",
+      "price": 160,
+      "discount": 25,
+      "instructor": "Jessica Garcia",
+      "category": "Programming",
+      "duration": "7 weeks",
+      "image": "https://cdn.windowsreport.com/wp-content/uploads/2017/05/java_jar-on-windows-10.png",
+      "free": false,
+      "paid": true,
+      "prerequisites": "None",
+      "level": "Beginner",
+      "syllabus": "Java Basics, Object-Oriented Programming, Data Structures, Exception Handling",
+      "what_you_will_learn": [
+        "Understand Java syntax and basics",
+        "Apply object-oriented programming principles",
+        "Work with data structures and algorithms",
+        "Handle exceptions and errors"
+      ],
+      "rating": 4.7,
+      "reviews_count": 5,
+      "reviews": [
+        {
+          "userId": "94",
+          "userName": "Samuel Clark",
+          "comment": "Excellent course for learning Java.",
+          "rating": 5
+        },
+        {
+          "userId": "95",
+          "userName": "Isabella Anderson",
+          "comment": "Very clear and structured.",
+          "rating": 4
+        },
+        {
+          "userId": "96",
+          "userName": "Liam Smith",
+          "comment": "Great for beginners.",
+          "rating": 4
+        },
+        {
+          "userId": "97",
+          "userName": "Mia Brown",
+          "comment": "Good introduction to Java programming.",
+          "rating": 5
+        },
+        {
+          "userId": "98",
+          "userName": "Ethan Wilson",
+          "comment": "Well-organized and practical.",
+          "rating": 4
+        }
+      ],
+      "includes": {
+        "hours_of_video": 30,
+        "articles": 13,
+        "downloadable_resources": 5,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
+    },
+    {
+      "id": "25",
+      "title": "Web Development with PHP",
+      "description": "Learn how to develop dynamic web applications using PHP.",
+      "price": 175,
+      "discount": 30,
+      "instructor": "John Robinson",
+      "category": "Programming",
+      "duration": "6 weeks",
+      "image": "https://admin.tops-int.com/storage/media/editor_images/23190.jpg",
+      "free": false,
+      "paid": true,
+      "prerequisites": "Basic HTML and CSS knowledge",
+      "level": "Intermediate",
+      "syllabus": "PHP Basics, Forms and Validation, Sessions and Cookies, MySQL Integration",
+      "what_you_will_learn": [
+        "Understand PHP syntax and basics",
+        "Handle forms and validation",
+        "Use sessions and cookies for user management",
+        "Integrate PHP with MySQL databases"
+      ],
+      "rating": 4.6,
+      "reviews_count": 4,
+      "reviews": [
+        {
+          "userId": "99",
+          "userName": "Emma White",
+          "comment": "Great for learning PHP for web development.",
+          "rating": 5
+        },
+        {
+          "userId": "100",
+          "userName": "Noah Johnson",
+          "comment": "Very practical and hands-on course.",
+          "rating": 4
+        },
+        {
+          "userId": "101",
+          "userName": "Sophia Brown",
+          "comment": "Well-explained and useful.",
+          "rating": 4
+        },
+        {
+          "userId": "102",
+          "userName": "Mason Davis",
+          "comment": "Comprehensive course on PHP.",
+          "rating": 5
+        }
+      ],
+      "includes": {
+        "hours_of_video": 25,
+        "articles": 12,
+        "downloadable_resources": 4,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
+    },
+    {
+      "id": "26",
+      "title": "Introduction to Machine Learning",
+      "description": "Learn the basics of machine learning and data analysis.",
+      "price": 220,
+      "discount": 15,
+      "instructor": "Alice Walker",
+      "category": "Data Science",
+      "duration": "8 weeks",
+      "image": "https://www.electronicsmedia.info/wp-content/uploads/2021/06/2-1.png",
+      "free": false,
+      "paid": true,
+      "prerequisites": "Basic programming knowledge",
+      "level": "Beginner",
+      "syllabus": "Machine Learning Concepts, Supervised Learning, Unsupervised Learning, Model Evaluation",
+      "what_you_will_learn": [
+        "Understand machine learning concepts and techniques",
+        "Implement supervised and unsupervised learning algorithms",
+        "Evaluate and tune machine learning models",
+        "Apply machine learning to real-world problems"
+      ],
+      "rating": 4.8,
+      "reviews_count": 6,
+      "reviews": [
+        {
+          "userId": "103",
+          "userName": "Jack Smith",
+          "comment": "Excellent introduction to machine learning.",
+          "rating": 5
+        },
+        {
+          "userId": "104",
+          "userName": "Olivia Brown",
+          "comment": "Very informative and practical.",
+          "rating": 4
+        },
+        {
+          "userId": "105",
+          "userName": "Ethan Wilson",
+          "comment": "Great course for learning machine learning basics.",
+          "rating": 5
+        },
+        {
+          "userId": "106",
+          "userName": "Chloe Johnson",
+          "comment": "Well-structured and comprehensive.",
+          "rating": 4
+        },
+        {
+          "userId": "107",
+          "userName": "Daniel Clark",
+          "comment": "Highly recommended for beginners.",
+          "rating": 5
+        },
+        {
+          "userId": "108",
+          "userName": "Sophia Martinez",
+          "comment": "Good practical exercises and examples.",
+          "rating": 4
+        }
+      ],
+      "includes": {
+        "hours_of_video": 34,
+        "articles": 16,
+        "downloadable_resources": 8,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
+    },
+    {
+      "id": "27",
+      "title": "Frontend Development with Vue.js",
+      "description": "Learn how to build modern web applications using Vue.js.",
+      "price": 170,
+      "discount": 20,
+      "instructor": "Natalie Adams",
+      "category": "Frontend",
+      "duration": "7 weeks",
+      "image": "https://th.bing.com/th/id/R.3ab8c22a6a2ed634f822de6ca3982f38?rik=q4sj6hT7BwMFFw&pid=ImgRaw&r=0",
+      "free": false,
+      "paid": true,
+      "prerequisites": "Basic HTML, CSS, and JavaScript knowledge",
+      "level": "Intermediate",
+      "syllabus": "Vue.js Basics, Components, Vuex, Vue Router",
+      "what_you_will_learn": [
+        "Understand Vue.js basics and components",
+        "Manage state with Vuex",
+        "Implement routing with Vue Router",
+        "Build and deploy Vue.js applications"
+      ],
+      "rating": 4.7,
+      "reviews_count": 5,
+      "reviews": [
+        {
+          "userId": "109",
+          "userName": "Lucas White",
+          "comment": "Great for learning Vue.js development.",
+          "rating": 5
+        },
+        {
+          "userId": "110",
+          "userName": "Emily Smith",
+          "comment": "Very detailed and practical.",
+          "rating": 4
+        },
+        {
+          "userId": "111",
+          "userName": "Mia Johnson",
+          "comment": "Excellent for building Vue.js applications.",
+          "rating": 4
+        },
+        {
+          "userId": "112",
+          "userName": "Jackson Davis",
+          "comment": "Well-structured and informative.",
+          "rating": 5
+        },
+        {
+          "userId": "113",
+          "userName": "Avery Brown",
+          "comment": "Highly recommend for Vue.js developers.",
+          "rating": 4
+        }
+      ],
+      "includes": {
+        "hours_of_video": 27,
+        "articles": 13,
+        "downloadable_resources": 6,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
     },
     {
       "id": "28",
-      "title": "Introduction to Quantum Computing",
-      "description": "Learn the basics of quantum computing and its potential applications.",
-      "price": 200,
-      "discount": 30,
-      "instructor": "Emily Davis",
-      "category": "Quantum Computing",
-      "duration": "8 weeks",
-      "image": "https://example.com/images/quantum-computing.jpg",
+      "title": "Digital Marketing Fundamentals",
+      "description": "Learn the essentials of digital marketing and online advertising.",
+      "price": 190,
+      "discount": 15,
+      "instructor": "Sarah Lewis",
+      "category": "Marketing",
+      "duration": "6 weeks",
+      "image": "https://th.bing.com/th/id/OIP.xMlvIA1S6H3JCDDfHJrN6QHaE3?rs=1&pid=ImgDetMain",
       "free": false,
-      "paid": false,
-      "prerequisites": "Basic understanding of quantum physics and computing concepts",
-      "level": "Advanced",
-      "syllabus": "Quantum Computing Basics, Quantum Algorithms, Quantum Cryptography, Quantum Programming, Future of Quantum Computing",
-      "rating": 4.8,
+      "paid": true,
+      "prerequisites": "None",
+      "level": "Beginner",
+      "syllabus": "Digital Marketing Basics, SEO, SEM, Social Media Marketing",
+      "what_you_will_learn": [
+        "Understand digital marketing fundamentals",
+        "Implement SEO and SEM strategies",
+        "Leverage social media for marketing",
+        "Develop effective online advertising campaigns"
+      ],
+      "rating": 4.6,
+      "reviews_count": 5,
       "reviews": [
         {
-          "userId": "1",
-          "comment": "Advanced and insightful course on quantum computing.",
+          "userId": "114",
+          "userName": "Zoe Smith",
+          "comment": "Great overview of digital marketing.",
+          "rating": 4
+        },
+        {
+          "userId": "115",
+          "userName": "Henry Johnson",
+          "comment": "Informative and practical.",
           "rating": 5
+        },
+        {
+          "userId": "116",
+          "userName": "Lily Davis",
+          "comment": "Excellent course for digital marketing basics.",
+          "rating": 4
+        },
+        {
+          "userId": "117",
+          "userName": "William Brown",
+          "comment": "Very useful for understanding online advertising.",
+          "rating": 5
+        },
+        {
+          "userId": "118",
+          "userName": "Emma White",
+          "comment": "Well-structured and comprehensive.",
+          "rating": 4
         }
+      ],
+      "includes": {
+        "hours_of_video": 22,
+        "articles": 10,
+        "downloadable_resources": 5,
+        "access": [
+          "mobile",
+          "TV"
+        ],
+        "certificate_of_completion": true
+      }
+
       ]
     },
     {

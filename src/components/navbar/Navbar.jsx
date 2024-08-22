@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import './navebar.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { changeLang } from '../../redux/reducers/languageSlice'
@@ -8,8 +8,11 @@ import { changeMode } from '../../redux/reducers/modeSlice'
 import SignInDialog from '../signInDialog/signInDialog'
 import SignUpDialog from '../signUpDialog/SignUpDialog'
 import { logOutUser } from '../../redux/reducers/userAuthSlice'
+import UploadDialog from '../uploadImgDialog/UploadDialog'
 
 export default function Navbar() {
+  const location = useLocation()
+  const { pathname } = location
  const {user}=useSelector(state=>state.auth)
  const {language}=useSelector(state=>state.lang)
  const {translation}=useSelector(state=>state.lang)
@@ -29,7 +32,11 @@ dispatch(changeLang(e.target.value.toLowerCase()))
   
  }
 
+
+ 
   return (
+    <div className={pathname.startsWith('/admin/') || pathname.startsWith('/admin') ? 'hidden' : ''}>
+
     <div className='dark:bg-slate-800 dark:text-white bg-base-100 shadow'>
     <div className="max-w-screen-xl m-auto navbar   ">
     <div className="flex-none">
@@ -136,7 +143,10 @@ user?
            <span className="badge">{translation?.new}</span>
          </p>
        </span>
-       <li><Link to="">{translation?.setting}</Link></li>
+       <li ><Link to="/setting">{translation?.setting}</Link></li>
+       {/* <li  onClick={()=>document.getElementById(`upload`).showModal()}>{translation?.setting}</li> */}
+       {/* <button className="btn btnMain mx-1" onClick={()=>document.getElementById(`signUp`).showModal()}>{translation.signUp}</button> */}
+       <UploadDialog></UploadDialog>
        <li><Link to="/" onClick={logOut} >{translation?.logout}</Link></li>
      </ul>
    </div>
@@ -186,6 +196,7 @@ user?
     </div>
   </div>
   </div>
+    </div>
     </div>
   )
 }

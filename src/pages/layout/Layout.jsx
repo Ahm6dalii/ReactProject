@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom'
 import Navbar from '../../components/navbar/Navbar'
 import { useSelector } from 'react-redux'
 import Footer from '../../components/footer/Footer'
+import { Toaster } from 'react-hot-toast'
 
 export default function () {
   const {language}=useSelector(state=>state.lang)
@@ -14,6 +15,10 @@ export default function () {
     <div dir={language=='ar'?'rtl':'ltr'}  className={`   dark:bg-slate-500 dark:text-white` } >
     <Navbar></Navbar>
     <div className='min-h-screen'>
+    <Toaster 
+  position="top-center"
+  reverseOrder={false}
+    />
     <Outlet></Outlet>  
     </div>
     <Footer></Footer>

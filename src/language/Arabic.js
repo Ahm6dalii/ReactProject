@@ -39,4 +39,13 @@ export const Ar = {
     formLogin: "دخول",
     accCreated:"تم أنشاء الحساب بنجاح",
     accFailed:"فشل أنشاء الحساب",
+    changeImage:"تغير صورة البروفايل",
+    changeImage: "تغيير الصورة",
+    userUpdated: "تم تحديث المستخدم بنجاح",
+    deleteImg: "حذف الصورة",
+    publicProfile: "الملف الشخصي العام",
+    accountSetting: "إعدادات الحساب",
+    myCourse: "دوراتي",
+    setting: "الإعدادات"
+
 }

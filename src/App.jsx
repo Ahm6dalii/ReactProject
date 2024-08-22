@@ -12,6 +12,10 @@ import Admin from './admin/pages/Admin'
 import Register from './pages/register/Register'
 import Login from './pages/login/login'
 import ProtectedRoot from './pages/protectedRoot/ProtectedRoot'
+import CoursesDetails from './pages/coursesDetails/CoursesDetails'
+import Setting from './pages/setting/Setting'
+import ProfileSetting from './pages/setting/profileSetting/ProfileSetting'
+import AccountSetting from './pages/setting/accountSetting/AccountSetting'
 
 function App() {
 
@@ -25,6 +29,11 @@ function App() {
     <Route path='' element={<Layout ></Layout>}>
     <Route path='' element={<Home></Home>}></Route>
     <Route path='/about' element={<ProtectedRoot> <About></About></ProtectedRoot>}></Route>
+    <Route path='/coursesD' element={ <CoursesDetails></CoursesDetails>}></Route>
+    <Route path='/setting' element={<Setting></Setting>}>
+        <Route path='/setting' element={<ProfileSetting></ProfileSetting>}></Route>
+        <Route path='/setting/account' element={<AccountSetting></AccountSetting>}></Route>
+    </Route>
       <Route path='/admin/*' element={<Admin />}></Route>
 
     <Route path='/register' element={<Register></Register>}></Route>
