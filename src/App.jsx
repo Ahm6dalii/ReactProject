@@ -12,10 +12,10 @@ import CoursesDetails from './pages/coursesDetails/CoursesDetails'
 import Setting from './pages/setting/Setting'
 import ProfileSetting from './pages/setting/profileSetting/ProfileSetting'
 import AccountSetting from './pages/setting/accountSetting/AccountSetting'
-import Login from './pages/login/Login'
 import CoursesCart from "./pages/cart/CoursesCart";
 import CoursesList from "./pages/coursesList/CoursesList";
 import Wishlist from "./pages/wishlist/Wishlist";
+import Login from './pages/login/login'
 
 function App() {
 
