@@ -2,11 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    body {
-      @apply font-satoshi font-normal text-base text-body bg-whiten relative z-1;
-    }
-  }
+
 .btnMain{
     @apply bg-[#967dff] text-white hover:border hover:bg-[#d9d2f8] hover:text-[#7c5cff] hover:border-[#967dff]
 }

@@ -4,10 +4,13 @@ import Breadcrumb from "../../../components/Breadcrumbs/Breadcrumb"
 import ModalCreateAccount from './../components/ModalCreateAccount';
 import AccountCards from "../components/AccountCards";
 import AccountTable from "../components/AccountTable";
+import useFetchUser from "../../../hooks/useFetchUser";
+import Pagination from "../../../components/Pagination/pagination";
 
 const AdminsList = () => {
     const [display, setDisplay] = useState(false)
     const [searchValue, setSearchValue] = useState('')
+    const { admins, adminsError, adminsLoading, setCurrentPage, currentPage } = useFetchUser()
     const handleDisplay = () => {
         setDisplay(!display)
     }
@@ -19,13 +22,13 @@ const AdminsList = () => {
         <>
             <Breadcrumb pageName="adminList" />
             <div>adminsList</div>
-            <div className="flex  align-middle">
+            <div className="flex  align-middle justify-center mb-3">
                 {/* <SelectGroupOne />
                 <SelectGroupOne />
                 <SelectGroupOne />
                 <SelectGroupOne /> */}
+                <ModalCreateAccount style={" text-xl  text-white bg-indigo-900 py-2 px-4 rounded-xl shadow-lg"} />
             </div>
-            <ModalCreateAccount />
             <div className=" flex justify-between align-middle">
                 <div className="relative w-full max-w-xl mx-auto bg-white dark:border-strokedark dark:bg-boxdark rounded-full z-40 ">
                     <input onChange={handleSearch} value={searchValue} placeholder="Search ..." className="rounded-full w-full h-16 bg-transparent py-2 pl-8 pr-32 outline-none border-2 border-gray-100 shadow-md hover:outline-none focus:ring-teal-200 focus:border-teal-200" type="text" name="query" id="query" />
@@ -41,8 +44,10 @@ const AdminsList = () => {
                 </div>
             </div>
             {!display
-                ? <AccountCards searchValue={searchValue} />
-                : <AccountTable searchValue={searchValue} display={display} />
+                ? <AccountCards searchValue={searchValue} type={admins} error={adminsError} loading={adminsLoading} />
+                : <AccountTable searchValue={searchValue} display={display} type={admins} error={adminsError} loading={adminsLoading} />
+            }
+            {!searchValue && <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} courses={admins} />
             }
         </>
     )

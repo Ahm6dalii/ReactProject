@@ -2,7 +2,7 @@
   "users": [
     {
       "id": "1",
-      "name": "John Doe",
+      "name": "John  do",
       "email": "john@example.com",
       "role": "user",
       "phone": "01002452521",
@@ -18,7 +18,6 @@
       "password": "password2",
       "image": "https://example.com/images/users/momen.jpg",
       "phone": "01054819521"
-
     },
     {
       "id": "3",
@@ -30,7 +29,6 @@
       "image": "https://images.pexels.com/photos/5397723/pexels-photo-5397723.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
-
       "id": "4",
       "name": "Bob Johnson",
       "email": "bob@example.com",
@@ -56,7 +54,6 @@
       "password": "Ahmedmemol"
     },
     {
-
       "id": "6",
       "name": "Diana Prince",
       "email": "diana@example.com",
@@ -124,15 +121,6 @@
       "name": "Nader",
       "phone": "01097842331",
       "email": "ali551@gmail.com",
-      "role": "user",
-      "password": "123456",
-      "image": ""
-    },
-    {
-      "id": "74a8",
-      "name": "Nader",
-      "phone": "01097842331",
-      "email": "ali51@gmail.com",
       "role": "user",
       "password": "123456",
       "image": ""
@@ -264,15 +252,6 @@
       "image": ""
     },
     {
-      "id": "f1be",
-      "name": "Ahmed Ali",
-      "phone": "01018184111",
-      "email": "ali333@gmail.com",
-      "role": "user",
-      "password": "123456",
-      "image": ""
-    },
-    {
       "id": "3708",
       "name": "Ahmed Ali",
       "phone": "01018184111",
@@ -298,9 +277,17 @@
       "role": "user",
       "password": "123456",
       "image": ""
+    },
+    {
+      "id": "1ee3",
+      "role": "PAID",
+      "name": "Michelle",
+      "phone": "01122546414",
+      "email": "punkmohamed22@gmail.com",
+      "password": "123123"
     }
   ],
-  "courses":  [
+  "courses": [
     {
       "id": "1",
       "title": "Introduction to JavaScript",
@@ -2063,6 +2050,19 @@
         ],
         "certificate_of_completion": true
       }
+    },
+    {
+      "id": "0446",
+      "instructor": "dqwd",
+      "title": "dqwd",
+      "category": "dqwd",
+      "duration": "dqw",
+      "typeOfCourse": "FREE",
+      "syllabus": "qwdw",
+      "image": {},
+      "level": "Intermediate",
+      "prerequisites": "qdqwdqwd",
+      "description": "qwdqwd"
     }
   ],
   "carts": [

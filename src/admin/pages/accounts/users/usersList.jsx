@@ -1,11 +1,16 @@
+/* eslint-disable react/no-unknown-property */
 import { useState } from "react"
 import Breadcrumb from "../../../components/Breadcrumbs/Breadcrumb"
-import SelectGroupOne from "../../../components/Forms/SelectGroup/SelectGroupOne"
 import AccountCards from "../components/AccountCards"
 import AccountTable from "../components/AccountTable"
 import ModalCreateAccount from "../components/ModalCreateAccount"
+import useFetchUser from "../../../hooks/useFetchUser"
+import Pagination from "../../../components/Pagination/pagination"
 
 const UsersList = () => {
+    const { users, usersLoading, usersError, setCurrentPage, currentPage } = useFetchUser()
+
+
     const [display, setDisplay] = useState(false)
     const [searchValue, setSearchValue] = useState('')
     const handleDisplay = () => {
@@ -18,14 +23,13 @@ const UsersList = () => {
     return (
         <>
             <Breadcrumb pageName="userList" />
-            <div>userList</div>
-            <div className="flex  align-middle">
+            <div className="flex  align-middle justify-center mb-3">
                 {/* <SelectGroupOne />
                 <SelectGroupOne />
                 <SelectGroupOne />
                 <SelectGroupOne /> */}
+                <ModalCreateAccount style={" text-xl  text-white bg-indigo-900 py-2 px-4 rounded-xl shadow-lg"} />
             </div>
-            <ModalCreateAccount />
             <div className=" flex justify-between align-middle">
                 <div className="relative w-full max-w-xl mx-auto bg-white dark:border-strokedark dark:bg-boxdark rounded-full z-40 ">
                     <input onChange={handleSearch} value={searchValue} placeholder="Search ..." className="rounded-full w-full h-16 bg-transparent py-2 pl-8 pr-32 outline-none border-2 border-gray-100 shadow-md hover:outline-none focus:ring-teal-200 focus:border-teal-200" type="text" name="query" id="query" />
@@ -41,8 +45,10 @@ const UsersList = () => {
                 </div>
             </div>
             {!display
-                ? <AccountCards searchValue={searchValue} />
-                : <AccountTable searchValue={searchValue} display={display} />
+                ? <AccountCards searchValue={searchValue} type={users} error={usersError} loading={usersLoading} />
+                : <AccountTable searchValue={searchValue} display={display} type={users} error={usersError} loading={usersLoading} />
+            }
+            {!searchValue && <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} courses={users} />
             }
         </>
     )
