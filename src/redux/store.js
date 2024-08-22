@@ -5,6 +5,7 @@ import { counterReducer } from "./reducers/counterSlice";
 import { languageReducer } from "./reducers/languageSlice";
 import { modeReducer } from "./reducers/modeSlice";
 
+
 let store=configureStore({
     reducer:{
         counter:counterReducer,
@@ -12,6 +13,7 @@ let store=configureStore({
         auth:userAuthReducer,
         lang:languageReducer,
         mode:modeReducer
+
     }
 })
 

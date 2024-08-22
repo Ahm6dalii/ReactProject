@@ -1,15 +1,12 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
 
 
 export default function Home() {
- const api=useSelector(state=>state.apiLink.link)
- console.log(api);
- 
-  
-  
+
+
+
   return (
     <>
+
     <div className=" min-h-screen flex items-center  max-w-screen-xl mx-auto py-5">
   <div className=" grid grid-cols-6">
     <div className='col-span-4 flex items-center p-4'>

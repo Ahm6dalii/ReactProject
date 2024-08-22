@@ -11,12 +11,14 @@
     },
     {
       "id": "2",
-      "name": "Monmen",
+      "name": "not worek",
       "email": "momen@example.com",
-      "role": "user",
-      "phone": "01003563631",
+      "role": "PAID",
+      "token": "user_token_7",
       "password": "password2",
-      "image": "https://images.pexels.com/photos/8159657/pexels-photo-8159657.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      "image": "https://example.com/images/users/momen.jpg",
+      "phone": "01054819521"
+
     },
     {
       "id": "3",
@@ -28,6 +30,7 @@
       "image": "https://images.pexels.com/photos/5397723/pexels-photo-5397723.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
+
       "id": "4",
       "name": "Bob Johnson",
       "email": "bob@example.com",
@@ -46,6 +49,14 @@
       "image": "https://images.pexels.com/photos/5704849/pexels-photo-5704849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
+      "id": "226e",
+      "name": "Michelle G",
+      "phone": "01122546414",
+      "email": "punkmohamed@gmail.com",
+      "password": "Ahmedmemol"
+    },
+    {
+
       "id": "6",
       "name": "Diana Prince",
       "email": "diana@example.com",
@@ -807,6 +818,7 @@
       }
     },
     {
+
       "id": "10",
       "title": "Introduction to Cloud Computing",
       "description": "An overview of cloud computing concepts and services.",
@@ -915,6 +927,7 @@
       }
     },
     {
+
       "id": "12",
       "title": "Introduction to Docker",
       "description": "Learn how to use Docker for containerization and deploying applications.",
@@ -991,6 +1004,19 @@
       ],
       "rating": 4.7,
       "reviews_count": 3,
+      "discount": 15,
+      "instructor": "Mia Parker",
+      "category": "Web Development",
+      "duration": "4 weeks",
+      "image": {
+        "0": {}
+      },
+      "free": true,
+      "paid": false,
+      "prerequisites": "None",
+      "level": "Intermediate",
+      "syllabus": "HTML Basics, CSS Styling, JavaScript Basics, Responsive Design, Web Hosting",
+      "rating": 4.5,
       "reviews": [
         {
           "userId": "1",
@@ -1021,6 +1047,7 @@
         ],
         "certificate_of_completion": true
       }
+      "typeOfCourse": "PAID"
     },
     {
       "id": "14",
@@ -2052,6 +2079,94 @@
         ],
         "certificate_of_completion": true
       }
+
+      ]
+    },
+    {
+      "id": "c4d6",
+      "title": "react js",
+      "description": "learn all about react ",
+      "typeOfCourse": "free",
+      "instructor": "ahmed ali",
+      "category": "front end",
+      "duration": "5h",
+      "prerequisites": "java script ",
+      "level": "beginner",
+      "syllabus": "ay7aga",
+      "image": {
+        "0": {}
+      }
+    },
+    {
+      "id": "e9d6",
+      "title": "update teste",
+      "description": "update teste",
+      "typeOfCourse": "free",
+      "instructor": "update teste",
+      "category": "update teste",
+      "duration": "update teste",
+      "prerequisites": "update teste",
+      "level": "intermediate",
+      "syllabus": "update teste",
+      "image": {}
+    },
+    {
+      "id": "db76",
+      "discount": 0,
+      "price": 200,
+      "image": {},
+      "typeOfCourse": "PAID",
+      "syllabus": "dwddd",
+      "level": "Intermediate",
+      "prerequisites": "dqwd",
+      "duration": "iugiu",
+      "category": "guuig",
+      "instructor": "duqwdgu",
+      "description": "dwdwd",
+      "title": "guigdiu"
+    },
+    {
+      "id": "62e3",
+      "discount": 2,
+      "price": 20,
+      "image": {},
+      "typeOfCourse": "PAID",
+      "syllabus": "dqwd",
+      "level": "Beginner",
+      "prerequisites": "qwdqwd",
+      "duration": "dwd",
+      "category": "wdw",
+      "instructor": "dwdw",
+      "description": "dqwd",
+      "title": "dwqd"
+    },
+    {
+      "id": "4fc1",
+      "instructor": "dwd",
+      "title": "dwd",
+      "category": "dwdw",
+      "duration": "wdwd",
+      "typeOfCourse": "FREE",
+      "syllabus": "qwdwqd",
+      "image": {},
+      "level": "Beginner",
+      "prerequisites": "dqwd",
+      "description": "dqwdqwd"
+    },
+    {
+      "id": "b1dd",
+      "discount": 20,
+      "price": 20,
+      "image": {},
+      "typeOfCourse": "PAID",
+      "syllabus": "dqwd",
+      "level": "Beginner",
+      "prerequisites": "wd",
+      "duration": "dwd",
+      "category": "dwdw",
+      "instructor": "dwqd",
+      "description": "d",
+      "title": "dwd"
     }
   ],
   "carts": [
