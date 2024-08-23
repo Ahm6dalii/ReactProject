@@ -46,6 +46,7 @@ function CoursesList() {
     <>
       <div className="min-h-screen w-screen flex flex-col items-center py-10">
         {show && <div className="mb-6 w-full max-w-md">
+
           <Searchbar
             searchQuery={searchQuery}
             onSearchChange={setSearchQuery}

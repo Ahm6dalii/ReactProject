@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link, NavLink, useLocation } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import './navebar.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { changeLang } from '../../redux/reducers/languageSlice'
@@ -15,7 +15,11 @@ export default function Navbar() {
  const {user}=useSelector(state=>state.auth)
  const {language}=useSelector(state=>state.lang)
  const {translation}=useSelector(state=>state.lang)
- const {mode}=useSelector(state=>state.mode)
+ const {mode}=useSelector(state=>state.mode);
+ const {cart}=useSelector(state=>state);
+ const {wishlist}=useSelector(state=>state);
+ let[total,setTotal]=useState()
+ const navigate=useNavigate()
  console.log(mode);
  
  const dispatch=useDispatch()
@@ -31,12 +35,16 @@ dispatch(changeLang(e.target.value.toLowerCase()))
   
  }
 
-
- 
+ const calcTotals = () => {
+  setTotal(cart?.reduce((total, course) => total + course.price, 0).toFixed(2))
+};
+useEffect(()=>{
+  calcTotals()
+},[cart])
   return (
     <div className={pathname.startsWith('/admin/') || pathname.startsWith('/admin') ? 'hidden' : ''}>
 
-    <div className='dark:bg-slate-800 dark:text-white bg-base-100 shadow'>
+    <div className='dark:bg-slate-800 dark:text-white bg-base-100 shadow fixed end-0 start-0 top-0 z-[9999]'>
     <div className="max-w-screen-xl m-auto navbar   ">
     <div className="flex-none">
       <a className="btn btn-ghost text-xl">daisyUI</a>
@@ -91,6 +99,18 @@ dispatch(changeLang(e.target.value.toLowerCase()))
 {
 user?
  <>
+ {/* Wish */}
+        
+      <button className="dropdown dropdown-end   "  onClick={()=>navigate('/wishlist')}>
+     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+       <div className="indicator ">
+       <i className="fa-solid dark:text-white fa-heart text-sm text-black fa-xl"></i>
+         <span className="badge badge-sm indicator-item top-[-8px]">{wishlist.length }</span>
+       </div>
+     </div>
+   
+     
+   </button>
  {/* Cart */}
      <div className="dropdown dropdown-end   ">
      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
@@ -107,17 +127,18 @@ user?
              strokeWidth="2"
              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
          </svg>
-         <span className="badge badge-sm indicator-item">8</span>
+         <span className="badge badge-sm indicator-item">{cart.length}</span>
        </div>
      </div>
      <div
        tabIndex={0}
-       className="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-52 shadow dark:bg-slate-200">
+       className="card card-compact dropdown-content bg-base-100 z-[200] mt-3 w-52 shadow dark:bg-slate-200">
        <div className="card-body ">
-         <span className="text-lg font-bold dark:text-black">8 Items</span>
-         <span className="text-info">Subtotal: $999</span>
+         <span className="text-lg font-bold dark:text-black">{cart.length}Items</span>
+         <span className="text-info">Subtotal: ${total}</span>
          <div className="card-actions">
-           <button className="btn btn-primary btn-block">View cart</button>
+           <button onClick={()=>navigate('/cart')} className="btn btn-primary btn-block">View cart</button>
+           
          </div>
        </div>
      </div>

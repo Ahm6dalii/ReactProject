@@ -1,6 +1,8 @@
 import CoursesList from "../coursesList/CoursesList";
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import BrandSlider from "../../components/brandSlider/BrandSlider";
+import Testmonial from "../../components/testmonial/Testmonial";
+
 
 
 export default function Home() {
@@ -40,6 +42,18 @@ export default function Home() {
           <Link to='/courses'>   <button>See More</button></Link>
         </div>
       </div>
-    </>
-  )
-}
+    </div>
+
+    <div className='md:col-span-2 text-center'>
+    <img
+      src="https://img.freepik.com/free-vector/stay-home-talk-your-friends-online_23-2148485083.jpg?t=st=1724083427~exp=1724087027~hmac=bb45c5c33588c10872080aec80e5d50646d3c33fc7476fd7926f2ddc94157d9f&w=740"
+      className="w-full rounded-lg mx-bg " />
+    </div>
+  </div>
+</div>
+
+    <BrandSlider></BrandSlider>
+    <CoursesList></CoursesList>
+    <Testmonial></Testmonial>
+</>
+)}

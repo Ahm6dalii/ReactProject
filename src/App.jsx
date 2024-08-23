@@ -16,6 +16,7 @@ import CoursesCart from "./pages/cart/CoursesCart";
 import CoursesList from "./pages/coursesList/CoursesList";
 import Wishlist from "./pages/wishlist/Wishlist";
 import Login from './pages/login/login'
+import Contact from './pages/cotact/Contact'
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
     <Route path='' element={<Home></Home>}></Route>
     <Route path='/about' element={<ProtectedRoot> <About></About></ProtectedRoot>}></Route>
     <Route path='/course/:id' element={ <CoursesDetails></CoursesDetails>}></Route>
+    <Route path='/contact' element={ <Contact></Contact>}></Route>
     <Route path='/setting' element={<Setting></Setting>}>
         <Route path='/setting' element={<ProfileSetting></ProfileSetting>}></Route>
         <Route path='/setting/account' element={<AccountSetting></AccountSetting>}></Route>

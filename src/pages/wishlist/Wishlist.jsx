@@ -11,7 +11,7 @@ function Wishlist() {
   };
   return (
     <>
-      <h2 className="text-3xl font-bold text-center text-black flex justify-center  ">
+      <h2 className="dark:text-white text-3xl font-bold text-center text-black flex justify-center mt-12 pt-10  ">
         Your Wishlist
       </h2>
       {wishlist.length === 0 ? (
@@ -21,7 +21,7 @@ function Wishlist() {
           </h2>
         </div>
       ) : (
-        <div className="flex flex-wrap justify-center gap-4 mt-6  ">
+        <div className="flex flex-wrap justify-center gap-4 mt-1 pt-9 ">
           <button
             className="btn glass bg-purple-600 hover:bg-purple-900 hover:text-white  btn-md"
             onClick={clearAllWishlist}
@@ -31,7 +31,7 @@ function Wishlist() {
         </div>
       )}
 
-      <div className="flex flex-wrap justify-center gap-4 mt-9">
+      <div className="flex flex-wrap justify-center gap-4 mt-5 py-5 mb-5">
         {wishlist.map((course) => (
           <CardOfWishlist
             key={course.id}
