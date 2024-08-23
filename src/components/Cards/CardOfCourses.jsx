@@ -42,7 +42,7 @@ export default function CardOfCourses(props) {
   };
   return (
     <>
-      <div className="relative h-90  flex flex-col justify-between h-full max-w-xs ms-8">
+      <div className="dark:bg-slate-200 dark:text-slate-700 rounded-md relative h-90  flex flex-col justify-between h-full max-w-xs ms-8">
         <div className=" max-w-sm  bg-gray-100 px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500">
           <h3 className="mb-3 text-xl font-bold text-indigo-600">
             {props.level}
@@ -140,7 +140,7 @@ export default function CardOfCourses(props) {
                 Wishlist
                 <i
                   className={`fa-${
-                    !alreadyInWish ? "solid" : "regular"
+                    alreadyInWish ? "solid" : "regular"
                   } fa-heart ms-2`}
                 ></i>
               </span>

@@ -79,7 +79,7 @@ const CoursesDetails = () => {
 
                
                 <p className="pt-2">Created by <span className="text-blue-400 ">{courseData.instructor}</span></p>
-                <button className="focus:outline-none focus:ring-2 hover:bg-black focus:ring-offset-2 focus:ring-gray-800 font-medium text-base leading-4 text-white bg-gray-800 w-full py-5 lg:mt-12 mt-6">Add to Card</button>
+                <button className="focus:outline-none bg-blue-900 dark:hover:bg-blue-900  focus:ring-2 hover:bg-black focus:ring-offset-2 focus:ring-gray-800 font-medium text-base leading-4 text-white bg-gray-800 w-full py-5 lg:mt-12 mt-6">Add to Card</button>
             </div>
 
             {/* <!-- Preview Images Div For larger Screen--> */}

@@ -38,7 +38,7 @@ function CoursesList() {
 
   return (
     <>
-      <div className="min-h-screen w-screen flex flex-col items-center py-10">
+      <div className="min-h-screen w-screen flex flex-col items-center py-10 ">
         <div className="mb-6 w-full max-w-md">
           <Searchbar
             searchQuery={searchQuery}

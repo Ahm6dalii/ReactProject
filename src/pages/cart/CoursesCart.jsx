@@ -56,7 +56,7 @@ useEffect(()=>{
 
   return (
     <>
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 ">
         <div className="flex flex-col md:flex-row justify-center items-start gap-8">
           <div className="dark:bg-black bg-white p-6 rounded-lg shadow-lg w-full md:w-2/3 lg:w-1/2">
             <h1 className="text-2xl font-bold text-gray-800 mb-4">

@@ -1,3 +1,6 @@
+import BrandSlider from "../../components/brandSlider/BrandSlider";
+import Testmonial from "../../components/testmonial/Testmonial";
+import CoursesList from './../coursesList/CoursesList';
 
 
 export default function Home() {
@@ -30,5 +33,28 @@ export default function Home() {
     </div>
   </div>
 </div>
+  {/* <marquee>
+    <div className="flex">
+      <div>
+          <img className="w-50" src="https://img.freepik.com/free-photo/company-co-business-logo-gold-emboss_53876-143192.jpg?t=st=1724426979~exp=1724430579~hmac=961ab7e57cbd9fc7ceceb64b1a41c6b592a9201ac92d6e554b8ce1de812fe1ef&w=740" alt="" />
+      </div>
+      <div>
+          <img className="w-50" src="https://img.freepik.com/free-photo/company-co-business-logo-gold-emboss_53876-143192.jpg?t=st=1724426979~exp=1724430579~hmac=961ab7e57cbd9fc7ceceb64b1a41c6b592a9201ac92d6e554b8ce1de812fe1ef&w=740" alt="" />
+      </div>
+      <div>
+          <img className="w-50" src="https://img.freepik.com/free-photo/company-co-business-logo-gold-emboss_53876-143192.jpg?t=st=1724426979~exp=1724430579~hmac=961ab7e57cbd9fc7ceceb64b1a41c6b592a9201ac92d6e554b8ce1de812fe1ef&w=740" alt="" />
+      </div>
+      <div>
+          <img className="w-50" src="https://img.freepik.com/free-photo/company-co-business-logo-gold-emboss_53876-143192.jpg?t=st=1724426979~exp=1724430579~hmac=961ab7e57cbd9fc7ceceb64b1a41c6b592a9201ac92d6e554b8ce1de812fe1ef&w=740" alt="" />
+      </div>
+      <div>
+          <img className="w-50" src="https://img.freepik.com/free-photo/company-co-business-logo-gold-emboss_53876-143192.jpg?t=st=1724426979~exp=1724430579~hmac=961ab7e57cbd9fc7ceceb64b1a41c6b592a9201ac92d6e554b8ce1de812fe1ef&w=740" alt="" />
+      </div>
+    </div>
+    
+    </marquee> */}
+    <BrandSlider></BrandSlider>
+    <CoursesList></CoursesList>
+    <Testmonial></Testmonial>
 </>
 )}
