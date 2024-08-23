@@ -29,7 +29,7 @@ const CoursesCards = ({ searchValue }) => {
                             <div key={course.id} className="max-w-sm  bg-white dark:border-strokedark dark:bg-boxdark  px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500">
                                 <h3 className="mb-3 text-xl font-bold text-indigo-600">{course.level}</h3>
                                 <div className="relative">
-                                    <img className="w-full rounded-xl" src={courses.image || "https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"} alt="Colors" />
+                                    <img className="w-full rounded-xl h-40 object-cover" src={course.image || "https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"} alt="Colors" />
                                     {course.free ? (
                                         <p className="absolute top-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">Free</p>
                                     ) : (

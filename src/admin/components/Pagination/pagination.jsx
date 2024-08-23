@@ -3,6 +3,7 @@
 
 const Pagination = ({ currentPage, setCurrentPage, courses }) => {
 
+
     if (!courses) {
         console.error('Courses data is not available');
         return <div>Error: Courses data is not available</div>;

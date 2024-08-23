@@ -8,6 +8,7 @@ const useCourses = () => {
     const [perPage, setPerPage] = useState(10)
     console.log("currentPage", currentPage);
 
+
     const api = useSelector(state => state.apiLink.link)
     const { data, error, isLoading } = useQuery(['data', currentPage, perPage], () => axios(`${api}/courses?_page=${currentPage}&_per_page=${perPage}`),
         {

@@ -49,13 +49,13 @@ export default function CardOfCourses(props) {
           </h3>
           <div className="relative">
             <Link to={`/course/${props.id}`}>
-            <img
-              className="w-full rounded-xl h-40 object-cover"
-              src={props.course.image}
-              alt={props.course.title}
-            />
+              <img
+                className="w-full rounded-xl h-40 object-cover"
+                src={props.course.image}
+                alt={props.course.title}
+              />
             </Link>
-           
+
             <p className="absolute top-0 bg-yellow-300 text-gray-800 font-bold py-1 px-3 rounded-br-lg rounded-tl-lg ">
               <del>${props.price}</del>
             </p>
@@ -109,11 +109,10 @@ export default function CardOfCourses(props) {
             {/* Cart Button */}
             {!props.isInCart && (
               <button
-                className={`btn glass mt-3 ${
-                  alreadyInCart
+                className={`btn glass mt-3 ${alreadyInCart
                     ? "bg-purple-700 hover:bg-[#dc2626]"
                     : "bg-purple-700 hover:bg-[#10b981]"
-                } text-white btn-md`}
+                  } text-white btn-md`}
                 onClick={handleCartActions}
                 disabled={isLoading}
               >
@@ -139,6 +138,7 @@ export default function CardOfCourses(props) {
               <span className="text-s mt-1">
                 Wishlist
                 <i
+
                   className={`fa-${
                     alreadyInWish ? "solid" : "regular"
                   } fa-heart ms-2`}
@@ -148,6 +148,7 @@ export default function CardOfCourses(props) {
           </div>
         </div>
       </div>
+
     </>
   );
 }

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { yupResolver } from "@hookform/resolvers/yup"
 import axios from "axios"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useForm } from "react-hook-form"
 import toast, { Toaster } from "react-hot-toast";
 import { useMutation, useQueryClient } from "react-query"
@@ -9,8 +9,7 @@ import { useSelector } from "react-redux"
 import * as yup from 'yup'
 import MessageSuccess from "../../../components/MessageSuccess";
 import ErrorMessage from './../../../components/ErrorMessage';
-import UploadDashImg from "./ImgDialog/UploadDashImg";
-import { getDownloadURL, listAll, ref, uploadBytes } from "firebase/storage";
+import { ref, uploadBytes } from "firebase/storage";
 import { v4 } from "uuid";
 import { imageDb } from './../../../../pages/setting/Config';
 
@@ -18,7 +17,12 @@ const CourseForm = ({ course, courseId }) => {
     const [img, setImg] = useState("");
     const [imgUrl, setImgUrl] = useState([]);
 
-    const [paidorNot, setPaidorNot] = useState("")
+    const [paidorNot, setPaidorNot] = useState(course?.typeOfCourse === "PAID" ? "PAID" : "")
+    useEffect(() => {
+        if (course) {
+            setPaidorNot(course.typeOfCourse === "PAID" ? "PAID" : "");
+        }
+    }, [course]);
     const api = useSelector(state => state.apiLink.link)
     const queryClient = useQueryClient()
     const schema = yup.object().shape({
@@ -31,11 +35,9 @@ const CourseForm = ({ course, courseId }) => {
         level: yup.string().required("Level is required"),
         syllabus: yup.string().required("Syllabus is required"),
         typeOfCourse: yup.string().required("Type of Course is required"),
-        image: yup.mixed()
-            .test('fileType', 'Only image files are allowed', (value) => value && value[0].type.includes('image/'))
-            .test('fileSize', 'File size must be less than 2MB', (value) => value && value[0].size < 2000000),
+        image: yup.mixed(),
         price: yup.number().positive("Positive number only"),
-        discount: yup.number().positive("Positive number only").integer("Integer number only").min(0).max(100)
+        discount: yup.string()
     })
 
     const { mutate: creatingCourse, error: createError, isLoading: isCreating, isSuccess: isCreateSuccess } = useMutation(
@@ -71,7 +73,7 @@ const CourseForm = ({ course, courseId }) => {
     )
 
 
-    const { register, handleSubmit, formState: { errors }, reset } = useForm({
+    const { register, handleSubmit, formState: { errors }, reset, setValue, getValues } = useForm({
         resolver: yupResolver(schema),
         defaultValues: course ? { ...course } : {}
     })
@@ -80,49 +82,54 @@ const CourseForm = ({ course, courseId }) => {
         setPaidorNot(e.target.value)
     }
 
+
     const submitTheForm = (data) => {
-        console.log(data);
-    
+        console.log("Form Data on Submit:", data)
+
         try {
             if (courseId) {
                 updateingCourse(data)
+                console.log("Image field value set:", getValues('image'));
+                setValue('image', imgUrl);
+                setPaidorNot("");
                 console.log('Course updated successfully')
             } else {
                 creatingCourse(data)
+                console.log("Image field value set:", getValues('image'));
+                setValue('image', imgUrl);
+                setPaidorNot("");
                 reset()
+
                 console.log('Course created successfully')
             }
         } catch (error) {
             console.log(error);
         }
     }
-     function handleImgChange(e){
-    console.log(e.target.files[0].name);
 
-    }
 
     const handleClick = () => {
         console.log('dsds');
         if (img !== null) {
-          const imgRef = ref(imageDb, `files/${v4()}`);
-          uploadBytes(imgRef, img).then((value) => {
-            console.log(value.metadata.name);
-            console.log(
-              `https://firebasestorage.googleapis.com/v0/b/e-learing-6119b.appspot.com/o/files%2F${value.metadata.name}?alt=media&token=5f589c95-499f-4830-89d0-927bd7b28774`
-            );
-            const image = `https://firebasestorage.googleapis.com/v0/b/e-learing-6119b.appspot.com/o/files%2F${value.metadata.name}?alt=media&token=5f589c95-499f-4830-89d0-927bd7b28774`;
-            // dispatch(setUser({ ...user, image }));
-            // console.log({ ...user, image });
-            // upadeUser({ ...user, image });
-            setImgUrl(image)
-            
-            setTimeout(() => {
-            //   setLoading(false)
-              document.getElementById("upload").close();
-            }, 500);
-          });
+            const imgRef = ref(imageDb, `files/${v4()}`);
+            uploadBytes(imgRef, img).then((value) => {
+                console.log(value.metadata.name);
+                console.log("ay7age",
+                    `https://firebasestorage.googleapis.com/v0/b/e-learing-6119b.appspot.com/o/files%2F${value.metadata.name}?alt=media&token=5f589c95-499f-4830-89d0-927bd7b28774`
+                );
+                const image = `https://firebasestorage.googleapis.com/v0/b/e-learing-6119b.appspot.com/o/files%2F${value.metadata.name}?alt=media&token=5f589c95-499f-4830-89d0-927bd7b28774`;
+                // dispatch(setUser({ ...user, image }));
+                // console.log({ ...user, image });
+                // upadeUser({ ...user, image });
+                setImgUrl(image)
+                console.log("image firebase url ", image)
+                setTimeout(() => {
+                    //   setLoading(false)
+                    document.getElementById("upload").close();
+                }, 500);
+            });
         }
-      };
+    };
 
     return (
         <>
@@ -174,8 +181,6 @@ const CourseForm = ({ course, courseId }) => {
                             </label>
                             <input
                                 type="text"
-                                onChange={handleImgChange}
-
                                 placeholder="Enter course duration"
                                 {...register("duration")}
                                 className={`w-full rounded border-[1.5px] ${errors.duration ? 'border-red-500' : 'border-stroke'} bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary`}
@@ -241,7 +246,7 @@ const CourseForm = ({ course, courseId }) => {
                                     DISCOUNT
                                 </label>
                                 <input
-                                    type="number"
+                                    type="text"
                                     placeholder="Enter course discount"
                                     {...register("discount")}
                                     className={`w-full rounded border-[1.5px] ${errors.discount ? 'border-red-500' : 'border-stroke'} bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary`}
@@ -264,13 +269,13 @@ const CourseForm = ({ course, courseId }) => {
                     <div className="mb-4.5">
                         <label className="mb-2.5 block text-black dark:text-white">
                             IMAGE
-                        </label>                    
+                        </label>
                         <input
                             type="file"
-                            onChange={(e) => {setImg(e.target.files[0]),handleClick()}}
+                            onChange={(e) => { setImg(e.target.files[0]), handleClick() }}
                             className={`w-full rounded border-[1.5px] ${errors.image ? 'border-red-500' : 'border-stroke'} bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary`}
                         />
-                        
+
                         {errors.image && <p className="text-red-500">{errors.image.message}</p>}
                     </div>
                     <div className="mb-4.5">
