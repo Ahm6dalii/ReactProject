@@ -28,7 +28,7 @@ const CoursesList = () => {
                 <Sortby />
                 <SortbyCategories />
                 <button className="btn mt-8 px-5 dark:bg-boxdark dark:text-white text-white bg-boxdark-2 ">Reset</button> */}
-                <CourseCreateModel style={" text-xl  text-white bg-indigo-900 py-2 px-4 rounded-xl shadow-lg"} />
+                {/* <CourseCreateModel style={" text-xl  text-white bg-indigo-900 py-2 px-4 rounded-xl shadow-lg"} /> */}
             </div>
             <div className=" flex justify-between align-middle">
                 <div className="relative w-full max-w-xl mx-auto bg-white dark:border-strokedark dark:bg-boxdark rounded-full z-40 ">
