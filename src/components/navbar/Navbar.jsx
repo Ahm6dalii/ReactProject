@@ -183,10 +183,11 @@ user?
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow dark:bg-slate-200 dark:text-black">
-        <li><Link to=''>Homepage</Link></li>
-        <li><Link to=''>Portfolio</Link></li>
-        <li><Link to=''>About</Link></li>
-        
+            <li><NavLink to='/'>{translation.home}</NavLink></li>
+        <li><NavLink to='/courses'>{translation.courses}</NavLink></li>
+      <li><NavLink to='/contact'>{translation.contact}</NavLink></li>
+      <li><NavLink to='/about'>{translation.about}</NavLink></li>
+      
        {!user&& <>
         <li className='sm:hidden'><button className="btn btnMain mx-1" onClick={()=>document.getElementById(`signUp`).showModal()}>{translation.signUp}</button></li>
         <li className='sm:hidden'><button className="btn bg-transparent shadow-none border-0 mx-1 dark:text-white dark:hover:text-[#7c5cff] hover:text-[#7c5cff] hover:bg-[#d9d2f8]" onClick={()=>document.getElementById(`signIn`).showModal()}>{translation.signIn}</button></li>

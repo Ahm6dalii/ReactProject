@@ -9,7 +9,15 @@ import { useSelector } from "react-redux"
 import * as yup from 'yup'
 import MessageSuccess from "../../../components/MessageSuccess";
 import ErrorMessage from './../../../components/ErrorMessage';
+import UploadDashImg from "./ImgDialog/UploadDashImg";
+import { getDownloadURL, listAll, ref, uploadBytes } from "firebase/storage";
+import { v4 } from "uuid";
+import { imageDb } from './../../../../pages/setting/Config';
+
 const CourseForm = ({ course, courseId }) => {
+    const [img, setImg] = useState("");
+    const [imgUrl, setImgUrl] = useState([]);
+
     const [paidorNot, setPaidorNot] = useState("")
     const api = useSelector(state => state.apiLink.link)
     const queryClient = useQueryClient()
@@ -65,7 +73,7 @@ const CourseForm = ({ course, courseId }) => {
 
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
         resolver: yupResolver(schema),
-        defaultValues: course ? { ...course, image: null } : {}
+        defaultValues: course ? { ...course } : {}
     })
 
     const handlePaidorFree = (e) => {
@@ -74,7 +82,7 @@ const CourseForm = ({ course, courseId }) => {
 
     const submitTheForm = (data) => {
         console.log(data);
-
+    
         try {
             if (courseId) {
                 updateingCourse(data)
@@ -88,7 +96,33 @@ const CourseForm = ({ course, courseId }) => {
             console.log(error);
         }
     }
+     function handleImgChange(e){
+    console.log(e.target.files[0].name);
 
+    }
+
+    const handleClick = () => {
+        console.log('dsds');
+        if (img !== null) {
+          const imgRef = ref(imageDb, `files/${v4()}`);
+          uploadBytes(imgRef, img).then((value) => {
+            console.log(value.metadata.name);
+            console.log(
+              `https://firebasestorage.googleapis.com/v0/b/e-learing-6119b.appspot.com/o/files%2F${value.metadata.name}?alt=media&token=5f589c95-499f-4830-89d0-927bd7b28774`
+            );
+            const image = `https://firebasestorage.googleapis.com/v0/b/e-learing-6119b.appspot.com/o/files%2F${value.metadata.name}?alt=media&token=5f589c95-499f-4830-89d0-927bd7b28774`;
+            // dispatch(setUser({ ...user, image }));
+            // console.log({ ...user, image });
+            // upadeUser({ ...user, image });
+            setImgUrl(image)
+            
+            setTimeout(() => {
+            //   setLoading(false)
+              document.getElementById("upload").close();
+            }, 500);
+          });
+        }
+      };
 
     return (
         <>
@@ -140,6 +174,8 @@ const CourseForm = ({ course, courseId }) => {
                             </label>
                             <input
                                 type="text"
+                                onChange={handleImgChange}
+
                                 placeholder="Enter course duration"
                                 {...register("duration")}
                                 className={`w-full rounded border-[1.5px] ${errors.duration ? 'border-red-500' : 'border-stroke'} bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary`}
@@ -228,12 +264,13 @@ const CourseForm = ({ course, courseId }) => {
                     <div className="mb-4.5">
                         <label className="mb-2.5 block text-black dark:text-white">
                             IMAGE
-                        </label>
+                        </label>                    
                         <input
                             type="file"
-                            {...register("image")}
+                            onChange={(e) => {setImg(e.target.files[0]),handleClick()}}
                             className={`w-full rounded border-[1.5px] ${errors.image ? 'border-red-500' : 'border-stroke'} bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary`}
                         />
+                        
                         {errors.image && <p className="text-red-500">{errors.image.message}</p>}
                     </div>
                     <div className="mb-4.5">

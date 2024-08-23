@@ -1,12 +1,59 @@
 import { useSelector } from "react-redux";
 import CardOfCart from "../../components/Cards/CardOfCart";
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+import { useEffect, useState } from "react";
+import PaypalCheckoutButton from "../../components/checkOut/PaypalCheckoutButton.jsx";
+import swal from 'sweetalert';
 
 function CoursesCart() {
+  const product = {
+    description: "Learn how to build a website with React JS",
+    price: 29,
+};
+  let [totalCurrency,setTotalCurreny]=useState()
+  const initialOptions = {
+    clientId: "ARa-78yDZCO5ncsck__pMczVCwcyOeoJE3rGrSXsEdhD9rifPqeCgY87NCAUni4a8MWV9Q39yhIALUR7",
+    // Add other options as needed
+    currency: "USD",               // Specify the currency
+
+};
   const cart = useSelector((state) => state.cart);
 
   const calcTotals = () => {
-    return cart.reduce((total, course) => total + course.price, 0).toFixed(2);
+    return  cart.reduce((total, course) => total + course.price, 0).toFixed(2)
   };
+  
+  const createOrder = (data, actions) => {
+    const totalAmount=calcTotals();
+    console.log(totalAmount,'ddd');
+    if (totalAmount === undefined) {
+      console.error("calcTotals() returned undefined");
+      return; // Or handle the error appropriately
+  }
+    return actions.order.create({
+        purchase_units: [{
+            amount: {
+                value: `${totalAmount}`,  // The payment amount in the specified currency
+            },
+        }],
+    }).catch(err => {
+        console.error("Create Order Error:", err);
+    });
+};
+
+// const onApprove = (data, actions) => {
+//   return actions.order.capture().then(details => {
+//       alert("Transaction completed by " + details.payer.name.given_name);
+//       console.log(details);
+//   }).catch(err => {
+//       console.error("OnApprove Error:", err);
+//   });
+// };
+useEffect(()=>{
+  calcTotals()
+
+},[cart])
+
   return (
     <>
       <div className="container mx-auto px-4 py-8">
@@ -37,17 +84,17 @@ function CoursesCart() {
             </div>
           </div>
 
-          <div className="mt-6 mx-7">
+         { cart.length !==0 &&  <div className="mt-6 mx-7">
             <div className="flex items-center justify-between my-4">
               <p className="text-xl font-bold text-gray-800">Total:</p>
               <p className="text-2xl font-bold text-gray-800">
-                ${calcTotals()}
+              {calcTotals()}
               </p>
             </div>
             <div className="my-4">
-              <button className="w-full bg-[#7e22ce] text-white text-lg py-3 rounded-lg hover:bg-[#581c87]">
-                Checkout
-              </button>
+             
+             <PaypalCheckoutButton initialOptions={initialOptions} product={product} />
+
             </div>
             <hr className="border-t border-gray-300 my-" />
             <label
@@ -67,7 +114,7 @@ function CoursesCart() {
                 Apply
               </button>
             </div>
-          </div>
+          </div>}
         </div>
       </div>
     </>

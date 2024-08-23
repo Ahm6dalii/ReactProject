@@ -9,7 +9,7 @@ import { useFormik } from "formik";
 
 export default function Register() {
   const {translation}=useSelector(state=>state.lang)
-const  apiLink=useSelector(state=>state.apiLink.link)
+ const  apiLink=useSelector(state=>state.apiLink.link)
   let navigate = useNavigate();
   let [allUser,setAllUser]=useState([])
   let [userExist,setUserExist]=useState(false)
@@ -207,6 +207,7 @@ toast.success(translation.accCreated)
             className="grow"
           />
         </label>
+        
         {formik.touched.password && formik.errors.password ? (
           <div className="text-red-600">{formik.errors.password}</div>
         ) : null}
