@@ -8,14 +8,20 @@ const useCourses = () => {
     const [perPage, setPerPage] = useState(6)
     console.log("currentPage", currentPage);
 
-
+    const axiosInstance = axios.create({
+       
+        withCredentials: true,  
+    });
+    const fetchCourses = () => {
+   return  axiosInstance.get(`${api}/courses?_page=${currentPage}&_per_page=${perPage}`);
+};
     const api = useSelector(state => state.apiLink.link)
-    const { data, error, isLoading } = useQuery(['data', currentPage, perPage], () => axios(`${api}/courses?_page=${currentPage}&_per_page=${perPage}`),
+    const { data, error, isLoading } = useQuery(['data', currentPage, perPage], fetchCourses,
         {
             keepPreviousData: true,
         })
-    const courses = data?.data
-    console.log(courses);
+    const courses = data
+    console.log(data,'sdasdadss');
 
     const queryClient = useQueryClient()
 

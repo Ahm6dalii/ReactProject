@@ -15,10 +15,13 @@ export default function Register() {
   let [userExist,setUserExist]=useState(false)
   let [loading,setLoading]=useState(false)
 
+  const axiosInstance = axios.create({ 
+    withCredentials: true,  
+})
 
   const getUser=async()=>{
     setUserExist(false)
-    await axios.get(`${apiLink}/users`)
+    await  axiosInstance.get(`${apiLink}/users`)
     .then((res=>{
       console.log(res,'ssdsss');  
       setAllUser(res.data)

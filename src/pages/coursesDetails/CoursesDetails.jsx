@@ -19,9 +19,13 @@ const CoursesDetails = () => {
     const {user}=useSelector(state=>state.auth)
     const [isLoading, setIsLoading] = useState(false);
 
+    const axiosInstance = axios.create({ 
+    
+        withCredentials: true,  
+    })
     const getCourseById = async (userId) => {
         try {
-            const response = await axios.get(`${apiLink}/courses/${userId}`);
+            const response = await axiosInstance.get(`${apiLink}/courses/${userId}`);
             setCourseData(response?.data)
             setCourseAccess(response?.data?.includes)
             console.log('user created', response.data);

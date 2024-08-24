@@ -21,11 +21,14 @@ export default function AccountSetting() {
     upadeUser(value ,resetForm)
 
   }
-  
+  const axiosInstance = axios.create({ 
+    
+    withCredentials: true,  
+})
   const upadeUser = async (userPass,resetForm) => {
 
     try {
-      const response = await axios.patch(`${apiLink}/users/${user.id}`, userPass)
+      const response = await axiosInstance .patch(`${apiLink}/users/${user.id}`, userPass)
       console.log(response);
       toast.success(translation.userUpdated);
       setLoading(false);

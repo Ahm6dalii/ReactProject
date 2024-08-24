@@ -15,6 +15,10 @@ export default function UploadImg() {
 
   const dispatch = useDispatch();
 
+  const axiosInstance = axios.create({ 
+    withCredentials: true,  
+})
+
   const [img, setImg] = useState("");
   const [imgUrl, setImgUrl] = useState([]);
 
@@ -23,7 +27,7 @@ export default function UploadImg() {
     console.log(user);
 
     try {
-      const response = await axios.patch(`${apiLink}/users/${userU.id}`, userU);
+      const response = await axiosInstance.patch(`${apiLink}/users/${userU.id}`, userU);
       console.log(response);
       setLoading(false)
     } catch (error) {

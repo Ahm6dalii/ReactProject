@@ -16,12 +16,15 @@ export default function ProfileSetting() {
   let [loading, setLoading] = useState(false);
   let [allUser, setAllUser] = useState([]);
   const apiLink = useSelector((state) => state.apiLink.link);
-
+  const axiosInstance = axios.create({ 
+    
+    withCredentials: true,  
+})
   const upadeUser = async (userU,resetForm) => {
     console.log(user);
 
     try {
-      const response = await axios.patch(`${apiLink}/users/${userU.id}`, userU);
+      const response = await axiosInstance.patch(`${apiLink}/users/${userU.id}`, userU);
       console.log(response);
       toast.success(translation.userUpdated);
       dispatch(setUser(userU));
@@ -36,7 +39,7 @@ export default function ProfileSetting() {
 
   const getUser = async () => {
     setUserExist(false);
-    await axios
+    await axiosInstance
       .get(`${apiLink}/users`)
       .then((res) => {
         console.log(res, "ssdsss");

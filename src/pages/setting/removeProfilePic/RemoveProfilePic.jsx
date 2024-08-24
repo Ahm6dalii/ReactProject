@@ -12,10 +12,15 @@ export default function RemoveProfilePic() {
 
     const dispatch = useDispatch();
 
+    const axiosInstance = axios.create({ 
+    
+      withCredentials: true,  
+  })
+
     const upadeUser = async () => {
         setLoading(true)
         try {
-          const response = await axios.patch(`${apiLink}/users/${user.id}`, {image:"https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_640.png"});
+          const response = await axiosInstance.patch(`${apiLink}/users/${user.id}`, {image:"https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_640.png"});
           console.log(response);
             toast.success(translation.imgRemoveSuccful)
             dispatch(setUser(response.data));

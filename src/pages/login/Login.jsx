@@ -18,12 +18,23 @@ export default function Login() {
   let [loading,setLoading]=useState(false)
   let dispatch=useDispatch()
 
+  const axiosInstance = axios.create({ 
+    
+    withCredentials: true,  
+})
+
   const getUser=async()=>{
     setUserExist(false)
-    await axios.get(`${apiLink}/users`).then((res=>{
+    await axiosInstance.get(`${apiLink}/users`).then((res=>{
+      console.log(res.data,'dfdfs');
+  
       setAllUser(res.data)
-    }));
+    })).catch(err=>{
+      console.log(errr);
+      
+    })
   }
+
 
   useEffect(()=>{
     getUser()
