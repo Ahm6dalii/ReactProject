@@ -5,10 +5,9 @@ import CardOfCourses from "../../components/Cards/CardOfCourses";
 import Searchbar from "../../components/searchbar/Searchbar";
 import SearchSidebar from "../../components/sidebar/SearchSidebar";
 import Pagination from './../../admin/components/Pagination/pagination';
+import useCourses from "../../admin/hooks/useCourses";
 
 function CoursesList() {
-  const [courses, setCourses] = useState([]);
-  const [coursess, setCoursess] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredCourses, setFilteredCourses] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -16,30 +15,15 @@ function CoursesList() {
   const [selectedLevel, setSelectedLevel] = useState("");
   const [selectedRating, setSelectedRating] = useState();
   const [selectedDuration, setSelectedDuration] = useState("");
-  const [perPage, setPerPage] = useState(6)
   const [selectedPrice, setSelectedPrice] = useState({
     paid: false,
     free: false,
   });
 
 
-  const [currentPage, setCurrentPage] = useState(1)
   const location = useLocation();
   const show = location.pathname === "/courses";
-
-  const getAllCourses = async () => {
-    try {
-      const response = await axios.get(`http://localhost:5000/courses?_page=${currentPage}&_per_page=${perPage}`);
-      setCoursess(response.data)
-      return response.data;
-    } catch (error) {
-      console.error("Error fetching courses:", error);
-    }
-  };
-
-  useEffect(() => {
-    getAllCourses().then((data) => setCourses(data?.data));
-  }, [currentPage, perPage]);
+  const { courses, currentPage, setCurrentPage, setPerPage, perPage } = useCourses()
 
   useEffect(() => {
     setIsLoading(true);
@@ -51,7 +35,7 @@ function CoursesList() {
       setPerPage(6);
     }
     const delayCourses = setTimeout(() => {
-      const results = courses
+      const results = courses?.data
         // ----searchbar filter----
         .filter((course) =>
           course.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -112,7 +96,8 @@ function CoursesList() {
     selectedPrice,
     selectedDuration,
     perPage,
-    currentPage
+    currentPage,
+    setPerPage
   ]);
 
   // Handle sidebar auto-close on resize
@@ -212,12 +197,12 @@ function CoursesList() {
             </div>
           )}
         </div>
-        {show && perPage < 10 ? (
+        {show && perPage < 7 ? (
           <div className="py-8">
             <Pagination
               currentPage={currentPage}
               setCurrentPage={setCurrentPage}
-              courses={coursess}
+              courses={courses}
             />
           </div>
         ) : ''}

@@ -5,7 +5,7 @@ import { useSelector } from "react-redux"
 
 const useCourses = () => {
     const [currentPage, setCurrentPage] = useState(1)
-    const [perPage, setPerPage] = useState(10)
+    const [perPage, setPerPage] = useState(6)
     console.log("currentPage", currentPage);
 
 
@@ -32,7 +32,7 @@ const useCourses = () => {
     const handleDelete = (id) => {
         mutate(id)
     }
-    return { error, isLoading, currentPage, setCurrentPage, courses, handleDelete, setPerPage }
+    return { error, isLoading, currentPage, setCurrentPage, courses, handleDelete, setPerPage, perPage }
 }
 
 export default useCourses
