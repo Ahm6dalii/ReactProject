@@ -47,7 +47,7 @@ useEffect(()=>{
     <div className='dark:bg-slate-800 dark:text-white bg-base-100 shadow fixed end-0 start-0 top-0 z-[9999]'>
     <div className="max-w-screen-xl m-auto navbar   ">
     <div className="flex-none">
-      <a className="btn btn-ghost text-xl">daisyUI</a>
+      <a className="btn btn-ghost text-xl">SkillQuest</a>
     </div>
     
     {/* navbar links large screen */}

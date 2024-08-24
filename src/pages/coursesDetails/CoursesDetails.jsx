@@ -5,6 +5,8 @@ import { useSelector } from "react-redux";
 import axios from "axios";
 
 const CoursesDetails = () => {
+    const {translation}=useSelector(state=>state.lang)
+
     const { id } = useParams()
     // const courseDetails=useGetCourseById(5)
     // console.log(courseDetails);
@@ -29,13 +31,13 @@ const CoursesDetails = () => {
     }, [])
 
     return <>
-
-        {courseData == null ? <p>loading..</p> : <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 ">
+ 
+        {courseData == null ? <p>loading..</p>  : <div className="mt-12 2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 ">
             <div className="flex justify-center items-center lg:flex-row flex-col gap-8">
                 {/* <!-- Description Div --> */}
 
                 <div className="  w-full sm:w-96 md:w-8/12 lg:w-6/12 items-center">
-                    <p className=" focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 font-normal text-base leading-4 text-gray-600 dark:text-white "><Link to="/">Home </Link> / <Link to="/courses">Courses</Link>  / Courses Details</p>
+                    <p className=" focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 font-normal text-base leading-4 text-gray-600 dark:text-white "><Link to="/">{translation.detailsHome} </Link> / <Link to="/courses">{translation.detailsCourses}</Link>  / {translation.detailsCoursesDetial}</p>
                     <h2 className="font-semibold lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800 mt-4 dark:text-gray-300">{courseData?.title}</h2>
 
                     <div className=" flex flex-row justify-between  mt-5">
@@ -145,21 +147,21 @@ const CoursesDetails = () => {
 
             {/* What you'll learn */}
             <div className="border mt-4 p-3 dark:text-white ">
-                <h3 className="font-semibold lg:text-4xl text-3xl lg:leading-9 leading-7 dark:text-gray-300  text-gray-800 mt-4">What you'll learn</h3>
+                <h3 className="font-semibold lg:text-4xl text-3xl lg:leading-9 leading-7 dark:text-gray-300  text-gray-800 mt-4">{translation.whatLearn}</h3>
                 <div className="flex flex-wrap ">
-                    {courseData?.what_you_will_learn.map((learn) => <p className="flex items-center w-full lg:w-1/2 dark:text-white  font-normal text-lg leading-6 text-gray-600 mt-7 "><i className="fa-solid fa-check me-2"></i> {learn}</p>)}
+                    {courseData?.what_you_will_learn?.map((learn) => <p className="flex items-center w-full lg:w-1/2 dark:text-white  font-normal text-lg leading-6 text-gray-600 mt-7 "><i className="fa-solid fa-check me-2"></i> {learn}</p>)}
                 </div>
             </div>
 
             {/* This course includes: */}
             <div className="my-2">
-                <h3 className="font-semibold dark:text-gray-300 lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800 mt-4">This course includes:</h3>
+                <h3 className="font-semibold dark:text-gray-300 lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800 mt-4">{translation.courseInclude}</h3>
                 <div className="flex flex-wrap ">
-                    <p className="flex items-center w-full lg:w-1/2 dark:text-white   font-normal text-lg leading-6 text-gray-600 mt-7 "><i className="fa-solid fa-video  me-2"></i> {courseAccess?.hours_of_video} hours on-demand video</p>
-                    <p className="flex items-center w-full lg:w-1/2 dark:text-white   font-normal text-lg leading-6 text-gray-600 mt-7 "><i className="fa-regular fa-file me-2"></i>{courseAccess?.articles} articles</p>
-                    <p className="flex items-center w-full lg:w-1/2 dark:text-white   font-normal text-lg leading-6 text-gray-600 mt-7 "><i className="fa-solid fa-download me-2"></i>{courseAccess?.downloadable_resources} downloadable resources</p>
-                    <p className="flex items-center w-full lg:w-1/2 dark:text-white   font-normal text-lg leading-6 text-gray-600 mt-7 "><i className="fa-solid fa-mobile-screen me-2"></i>Access On {courseAccess?.access.map((access, index) => (index > 0 ? " and " : "") + access)} </p>
-                    {courseAccess?.certificate_of_completion && <p className="flex items-center w-full dark:text-white  lg:w-1/2  font-normal text-lg leading-6 text-gray-600 mt-7 "><i className="fa-solid fa-trophy me-2"></i>Certificate of completion</p>}
+                    <p className="flex items-center w-full lg:w-1/2 dark:text-white   font-normal text-lg leading-6 text-gray-600 mt-7 "><i className="fa-solid fa-video  me-2"></i> {courseAccess?.hours_of_video} {translation.hourVedio}</p>
+                    <p className="flex items-center w-full lg:w-1/2 dark:text-white   font-normal text-lg leading-6 text-gray-600 mt-7 "><i className="fa-regular fa-file me-2"></i>{courseAccess?.articles} {translation.articles}</p>
+                    <p className="flex items-center w-full lg:w-1/2 dark:text-white   font-normal text-lg leading-6 text-gray-600 mt-7 "><i className="fa-solid fa-download me-2"></i>{courseAccess?.downloadable_resources} {translation.download}</p>
+                    <p className="flex items-center w-full lg:w-1/2 dark:text-white   font-normal text-lg leading-6 text-gray-600 mt-7 "><i className="fa-solid fa-mobile-screen me-2"></i>{translation.access} {courseAccess?.access?.map((access, index) => (index > 0 ? " and " : "") + access)} </p>
+                    {courseAccess?.certificate_of_completion && <p className="flex items-center w-full dark:text-white  lg:w-1/2  font-normal text-lg leading-6 text-gray-600 mt-7 "><i className="fa-solid fa-trophy me-2"></i>{translation.certificate}</p>}
 
                 </div>
             </div>

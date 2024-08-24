@@ -5,67 +5,67 @@ import { useEffect, useState } from "react";
 import PaypalCheckoutButton from "../../components/checkOut/PaypalCheckoutButton.jsx";
 import swal from 'sweetalert';
 
-function CoursesCart() {
-  const product = {
-    description: "Learn how to build a website with React JS",
-    price: 29,
-};
-  let [totalCurrency,setTotalCurreny]=useState()
-  const initialOptions = {
-    clientId: "ARa-78yDZCO5ncsck__pMczVCwcyOeoJE3rGrSXsEdhD9rifPqeCgY87NCAUni4a8MWV9Q39yhIALUR7",
-    // Add other options as needed
-    currency: "USD",               // Specify the currency
 
-};
+function CoursesCart() {
+  let[key,setKey]=useState(0)
+
+  const {translation}=useSelector(state=>state.lang)
+  let [total,setTotal]=useState(0)
+ 
+
   const cart = useSelector((state) => state.cart);
 
   const calcTotals = () => {
-    return  cart.reduce((total, course) => total + course.price, 0).toFixed(2)
+    let totalAmout=cart.reduce((total, course) => total + course.price, 0).toFixed(2)
+    localStorage.setItem("total",totalAmout)
+    // setTotal(totalAmout)
+    return  totalAmout
   };
   
-  const createOrder = (data, actions) => {
-    const totalAmount=calcTotals();
-    console.log(totalAmount,'ddd');
-    if (totalAmount === undefined) {
-      console.error("calcTotals() returned undefined");
-      return; // Or handle the error appropriately
-  }
-    return actions.order.create({
-        purchase_units: [{
-            amount: {
-                value: `${totalAmount}`,  // The payment amount in the specified currency
-            },
-        }],
-    }).catch(err => {
-        console.error("Create Order Error:", err);
-    });
-};
 
-// const onApprove = (data, actions) => {
-//   return actions.order.capture().then(details => {
-//       alert("Transaction completed by " + details.payer.name.given_name);
-//       console.log(details);
-//   }).catch(err => {
-//       console.error("OnApprove Error:", err);
-//   });
-// };
+
 useEffect(()=>{
   calcTotals()
 
 },[cart])
 
+useEffect(()=>{
+  forceRender()
+},[])
+const forceRender = () => setKey(prevKey => prevKey + 1);
+
+// useEffect(()=>{
+//   window.paypal.Buttons({
+//     createOrder:(data, actions) => {
+//       return actions.order.create({
+//         purchase_units: [{
+//           amount: {
+//             value: '0.01' 
+//           }
+//         }]
+//       })
+//   }  ,
+//   onApprove:async (data, actions) => {
+//     return actions.order.capture().then((details)=> {
+//       alert('Transaction completed by ' + details.payer.name.given_name);
+//     });
+//   },
+  
+//   }).render('#paybal-button')
+// },[])
+
   return (
     <>
-      <div className="container mx-auto px-4 py-8 ">
+      <div className="mt-12 container mx-auto px-4 py-8 ">
         <div className="flex flex-col md:flex-row justify-center items-start gap-8">
           <div className="dark:bg-black bg-white p-6 rounded-lg shadow-lg w-full md:w-2/3 lg:w-1/2">
             <h1 className="text-2xl font-bold text-gray-800 mb-4">
-              Your Shopping Cart
+             {translation.cartShop}
             </h1>
 
             <div className="space-y-4">
               {cart.length === 0 ? (
-                <p>Your cart is empty.</p>
+                <p>{translation.cartEmpty}</p>
               ) : (
                 cart.map((course) => (
                   <CardOfCart
@@ -86,14 +86,16 @@ useEffect(()=>{
 
          { cart.length !==0 &&  <div className="mt-6 mx-7">
             <div className="flex items-center justify-between my-4">
-              <p className="text-xl font-bold text-gray-800">Total:</p>
+              <p onClick={forceRender} className="text-xl font-bold text-gray-800">Total:</p>
               <p className="text-2xl font-bold text-gray-800">
               {calcTotals()}
               </p>
             </div>
             <div className="my-4">
-             
-             <PaypalCheckoutButton initialOptions={initialOptions} product={product} />
+            <PayPalScriptProvider  options={{"client-id":"AQihEpAGXgr1ICAgxGk2e8thm9u3JvlDUnuyBDy4Jd-zfhesG7495ErFbtlB7ayqGwCfyP5euZv_4g3r"}}  >
+             <PaypalCheckoutButton total={total}  show={key}  />
+            </PayPalScriptProvider>
+            {/* <div id="paybal-button"></div> */}
 
             </div>
             <hr className="border-t border-gray-300 my-" />
@@ -101,7 +103,7 @@ useEffect(()=>{
               htmlFor="coupon"
               className="block text-sm font-medium text-gray-700 mt-2"
             >
-              Promotions
+              {translation.cartPromote}
             </label>
             <div className="flex mt-1">
               <input
@@ -111,7 +113,7 @@ useEffect(()=>{
                 placeholder="Enter Coupon"
               />
               <button className="bg-[#7e22ce] text-white px-4 py-2 rounded-r-lg hover:bg-[#581c87]">
-                Apply
+                {translation.cartApply}
               </button>
             </div>
           </div>}

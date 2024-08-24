@@ -4,6 +4,7 @@ import { clearWishlist } from "../../redux/reducers/wishlistSlice";
 import CardOfWishlist from "../../components/Cards/CardOfWishlist";
 
 function Wishlist() {
+  const {translation}=useSelector(state=>state.lang)
   const wishlist = useSelector((state) => state.wishlist);
   const dispatch = useDispatch();
   const clearAllWishlist = () => {
@@ -11,13 +12,13 @@ function Wishlist() {
   };
   return (
     <>
-      <h2 className="dark:text-white text-3xl font-bold text-center text-black flex justify-center mt-12 pt-10  ">
-        Your Wishlist
+      <h2 className="mt-12 dark:text-white text-3xl font-bold text-center text-black flex justify-center mt-12 pt-10  ">
+        {translation.wish}
       </h2>
       {wishlist.length === 0 ? (
         <div className="min-h-screen flex flex-col items-center justify-center">
           <h2 className="text-3xl font-bold text-center text-black mb-6 ">
-            Your wishlist is empty.
+            {translation.wishEmpty}
           </h2>
         </div>
       ) : (
@@ -26,7 +27,7 @@ function Wishlist() {
             className="btn glass bg-purple-600 hover:bg-purple-900 hover:text-white  btn-md"
             onClick={clearAllWishlist}
           >
-            Clear Wishlist
+           {translation.wishClear}
           </button>
         </div>
       )}

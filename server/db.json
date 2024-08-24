@@ -289,63 +289,6 @@
   ],
   "courses": [
     {
-      "id": "1",
-      "title": "Introduction to JavaScript",
-      "description": "Learn the basics of JavaScript, the most popular programming language for web development.",
-      "price": 100,
-      "discount": 20,
-      "instructor": "Jane Doe",
-      "category": "Programming",
-      "duration": "4 weeks",
-      "image": {
-        "0": {}
-      },
-      "free": false,
-      "paid": false,
-      "prerequisites": "None",
-      "level": "Beginner",
-      "syllabus": "Basics of JavaScript, Variables, Data Types, Functions, DOM Manipulation",
-      "what_you_will_learn": [
-        "Understand JavaScript syntax and fundamental concepts",
-        "Write JavaScript code for dynamic web content",
-        "Manipulate the DOM using JavaScript",
-        "Implement basic interactivity in web pages"
-      ],
-      "rating": 4.5,
-      "reviews_count": 3,
-      "reviews": [
-        {
-          "userId": "1",
-          "userName": "Alice Smith",
-          "comment": "Great course for beginners!",
-          "rating": 5
-        },
-        {
-          "userId": "2",
-          "userName": "Bob Johnson",
-          "comment": "Clear explanations, but could use more examples.",
-          "rating": 4
-        },
-        {
-          "userId": "3",
-          "userName": "Carol Davis",
-          "comment": "Good introduction, but a bit too basic for me.",
-          "rating": 4
-        }
-      ],
-      "includes": {
-        "hours_of_video": 20,
-        "articles": 15,
-        "downloadable_resources": 5,
-        "access": [
-          "mobile",
-          "TV"
-        ],
-        "certificate_of_completion": true
-      },
-      "typeOfCourse": "FREE"
-    },
-    {
       "id": "2",
       "title": "Advanced CSS Techniques",
       "description": "Deep dive into advanced CSS techniques and responsive design.",
@@ -2072,6 +2015,19 @@
         ],
         "certificate_of_completion": true
       }
+    },
+    {
+      "id": "3e19",
+      "instructor": "moahemd",
+      "title": "software engineer",
+      "category": "web",
+      "duration": "7 weeks",
+      "typeOfCourse": "FREE",
+      "syllabus": "goood",
+      "level": "Beginner",
+      "prerequisites": "no",
+      "description": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/e-learing-6119b.appspot.com/o/files%2F6b702b87-e400-4c1c-8a5f-55aa20b04784?alt=media&token=5f589c95-499f-4830-89d0-927bd7b28774"
     }
   ],
   "carts": [
@@ -2289,5 +2245,51 @@
         "image": "https://example.com/images/users/momen.jpg"
       }
     ]
-  }
+  },
+  "testimonial": [
+    {
+      "id": "1",
+      "name": "Emily Carter",
+      "role": "Project Manager",
+      "company": "Tech Innovators",
+      "testimonial": "The Agile Management course transformed the way I approach projects. The instructors were experienced, and the content was top-notch!",
+      "course": "Agile Management",
+      "image_url": "https://example.com/images/emily_carter.jpg",
+      "rating": 5,
+      "date": "2024-08-20"
+    },
+    {
+      "id": "2",
+      "name": "Michael Brown",
+      "role": "Senior Developer",
+      "company": "CodeCraft Inc.",
+      "testimonial": "This Full-Stack course is a must for any developer looking to upskill. The hands-on approach really solidified my understanding.",
+      "course": "Full-Stack Development",
+      "image_url": "https://example.com/images/michael_brown.jpg",
+      "rating": 4.7,
+      "date": "2024-08-18"
+    },
+    {
+      "id": "3",
+      "name": "Sophia Wilson",
+      "role": "Marketing Strategist",
+      "company": "Bright Ideas Marketing",
+      "testimonial": "I loved the Digital Marketing course! It provided me with actionable strategies that I implemented immediately in my work.",
+      "course": "Digital Marketing",
+      "image_url": "https://example.com/images/sophia_wilson.jpg",
+      "rating": 4.9,
+      "date": "2024-08-16"
+    },
+    {
+      "id": "4",
+      "name": "James Anderson",
+      "role": "Data Scientist",
+      "company": "DataMinds",
+      "testimonial": "The Data Science course was comprehensive and challenging. The real-world examples made the concepts easy to grasp.",
+      "course": "Data Science",
+      "image_url": "https://example.com/images/james_anderson.jpg",
+      "rating": 5,
+      "date": "2024-08-14"
+    }
+  ]
 }
