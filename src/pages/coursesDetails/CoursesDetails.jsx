@@ -1,6 +1,5 @@
-
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "axios";
 
@@ -78,6 +77,7 @@ const CoursesDetails = () => {
                     <p className=" font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 mt-6 ">$ {courseData?.price}</p>
 
 
+
                     <p className="pt-2">Created by <span className="text-blue-400 ">{courseData.instructor}</span></p>
                     <button className="focus:outline-none focus:ring-2 hover:bg-black focus:ring-offset-2 focus:ring-gray-800 font-medium text-base leading-4 text-white bg-gray-800 w-full py-5 lg:mt-12 mt-6">Add to Card</button>
                 </div>
@@ -89,10 +89,12 @@ const CoursesDetails = () => {
                         <img className='mx-bg w-full ' src={courseData?.image} alt={courseData?.title} />
                     </div>
 
+
                 </div>
             </div>
 
             {/* <div className="flex  justify-center items-center w-full">
+
             <div className="w-full sm:w-96 md:w-8/12 lg:w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 lg:gap-28 sm:gap-x-6 sm:gap-y-12 gap-y-12 sm:mt-14 mt-10">
                 <div>
                     <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -143,6 +145,7 @@ const CoursesDetails = () => {
             </div>
         </div> */}
 
+
             {/* What you'll learn */}
             <div className="border mt-4 p-3 dark:text-white ">
                 <h3 className="font-semibold lg:text-4xl text-3xl lg:leading-9 leading-7 dark:text-gray-300  text-gray-800 mt-4">What you'll learn</h3>
@@ -170,5 +173,6 @@ const CoursesDetails = () => {
 
 
 }
+
 
 export default CoursesDetails;
