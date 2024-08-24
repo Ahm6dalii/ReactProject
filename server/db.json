@@ -282,9 +282,9 @@
     {
       "id": "e35e",
       "role": "admin",
-      "name": "mohamed ali",
-      "phone": "01054819521",
-      "email": "punkmo22@gmail.com",
+      "name": "momen momen",
+      "phone": "01122546414",
+      "email": "momen22@gmail.com",
       "password": "123123",
       "image": "https://firebasestorage.googleapis.com/v0/b/e-learing-6119b.appspot.com/o/files%2F22f833e8-a05a-4ac3-8beb-77a607e6f3b8?alt=media&token=5f589c95-499f-4830-89d0-927bd7b28774"
     },
@@ -2084,31 +2084,31 @@
       }
     },
     {
-      "id": "d29d",
-      "instructor": "update test",
-      "title": "update test",
-      "category": "update test",
-      "duration": "update test",
-      "typeOfCourse": "FREE",
-      "syllabus": "update test update test",
+      "id": "b525",
+      "discount": "",
+      "price": 200,
+      "typeOfCourse": "PAID",
+      "syllabus": "faf",
       "level": "Beginner",
-      "prerequisites": "update test update test update test ",
-      "description": "update test update test update test ",
-      "image": "https://firebasestorage.googleapis.com/v0/b/e-learing-6119b.appspot.com/o/files%2F28bcbbaf-7c92-4eca-98f6-7d18663d5e4c?alt=media&token=5f589c95-499f-4830-89d0-927bd7b28774"
+      "prerequisites": "momen",
+      "duration": "momen",
+      "category": "momen",
+      "instructor": "momen",
+      "description": "momen",
+      "title": "momen"
     },
     {
-      "id": "6b93",
-      "discount": "50",
-      "price": 2000,
-      "typeOfCourse": "PAID",
-      "syllabus": "update test update test update test",
+      "id": "413b",
+      "instructor": "dqwid",
+      "title": "hiohoi",
+      "category": "dqwd",
+      "duration": "hiuhio",
+      "typeOfCourse": "FREE",
+      "syllabus": "qwdqwd",
       "level": "Beginner",
-      "prerequisites": "update test",
-      "duration": "update test",
-      "category": "update test",
-      "instructor": "update test update test",
-      "description": "update testupdate test",
-      "title": "update test"
+      "prerequisites": "dqwd",
+      "description": "huihiqhwid",
+      "image": "https://firebasestorage.googleapis.com/v0/b/e-learing-6119b.appspot.com/o/files%2Fcffa140a-1a9f-4ea8-acb7-35637d554002?alt=media&token=5f589c95-499f-4830-89d0-927bd7b28774"
     }
   ],
   "carts": [
