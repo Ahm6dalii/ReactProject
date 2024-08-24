@@ -7,6 +7,7 @@ import { addToCart, removeFromCart } from "../../redux/reducers/cartSlice";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import ShouldLogin from "../shouldLogin/ShouldLogin";
+import toast from "react-hot-toast";
 
 /* eslint-disable react/prop-types */
 export default function CardOfCourses(props) {
@@ -26,8 +27,12 @@ export default function CardOfCourses(props) {
 
   const wishlistActions = () => {
     if (alreadyInWish) {
+      toast.success("Removed Successful")
+
       dispatch(removeFromWishlist(props.course));
     } else {
+      toast.success("Add Successful")
+
       dispatch(addToWishlist(props.course));
     }
   };
@@ -35,9 +40,11 @@ export default function CardOfCourses(props) {
   const handleCartActions = () => {
     if (alreadyInCart) {
       dispatch(removeFromCart(props.course));
+      toast.success("Removed Successful")
     } else {
       setIsLoading(true);
       setTimeout(() => {
+        toast.success("Add Successful")
         dispatch(addToCart(props.course));
         setIsLoading(false);
       }, 1000);

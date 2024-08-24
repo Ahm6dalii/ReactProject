@@ -14,71 +14,7 @@ function Searchbar({ searchQuery, onSearchChange }) {
         >
           Your Search
         </label>
-        <div className="relative">
-          <button
-            type="button"
-            onClick={toggleDropdown}
-            className="inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
-          >
-            Categories
-            <svg
-              className="w-2.5 h-2.5 ml-2"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 10 6"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="m1 1 4 4 4-4"
-              />
-            </svg>
-          </button>
-          <div
-            className={`absolute right-0 mt-2 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 ${
-              isOpen ? "block" : "hidden"
-            }`}
-            style={{ zIndex: 50 }}
-          >
-            <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
-              <li>
-                <button
-                  type="button"
-                  className="w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >
-                  Web Design
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  className="w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >
-                  Programming
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  className="w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >
-                  Machine Learning
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  className="w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >
-                  Marketing
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
+       
         <div className="relative w-full">
           <input
             type="search"

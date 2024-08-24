@@ -6,6 +6,7 @@ import Searchbar from "../../components/searchbar/Searchbar";
 import SearchSidebar from "../../components/sidebar/SearchSidebar";
 import Pagination from './../../admin/components/Pagination/pagination';
 import { useSelector } from "react-redux";
+import { Toaster } from "react-hot-toast";
 
 function CoursesList() {
 
@@ -113,6 +114,10 @@ function CoursesList() {
   ////////////////////////////////////////////////////////////////////////
   return (
     <>
+    <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
       <SearchSidebar
         isSidebarOpen={isSidebarOpen}
         setSidebarOpen={setSidebarOpen}
