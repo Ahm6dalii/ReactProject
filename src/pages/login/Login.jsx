@@ -153,7 +153,7 @@ export default function Login() {
 
           {userExist||passError?<div className="text-red-600 text-center my-1">{translation.formMailOrPassErr}</div>:''}
 
-        <div className="px-2 w-25 pb-2 pt-4">
+        <div className="px-2 pb-2 pt-4">
                         <button 
                          type="submit"
                          disabled={loading}

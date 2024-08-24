@@ -6,7 +6,7 @@ function Searchbar({ searchQuery, onSearchChange }) {
   const [isOpen, setIsOpen] = useState(false);
   const toggleDropdown = () => setIsOpen((prev) => !prev);
   return (
-    <form className="max-w-lg ">
+    <form className="max-w-lg " dir={'ltr'}>
       <div className="flex">
         <label
           htmlFor="search-dropdown"

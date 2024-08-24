@@ -12,6 +12,7 @@ let userAuthSlice=createSlice({
         },
         logOutUser:(state,action)=>{
             localStorage.removeItem('user')
+            
            state.user=null
         },
       
