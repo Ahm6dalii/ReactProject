@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 
 
 export default function Home() {
-  const {translation}=useSelector(state=>state.lang)
+  const { translation } = useSelector(state => state.lang)
 
 
   return (
@@ -18,7 +18,7 @@ export default function Home() {
             <div >
               <h1 className="text-5xl font-bold text-[48px]">{translation.heroTitlel1} <br />{translation.heroTitlel2}</h1>
               <p className="py-6">
-               {translation.heroDesc}
+                {translation.heroDesc}
               </p>
               <div>
                 <button className="btn btnMain mx-1" >{translation.heroJoin}</button>
@@ -33,18 +33,19 @@ export default function Home() {
           </div>
         </div>
       </div>
-    
 
-    <BrandSlider></BrandSlider>
-    <div>
+
+      <BrandSlider></BrandSlider>
+      <div>
         <h1 className="text-center text-5xl font-bold mt-7">{translation.heroTop}</h1>
         <div>
           <CoursesList />
         </div>
         <div className="flex justify-center align-middle">
-          <Link to='/courses'>   <button>{translation.heroSeeMore}</button></Link>
+          <Link to='/courses'>   <button className="glass bg-purple-900 p-3 my-4 mb-20 text-white rounded-lg hover:bg-teal-900 ">{translation.heroSeeMore}</button></Link>
         </div>
-    </div>
-    <Testmonial></Testmonial>
-</>
-)}
+      </div>
+      <Testmonial></Testmonial>
+    </>
+  )
+}

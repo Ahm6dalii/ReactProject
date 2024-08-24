@@ -198,6 +198,7 @@ const CourseForm = ({ course, courseId }) => {
                                 onChange={handlePaidorFree}
                                 className={`relative z-20 w-full appearance-none rounded border ${errors.typeOfCourse ? 'border-red-500' : 'border-stroke'} bg-transparent py-3 px-5 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary text-black dark:text-white`}
                             >
+                                <option value="" disabled>Select Type</option>
                                 <option value="FREE" className="text-body dark:text-bodydark">
                                     FREE
                                 </option>

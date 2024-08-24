@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import axios from "axios";
 
 const CoursesDetails = () => {
-    const {translation}=useSelector(state=>state.lang)
+    const { translation } = useSelector(state => state.lang)
 
     const { id } = useParams()
     // const courseDetails=useGetCourseById(5)
@@ -30,8 +30,8 @@ const CoursesDetails = () => {
     }, [])
 
     return <>
- 
-        {courseData == null ? <p>loading..</p>  : <div className="mt-12 2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 ">
+
+        {courseData == null ? <p>loading..</p> : <div className="mt-12 2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 ">
             <div className="flex justify-center items-center lg:flex-row flex-col gap-8">
                 {/* <!-- Description Div --> */}
 
@@ -76,9 +76,10 @@ const CoursesDetails = () => {
                     </div>
 
                     <p className=" font-normal text-base leading-6 text-gray-600 mt-7 dark:text-white ">{courseData?.description}</p>
-                    <p className=" font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 mt-6 ">$ {courseData?.price}</p>
-
-
+                    {courseData.free || courseData.typeOfCourse === "FREE" ?
+                        <p className=" font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 mt-6 "> FREE</p>
+                        : <p className=" font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 mt-6 ">$ {courseData?.price}</p>
+                    }
 
                     <p className="pt-2">Created by <span className="text-blue-400 ">{courseData.instructor}</span></p>
                     <button className="focus:outline-none focus:ring-2 hover:bg-black focus:ring-offset-2 focus:ring-gray-800 font-medium text-base leading-4 text-white bg-gray-800 w-full py-5 lg:mt-12 mt-6">Add to Card</button>
@@ -168,7 +169,7 @@ const CoursesDetails = () => {
 
                 </div>
             </div>
-        </div>}
+        </div >}
 
 
     </>

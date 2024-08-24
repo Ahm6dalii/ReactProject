@@ -53,8 +53,8 @@ const CoursesTable = ({ searchValue, display }) => {
                             className="grid grid-cols-6 border-t border-stroke py-4.5 px-4 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
                             <div className="col-span-3 flex items-center">
                                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                                    <div className="h-12.5 w-15 rounded-md">
-                                        <img src={course?.image || "https://www.filepicker.io/api/file/S5atf80QTb2tZOScHsiW"} alt="Product" />
+                                    <div className="h-12.5 w-15 rounded-md overflow-hidden">
+                                        <img className="object-cover w-full h-full" src={course?.image || "https://www.filepicker.io/api/file/S5atf80QTb2tZOScHsiW"} alt="Product" />
                                     </div>
                                     <p className="text-sm text-black dark:text-white">
                                         {course?.title}
@@ -62,14 +62,14 @@ const CoursesTable = ({ searchValue, display }) => {
                                 </div>
                             </div>
                             <div className="col-span-1 hidden sm:flex items-center">
-                                <p className="text-sm px-3 text-black dark:text-white">
+                                <p className="text-sm px-3 text-black dark:text-white line-clamp-1">
                                     {course?.category}
                                 </p>
                             </div>
                             <div className="col-span-1 hidden sm:flex items-center">
                                 <p
                                     className='inline-flex rounded-full bg-opacity-10 py-1 px-1 text-sm font-medium'>
-                                    {course.free ? (
+                                    {course.free || course.typeOfCourse === "FREE" ? (
                                         <span
                                             className='inline-flex rounded-full bg-opacity-10 py-1 px-3 text-sm font-medium bg-blue-400 text-blue-800'>Free</span>
                                     ) : (
@@ -80,7 +80,7 @@ const CoursesTable = ({ searchValue, display }) => {
                             </div>
                             <div className="col-span-1 hidden sm:flex items-center">
                                 <p className="text-sm text-black dark:text-white">
-                                    {course.free ? 'No money' : `$${course.price}`}
+                                    {course.free || course.typeOfCourse === "FREE" ? 'No money' : `$${course.price}`}
                                 </p>
                             </div>
 

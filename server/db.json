@@ -47,13 +47,6 @@
       "image": "https://example.com/images/users/charlie.jpg"
     },
     {
-      "id": "226e",
-      "name": "Michelle G",
-      "phone": "01122546414",
-      "email": "punkmohamed@gmail.com",
-      "password": "Ahmedmemol"
-    },
-    {
       "id": "6",
       "name": "Diana Prince",
       "email": "diana@example.com",
@@ -285,11 +278,27 @@
       "phone": "01122546414",
       "email": "punkmohamed22@gmail.com",
       "password": "123123"
+    },
+    {
+      "id": "e35e",
+      "role": "admin",
+      "name": "mohamed ali",
+      "phone": "01054819521",
+      "email": "punkmo22@gmail.com",
+      "password": "123123",
+      "image": "https://firebasestorage.googleapis.com/v0/b/e-learing-6119b.appspot.com/o/files%2F22f833e8-a05a-4ac3-8beb-77a607e6f3b8?alt=media&token=5f589c95-499f-4830-89d0-927bd7b28774"
+    },
+    {
+      "id": "c509",
+      "role": "admin",
+      "name": "Michelle",
+      "phone": "01122546414",
+      "email": "punmed22@gmail.com",
+      "password": "123123"
     }
   ],
   "courses": [
     {
-
       "id": "1",
       "title": "Introduction to JavaScript",
       "description": "Learn the basics of JavaScript, the most popular programming language for web development.",
@@ -338,13 +347,15 @@
         "hours_of_video": 20,
         "articles": 15,
         "downloadable_resources": 5,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       },
       "typeOfCourse": "FREE"
     },
     {
-
       "id": "2",
       "title": "Advanced CSS Techniques",
       "description": "Deep dive into advanced CSS techniques and responsive design.",
@@ -397,7 +408,10 @@
         "hours_of_video": 18,
         "articles": 12,
         "downloadable_resources": 7,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
@@ -448,7 +462,10 @@
         "hours_of_video": 22,
         "articles": 10,
         "downloadable_resources": 6,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
@@ -499,7 +516,10 @@
         "hours_of_video": 24,
         "articles": 8,
         "downloadable_resources": 4,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
@@ -562,7 +582,10 @@
         "hours_of_video": 30,
         "articles": 20,
         "downloadable_resources": 8,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
@@ -613,7 +636,10 @@
         "hours_of_video": 21,
         "articles": 13,
         "downloadable_resources": 6,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
@@ -625,9 +651,7 @@
       "discount": 20,
       "instructor": "Sophia Garcia",
       "category": "Data Science",
-
       "duration": "1 week",
-
       "image": "https://www.fsm.ac.in/blog/wp-content/uploads/2022/07/FUqHEVVUsAAbZB0-1024x580.jpg",
       "free": false,
       "paid": true,
@@ -672,7 +696,10 @@
         "hours_of_video": 19,
         "articles": 11,
         "downloadable_resources": 5,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
@@ -697,7 +724,7 @@
         "Perform data aggregations and manipulations",
         "Apply SQL in real-world scenarios"
       ],
-      "rating": 5.0,
+      "rating": 5,
       "reviews_count": 3,
       "reviews": [
         {
@@ -723,7 +750,10 @@
         "hours_of_video": 15,
         "articles": 9,
         "downloadable_resources": 4,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
@@ -780,7 +810,10 @@
         "hours_of_video": 40,
         "articles": 25,
         "downloadable_resources": 10,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
@@ -793,7 +826,6 @@
       "instructor": "Robert Harris",
       "category": "Cloud Computing",
       "duration": "1 week",
-
       "image": "https://th.bing.com/th/id/OIP.mYf55M8ZyzWrWGJ5ZiN2YQHaE7?rs=1&pid=ImgDetMain",
       "free": false,
       "paid": false,
@@ -838,7 +870,7 @@
       "prerequisites": "Basic programming knowledge",
       "level": "Intermediate",
       "syllabus": "Unity Basics, Game Mechanics, Asset Management, Scripting, Game Publishing",
-      "rating": 5.0,
+      "rating": 5,
       "reviews": [
         {
           "userId": "3",
@@ -851,7 +883,10 @@
         "hours_of_video": 16,
         "articles": 10,
         "downloadable_resources": 3,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
@@ -902,7 +937,10 @@
         "hours_of_video": 20,
         "articles": 14,
         "downloadable_resources": 5,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
@@ -953,13 +991,15 @@
         "hours_of_video": 18,
         "articles": 12,
         "downloadable_resources": 4,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
     {
       "id": "133",
-
       "title": "Introduction to Mobile App Development",
       "description": "Learn the basics of mobile app development for iOS and Android.",
       "price": 140,
@@ -1005,7 +1045,10 @@
         "hours_of_video": 22,
         "articles": 11,
         "downloadable_resources": 6,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
@@ -1056,7 +1099,10 @@
         "hours_of_video": 20,
         "articles": 13,
         "downloadable_resources": 5,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
@@ -1113,7 +1159,10 @@
         "hours_of_video": 25,
         "articles": 15,
         "downloadable_resources": 7,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
@@ -1164,7 +1213,10 @@
         "hours_of_video": 16,
         "articles": 10,
         "downloadable_resources": 4,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
@@ -1233,7 +1285,10 @@
         "hours_of_video": 20,
         "articles": 10,
         "downloadable_resources": 5,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
@@ -1296,7 +1351,10 @@
         "hours_of_video": 32,
         "articles": 15,
         "downloadable_resources": 6,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
@@ -1353,7 +1411,10 @@
         "hours_of_video": 22,
         "articles": 12,
         "downloadable_resources": 4,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
@@ -1378,7 +1439,6 @@
       ],
       "rating": 3.4,
       "reviews_count": 5,
-
       "image": "https://th.bing.com/th/id/R.5f9f75bbcd0124783d9c9e3bcb48c405?rik=wHy9Pk2oD50Tiw&pid=ImgRaw&r=0",
       "reviews": [
         {
@@ -1416,7 +1476,10 @@
         "hours_of_video": 28,
         "articles": 14,
         "downloadable_resources": 7,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
@@ -1431,7 +1494,6 @@
       "duration": "7 weeks",
       "free": false,
       "paid": true,
-
       "image": "https://th.bing.com/th/id/R.bb4b6d39ecba3391801269cff357f1bb?rik=CBZmOH9Ii%2bVMog&pid=ImgRaw&r=0",
       "prerequisites": "None",
       "level": "Beginner",
@@ -1486,7 +1548,10 @@
         "hours_of_video": 24,
         "articles": 11,
         "downloadable_resources": 5,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
@@ -1555,7 +1620,10 @@
         "hours_of_video": 26,
         "articles": 10,
         "downloadable_resources": 5,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
@@ -1612,7 +1680,10 @@
         "hours_of_video": 18,
         "articles": 8,
         "downloadable_resources": 3,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
@@ -1675,7 +1746,10 @@
         "hours_of_video": 16,
         "articles": 7,
         "downloadable_resources": 4,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
@@ -1738,7 +1812,10 @@
         "hours_of_video": 30,
         "articles": 13,
         "downloadable_resources": 5,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
@@ -1795,7 +1872,10 @@
         "hours_of_video": 25,
         "articles": 12,
         "downloadable_resources": 4,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
@@ -1808,8 +1888,6 @@
       "instructor": "Alice Walker",
       "category": "Data Science",
       "duration": "2 weeks",
-
-
       "image": "https://th.bing.com/th/id/OIP.rX3M3fKa_tfS9EEBqz1RkgHaF-?rs=1&pid=ImgDetMain",
       "free": false,
       "paid": true,
@@ -1866,7 +1944,10 @@
         "hours_of_video": 34,
         "articles": 16,
         "downloadable_resources": 8,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
@@ -1892,10 +1973,7 @@
       ],
       "rating": 4.7,
       "reviews_count": 5,
-
       "image": "https://th.bing.com/th/id/OIP.1m9Y-lPmkKdiBakcWxT32wHaEK?rs=1&pid=ImgDetMain",
-
-
       "reviews": [
         {
           "userId": "109",
@@ -1932,7 +2010,10 @@
         "hours_of_video": 27,
         "articles": 13,
         "downloadable_resources": 6,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
@@ -1995,22 +2076,39 @@
         "hours_of_video": 22,
         "articles": 10,
         "downloadable_resources": 5,
-        "access": ["mobile", "TV"],
+        "access": [
+          "mobile",
+          "TV"
+        ],
         "certificate_of_completion": true
       }
     },
     {
-      "id": "3e19",
-      "instructor": "moahemd",
-      "title": "software engineer",
-      "category": "web",
-      "duration": "7 weeks",
+      "id": "d29d",
+      "instructor": "update test",
+      "title": "update test",
+      "category": "update test",
+      "duration": "update test",
       "typeOfCourse": "FREE",
-      "syllabus": "goood",
+      "syllabus": "update test update test",
       "level": "Beginner",
-      "prerequisites": "no",
-      "description": "",
-      "image": "https://firebasestorage.googleapis.com/v0/b/e-learing-6119b.appspot.com/o/files%2F6b702b87-e400-4c1c-8a5f-55aa20b04784?alt=media&token=5f589c95-499f-4830-89d0-927bd7b28774"
+      "prerequisites": "update test update test update test ",
+      "description": "update test update test update test ",
+      "image": "https://firebasestorage.googleapis.com/v0/b/e-learing-6119b.appspot.com/o/files%2F28bcbbaf-7c92-4eca-98f6-7d18663d5e4c?alt=media&token=5f589c95-499f-4830-89d0-927bd7b28774"
+    },
+    {
+      "id": "6b93",
+      "discount": "50",
+      "price": 2000,
+      "typeOfCourse": "PAID",
+      "syllabus": "update test update test update test",
+      "level": "Beginner",
+      "prerequisites": "update test",
+      "duration": "update test",
+      "category": "update test",
+      "instructor": "update test update test",
+      "description": "update testupdate test",
+      "title": "update test"
     }
   ],
   "carts": [

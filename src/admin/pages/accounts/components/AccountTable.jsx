@@ -53,7 +53,7 @@ const AccountTable = ({ searchValue, display, type, error, loading }) => {
                         <div className="col-span-3 flex items-center">
                             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                                 <div className="h-12.5 w-15 rounded-md overflow-hidden">
-                                    <img src={user.image ? user.image : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSixWENwTZdvqJbo7WMo7JJX4yBrk5Mif_bxg&s"} alt="Product" />
+                                    <img className='w-full h-full object-cover' src={user?.image || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSixWENwTZdvqJbo7WMo7JJX4yBrk5Mif_bxg&s"} alt="photo" />
                                 </div>
                                 <p className="text-sm text-black dark:text-white">
                                     {user.name}
@@ -76,7 +76,6 @@ const AccountTable = ({ searchValue, display, type, error, loading }) => {
                                 {user.role}
                             </p>
                         </div>
-
                         <div className="col-span-1 flex items-center gap-3">
                             <ModalCreateAccount userId={user.id} info={user} display={display} />
                             <BinModal id={user.id} text={user.name} handleDelete={handleDelete} />

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import CardOfCourses from "../../components/Cards/CardOfCourses";
 import Searchbar from "../../components/searchbar/Searchbar";
 import SearchSidebar from "../../components/sidebar/SearchSidebar";
@@ -16,10 +16,12 @@ function CoursesList() {
   const [selectedLevel, setSelectedLevel] = useState("");
   const [selectedRating, setSelectedRating] = useState();
   const [selectedDuration, setSelectedDuration] = useState("");
+  const [perPage, setPerPage] = useState(6)
   const [selectedPrice, setSelectedPrice] = useState({
     paid: false,
     free: false,
   });
+
 
   const [currentPage, setCurrentPage] = useState(1)
   const location = useLocation();
@@ -27,7 +29,7 @@ function CoursesList() {
 
   const getAllCourses = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/courses?_page=${currentPage}&_per_page=6`);
+      const response = await axios.get(`http://localhost:5000/courses?_page=${currentPage}&_per_page=${perPage}`);
       setCoursess(response.data)
       return response.data;
     } catch (error) {
@@ -37,10 +39,17 @@ function CoursesList() {
 
   useEffect(() => {
     getAllCourses().then((data) => setCourses(data?.data));
-  }, [currentPage]);
+  }, [currentPage, perPage]);
 
   useEffect(() => {
     setIsLoading(true);
+    const isFiltering = searchQuery || selectedLevel || selectedRating || selectedPrice.paid || selectedPrice.free || selectedDuration;
+
+    if (isFiltering) {
+      setPerPage(200);
+    } else {
+      setPerPage(6);
+    }
     const delayCourses = setTimeout(() => {
       const results = courses
         // ----searchbar filter----
@@ -66,6 +75,12 @@ function CoursesList() {
           if (selectedPrice.free) {
             return course.free;
           }
+          // if (selectedPrice.paid) {
+          //   return course.typeOfCourse === 'PAID';
+          // }
+          // if (selectedPrice.free) {
+          //   return course.typeOfCourse === 'FREE';
+          // }
           return true;
         })
         // -----Duration Filter -----
@@ -96,6 +111,8 @@ function CoursesList() {
     selectedRating,
     selectedPrice,
     selectedDuration,
+    perPage,
+    currentPage
   ]);
 
   // Handle sidebar auto-close on resize
@@ -137,7 +154,7 @@ function CoursesList() {
           </div>
         )}
 
-{show &&  <div className="flex flex-col md:flex-row md:items-start w-full max-w-6xl">
+        {show && <div className="flex flex-col md:flex-row md:items-start w-full max-w-6xl">
           <button
             onClick={() => setSidebarOpen(!isSidebarOpen)}
             className={`fixed top-20 left-5 p-3 text-white bg-black rounded-lg z-50 transition-transform duration-300 ease-in-out ${isSidebarOpen ? "invisible" : ""
@@ -188,14 +205,14 @@ function CoursesList() {
                     isInCart={false}
                     discount={course.discount}
                     id={course.id}
+                    typeOfCourse={course.typeOfCourse}
                   />
                 </div>
               ))}
             </div>
           )}
         </div>
-
-        {show && (
+        {show && perPage < 10 ? (
           <div className="py-8">
             <Pagination
               currentPage={currentPage}
@@ -203,7 +220,7 @@ function CoursesList() {
               courses={coursess}
             />
           </div>
-        )}
+        ) : ''}
       </div>
     </>
   );
