@@ -14,7 +14,7 @@ export default function () {
     <div className={`${mode=='light'?'':'dark'}`}>
     <div dir={language=='ar'?'rtl':'ltr'}  className={`   dark:bg-slate-900 dark:text-white` } >
     <Navbar></Navbar>
-    <div className='min-h-screen'>
+    <div className='min-h-screen  m-auto'>
     <Toaster 
   position="top-center"
   reverseOrder={false}
