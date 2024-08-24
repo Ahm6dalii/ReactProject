@@ -307,9 +307,7 @@
       "instructor": "Jane Doe",
       "category": "Programming",
       "duration": "4 weeks",
-      "image": {
-        "0": {}
-      },
+      "image": "https://th.bing.com/th/id/R.ce60d93c5bcb148893dcf7cdc60912ee?rik=PwsGEk2FvWPE6w&pid=ImgRaw&r=0",
       "free": false,
       "paid": false,
       "prerequisites": "None",
@@ -2109,6 +2107,33 @@
       "prerequisites": "dqwd",
       "description": "huihiqhwid",
       "image": "https://firebasestorage.googleapis.com/v0/b/e-learing-6119b.appspot.com/o/files%2Fcffa140a-1a9f-4ea8-acb7-35637d554002?alt=media&token=5f589c95-499f-4830-89d0-927bd7b28774"
+    },
+    {
+      "id": "3c18",
+      "discount": "20",
+      "price": 8000,
+      "typeOfCourse": "PAID",
+      "syllabus": "html css",
+      "level": "Beginner",
+      "prerequisites": "no",
+      "duration": " 8 week",
+      "category": "web",
+      "instructor": "moahemd",
+      "description": "",
+      "title": "fornt end"
+    },
+    {
+      "id": "4cae",
+      "instructor": "Natalie ",
+      "title": "sadasfasfs",
+      "category": "sdsfdsfds",
+      "duration": "5 week",
+      "typeOfCourse": "FREE",
+      "syllabus": "cdd",
+      "level": "Beginner",
+      "prerequisites": "dcdds",
+      "description": "",
+      "image": "https://firebasestorage.googleapis.com/v0/b/e-learing-6119b.appspot.com/o/files%2F56755692-85fb-4fb8-b9a2-3fb0cba4d4f2?alt=media&token=5f589c95-499f-4830-89d0-927bd7b28774"
     }
   ],
   "carts": [

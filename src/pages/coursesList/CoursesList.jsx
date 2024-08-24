@@ -37,7 +37,7 @@ function CoursesList() {
     if (isFiltering) {
       setPerPage(200);
     } else {
-      setPerPage(6);
+      setPerPage(8);
     }
     const delayCourses = setTimeout(() => {
       const results = courses?.data
@@ -172,14 +172,14 @@ function CoursesList() {
           </button>
         </div>}
 
-        <div className="flex-1 px-4 md:px-0 transition-transform duration-300 ease-in-out">
+        <div className="flex-1 px-4 md:px-0 transition-transform duration-300 ease-in-out w-full">
           {isLoading ? (
             <div className="flex items-center justify-center w-full h-48">
               <span className="loading loading-dots loading-lg"></span>
             </div>
           ) : (
             <div 
-              className={` grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3  lg:grid-cols-4  gap-2 px-4  ${filteredCourses.length > 0}
+              className={` grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3  lg:grid-cols-4  gap-2 px-4  ${filteredCourses?.length > 0}
                 ? "opacity-100 transition-opacity duration-500 ease-in"
                 : "opacity-0"
                 }`}
@@ -207,7 +207,7 @@ function CoursesList() {
             </div>
           )}
         </div>
-        {show && perPage < 7 ? (
+        {show && perPage < 9 ? (
           <div className="py-8">
             <Pagination
               currentPage={currentPage}
