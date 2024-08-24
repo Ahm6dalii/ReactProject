@@ -36,7 +36,7 @@ export default function Home() {
     
 
     <BrandSlider></BrandSlider>
-    <div>
+    <div className="overflow-hidden">
         <h1 className="text-center text-5xl font-bold mt-7">{translation.heroTop}</h1>
         <div>
           <CoursesList />

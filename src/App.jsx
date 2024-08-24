@@ -30,17 +30,17 @@ function App() {
    <Routes>
     <Route path='' element={<Layout ></Layout>}>
     <Route path='' element={<Home></Home>}></Route>
-    <Route path='/about' element={<ProtectedRoot> <About></About></ProtectedRoot>}></Route>
+    <Route path='/about' element={ <About></About>}></Route>
     <Route path='/course/:id' element={ <CoursesDetails></CoursesDetails>}></Route>
     <Route path='/contact' element={ <Contact></Contact>}></Route>
-    <Route path='/setting' element={<Setting></Setting>}>
-        <Route path='/setting' element={<ProfileSetting></ProfileSetting>}></Route>
-        <Route path='/setting/account' element={<AccountSetting></AccountSetting>}></Route>
+    <Route path='/setting' element={<ProtectedRoot><Setting></Setting></ProtectedRoot>}>
+        <Route path='/setting' element={ <ProtectedRoot> <ProfileSetting></ProfileSetting></ProtectedRoot>}></Route>
+        <Route path='/setting/account' element={<ProtectedRoot><AccountSetting></AccountSetting></ProtectedRoot> }></Route>
     </Route>
-              <Route path="/cart" element={<CoursesCart />}></Route>
+              <Route path="/cart" element={<ProtectedRoot><CoursesCart /></ProtectedRoot>}></Route>
               <Route path="/courses" element={<CoursesList />}></Route>
-              <Route path="/wishlist" element={<Wishlist />}></Route>
-      <Route path='/admin/*' element={<Admin />}></Route>
+              <Route path="/wishlist" element={<ProtectedRoot><Wishlist /></ProtectedRoot> }></Route>
+      <Route path='/admin/*' element={<ProtectedRoot><Admin /></ProtectedRoot> }></Route>
 
     <Route path='/register' element={<Register></Register>}></Route>
     <Route path='/login' element={<Login></Login>}></Route>

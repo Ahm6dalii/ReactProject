@@ -32,7 +32,7 @@ function SearchSidebar(props) {
     setSelectedDuration(e.target.value);
   };
   return (
-    <div>
+    <div dir={'ltr'} >
       <div
         className={`fixed z-[10000] inset-y-0 z-10 flex w-80 transform transition-transform duration-300 ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"

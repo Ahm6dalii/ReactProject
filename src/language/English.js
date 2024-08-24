@@ -129,5 +129,7 @@ cartApply:"Apply",
 wish:"Your Wishlist",
 wishEmpty:"Your wishlist is empty.",
 wishClear:" Clear Wishlist",
+loginFirst:"You should Login first",
+addToCart:"Add to Card"
 
 }   

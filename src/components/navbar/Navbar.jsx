@@ -8,6 +8,8 @@ import SignInDialog from '../signInDialog/signInDialog'
 import SignUpDialog from '../signUpDialog/SignUpDialog'
 import { logOutUser } from '../../redux/reducers/userAuthSlice'
 import UploadDialog from '../uploadImgDialog/UploadDialog'
+import { clearWishlist } from '../../redux/reducers/wishlistSlice'
+import { clearCart } from '../../redux/reducers/cartSlice'
 
 export default function Navbar() {
   const location = useLocation()
@@ -32,6 +34,8 @@ dispatch(changeLang(e.target.value.toLowerCase()))
 
  const logOut=()=>{
   dispatch( logOutUser())
+  dispatch(clearWishlist())
+  dispatch(clearCart())
   
  }
 
@@ -47,7 +51,7 @@ useEffect(()=>{
     <div className='dark:bg-slate-800 dark:text-white bg-base-100 shadow fixed end-0 start-0 top-0 z-[9999]'>
     <div className="max-w-screen-xl m-auto navbar   ">
     <div className="flex-none">
-      <a className="btn btn-ghost text-xl">SkillQuest</a>
+      <Link to="/" className=" text-xl">SkillQuest</Link>
     </div>
     
     {/* navbar links large screen */}

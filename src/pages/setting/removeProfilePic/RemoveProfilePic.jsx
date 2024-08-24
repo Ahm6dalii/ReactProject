@@ -36,7 +36,7 @@ export default function RemoveProfilePic() {
     }
   return (
     <div>
-            <p>{translation.areYouSure}</p>
+            <p className="font-semibold text-center mb-4">{translation.areYouSure}</p>
             <div className='flex gap-4 '>
             <button disabled={loading} className="px-6 rounded  duration-300 py-2 bg-red-300 hover:bg-red-700 transion text-white" onClick={upadeUser}>
                 
