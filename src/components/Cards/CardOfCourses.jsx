@@ -42,29 +42,29 @@ export default function CardOfCourses(props) {
   };
   return (
     <>
-      <div className="relative h-90  flex flex-col justify-between h-full max-w-xs ms-8">
-        <div className=" max-w-sm  bg-gray-100 px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500">
+      <div className="relative   flex flex-col justify-between h-full max-w-xs ms-8">
+        <div className=" max-w-sm  bg-gray-100 px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-103 transition duration-500">
           <h3 className="mb-3 text-xl font-bold text-indigo-600">
             {props.level}
           </h3>
           <div className="relative">
             <Link to={`/course/${props.id}`}>
-            <img
-              className="w-full rounded-xl h-40 object-cover"
-              src={props.course.image}
-              alt={props.course.title}
-            />
+              <img
+                className="w-full rounded-xl h-40 object-cover"
+                src={props.image}
+                alt={props.title}
+              />
             </Link>
-           
+
             <p className="absolute top-0 bg-yellow-300 text-gray-800 font-bold py-1 px-3 rounded-br-lg rounded-tl-lg ">
               <del>${props.price}</del>
             </p>
             <p className="absolute top-0 right-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-tr-lg rounded-bl-lg">
-              {props.course.discount}% Discount
+              {props.discount}% Discount
             </p>
           </div>
           <h1 className="mt-4 text-gray-800 text-2xl font-bold cursor-pointer">
-            {props.course.title}
+            {props.title}
           </h1>
           <div className="my-4">
             <div className="flex space-x-1 items-center">
@@ -84,7 +84,7 @@ export default function CardOfCourses(props) {
                   />
                 </svg>
               </span>
-              <p>{props.course.duration}</p>
+              <p>{props.duration}</p>
             </div>
             <div className="flex space-x-1 items-center">
               <span>
@@ -131,17 +131,18 @@ export default function CardOfCourses(props) {
             )}
           </div>
           {/* -------------Wishlist Button ------------*/}
-          <div className="absolute bottom-8 right-2">
+          <div className="absolute bottom-6 right-4">
             <button
               className="btn-md  btn glass bg-amber-300 flex flex-col items-center justify-center text-sm font-semibold py-2 px-4 hover:animate-bounce "
               onClick={wishlistActions}
             >
-              <span className="text-s mt-1">
+              <span className="text-m mt-1">
                 Wishlist
                 <i
                   className={`fa-${
-                    !alreadyInWish ? "solid" : "regular"
+                    !alreadyInWish ? "regular" : `solid`
                   } fa-heart ms-2`}
+                  style={alreadyInWish ? { color: "#e01010" } : {}}
                 ></i>
               </span>
             </button>
