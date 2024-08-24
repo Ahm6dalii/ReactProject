@@ -47,13 +47,6 @@
       "image": "https://example.com/images/users/charlie.jpg"
     },
     {
-      "id": "226e",
-      "name": "Michelle G",
-      "phone": "01122546414",
-      "email": "punkmohamed@gmail.com",
-      "password": "Ahmedmemol"
-    },
-    {
       "id": "6",
       "name": "Diana Prince",
       "email": "diana@example.com",
@@ -284,6 +277,23 @@
       "name": "Michelle",
       "phone": "01122546414",
       "email": "punkmohamed22@gmail.com",
+      "password": "123123"
+    },
+    {
+      "id": "e35e",
+      "role": "admin",
+      "name": "momen momen",
+      "phone": "01122546414",
+      "email": "momen22@gmail.com",
+      "password": "123123",
+      "image": "https://firebasestorage.googleapis.com/v0/b/e-learing-6119b.appspot.com/o/files%2F22f833e8-a05a-4ac3-8beb-77a607e6f3b8?alt=media&token=5f589c95-499f-4830-89d0-927bd7b28774"
+    },
+    {
+      "id": "c509",
+      "role": "admin",
+      "name": "Michelle",
+      "phone": "01122546414",
+      "email": "punmed22@gmail.com",
       "password": "123123"
     }
   ],
@@ -2074,17 +2084,31 @@
       }
     },
     {
-      "id": "3e19",
-      "instructor": "moahemd",
-      "title": "software engineer",
-      "category": "web",
-      "duration": "7 weeks",
-      "typeOfCourse": "FREE",
-      "syllabus": "goood",
+      "id": "b525",
+      "discount": "",
+      "price": 200,
+      "typeOfCourse": "PAID",
+      "syllabus": "faf",
       "level": "Beginner",
-      "prerequisites": "no",
-      "description": "",
-      "image": "https://firebasestorage.googleapis.com/v0/b/e-learing-6119b.appspot.com/o/files%2F6b702b87-e400-4c1c-8a5f-55aa20b04784?alt=media&token=5f589c95-499f-4830-89d0-927bd7b28774"
+      "prerequisites": "momen",
+      "duration": "momen",
+      "category": "momen",
+      "instructor": "momen",
+      "description": "momen",
+      "title": "momen"
+    },
+    {
+      "id": "413b",
+      "instructor": "dqwid",
+      "title": "hiohoi",
+      "category": "dqwd",
+      "duration": "hiuhio",
+      "typeOfCourse": "FREE",
+      "syllabus": "qwdqwd",
+      "level": "Beginner",
+      "prerequisites": "dqwd",
+      "description": "huihiqhwid",
+      "image": "https://firebasestorage.googleapis.com/v0/b/e-learing-6119b.appspot.com/o/files%2Fcffa140a-1a9f-4ea8-acb7-35637d554002?alt=media&token=5f589c95-499f-4830-89d0-927bd7b28774"
     }
   ],
   "carts": [

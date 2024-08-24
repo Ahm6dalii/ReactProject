@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import CardOfCourses from "../../components/Cards/CardOfCourses";
 import Searchbar from "../../components/searchbar/Searchbar";
 import SearchSidebar from "../../components/sidebar/SearchSidebar";
 import Pagination from './../../admin/components/Pagination/pagination';
+import useCourses from "../../admin/hooks/useCourses";
+
 import { useSelector } from "react-redux";
 
 function CoursesList() {
 
-  const [courses, setCourses] = useState([]);
-  const [coursess, setCoursess] = useState([]);
+
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredCourses, setFilteredCourses] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -23,28 +24,22 @@ function CoursesList() {
     free: false,
   });
 
-  const [currentPage, setCurrentPage] = useState(1)
+
   const location = useLocation();
   const show = location.pathname === "/courses";
-
-  const getAllCourses = async () => {
-    try {
-      const response = await axios.get(`http://localhost:5000/courses?_page=${currentPage}&_per_page=6`);
-      setCoursess(response.data)
-      return response.data;
-    } catch (error) {
-      console.error("Error fetching courses:", error);
-    }
-  };
-
-  useEffect(() => {
-    getAllCourses().then((data) => setCourses(data?.data));
-  }, [currentPage]);
+  const { courses, currentPage, setCurrentPage, setPerPage, perPage } = useCourses()
 
   useEffect(() => {
     setIsLoading(true);
+    const isFiltering = searchQuery || selectedLevel || selectedRating || selectedPrice.paid || selectedPrice.free || selectedDuration;
+
+    if (isFiltering) {
+      setPerPage(200);
+    } else {
+      setPerPage(6);
+    }
     const delayCourses = setTimeout(() => {
-      const results = courses
+      const results = courses?.data
         // ----searchbar filter----
         .filter((course) =>
           course.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -68,6 +63,12 @@ function CoursesList() {
           if (selectedPrice.free) {
             return course.free;
           }
+          // if (selectedPrice.paid) {
+          //   return course.typeOfCourse === 'PAID';
+          // }
+          // if (selectedPrice.free) {
+          //   return course.typeOfCourse === 'FREE';
+          // }
           return true;
         })
         // -----Duration Filter -----
@@ -98,6 +99,9 @@ function CoursesList() {
     selectedRating,
     selectedPrice,
     selectedDuration,
+    perPage,
+    currentPage,
+    setPerPage
   ]);
 
   // Handle sidebar auto-close on resize
@@ -138,6 +142,7 @@ function CoursesList() {
             />
           </div>
         )}
+
 
 {show &&  <div className="flex flex-col md:flex-row md:items-start w-full max-w-6xl overflow-hidden ">
           <button
@@ -190,22 +195,22 @@ function CoursesList() {
                     isInCart={false}
                     discount={course.discount}
                     id={course.id}
+                    typeOfCourse={course.typeOfCourse}
                   />
                 </div>
               ))}
             </div>
           )}
         </div>
-
-        {show && (
+        {show && perPage < 7 ? (
           <div className="py-8">
             <Pagination
               currentPage={currentPage}
               setCurrentPage={setCurrentPage}
-              courses={coursess}
+              courses={courses}
             />
           </div>
-        )}
+        ) : ''}
       </div>
     </>
   );

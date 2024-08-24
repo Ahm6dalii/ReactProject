@@ -13,9 +13,6 @@ const ECommerce = () => {
   const adminsData = admins?.items
   const usersData = users?.items
   const totalPrice = courses?.data.reduce((acc, course) => acc + course.price, 0);
-  console.log(usersData, "users main page");
-  console.log(adminsData, "admins main page")
-  console.log(coursesData, "courses")
 
   return (
     <>

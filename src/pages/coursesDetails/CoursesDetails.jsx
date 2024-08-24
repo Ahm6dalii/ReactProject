@@ -7,6 +7,7 @@ import { addToCart, removeFromCart } from "../../redux/reducers/cartSlice";
 import ShouldLogin from "../../components/shouldLogin/ShouldLogin";
 
 const CoursesDetails = () => {
+
     const {translation}=useSelector(state=>state.lang)
     const dispatch =useDispatch()
     const { id } = useParams()
@@ -61,8 +62,8 @@ const CoursesDetails = () => {
         }
       };
     return <>
- 
-        {courseData == null ? <p>loading..</p>  : <div className="mt-12 2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 ">
+
+        {courseData == null ? <p>loading..</p> : <div className="mt-12 2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 ">
             <div className="flex justify-center items-center lg:flex-row flex-col gap-8">
                 {/* <!-- Description Div --> */}
 
@@ -107,9 +108,10 @@ const CoursesDetails = () => {
                     </div>
 
                     <p className=" font-normal text-base leading-6 text-gray-600 mt-7 dark:text-white ">{courseData?.description}</p>
-                    <p className=" font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 mt-6 ">$ {courseData?.price}</p>
-
-
+                    {courseData.free || courseData.typeOfCourse === "FREE" ?
+                        <p className=" font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 mt-6 "> FREE</p>
+                        : <p className=" font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 mt-6 ">$ {courseData?.price}</p>
+                    }
 
                     <p className="pt-2">Created by <span className="text-blue-400 ">{courseData.instructor}</span></p>
                    <div className="flex gap-2 items-end">
@@ -224,8 +226,10 @@ const CoursesDetails = () => {
 
                 </div>
             </div>
+
         </div>}
 <ShouldLogin></ShouldLogin>
+
 
     </>
 

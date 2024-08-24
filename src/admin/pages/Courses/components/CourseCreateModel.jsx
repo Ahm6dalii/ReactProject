@@ -9,7 +9,7 @@ const CourseCreateModel = ({ courseId, course, display, style }) => {
                 display ? <button className="hover:text-primary" onClick={() => document.getElementById(`my_modal_${courseId}`).showModal()}>
                     <i className="fa-regular fa-pen-to-square"></i>
                 </button>
-                    : <button className={style} onClick={() => document.getElementById(`my_modal_${courseId}`).showModal()}>{courseId ? 'Edit' : 'Create'}</button>
+                    : <button className={style} onClick={() => document.getElementById(`my_modal_${courseId}`).showModal()}>{courseId ? 'Edit' : 'Create'}</button >
             }
             <dialog id={`my_modal_${courseId}`} className="modal">
                 <div className="modal-box w-8/12 max-w-5xl dark:bg-black">
