@@ -289,6 +289,62 @@
   ],
   "courses": [
     {
+
+      "id": "1",
+      "title": "Introduction to JavaScript",
+      "description": "Learn the basics of JavaScript, the most popular programming language for web development.",
+      "price": 100,
+      "discount": 20,
+      "instructor": "Jane Doe",
+      "category": "Programming",
+      "duration": "4 weeks",
+      "image": {
+        "0": {}
+      },
+      "free": false,
+      "paid": false,
+      "prerequisites": "None",
+      "level": "Beginner",
+      "syllabus": "Basics of JavaScript, Variables, Data Types, Functions, DOM Manipulation",
+      "what_you_will_learn": [
+        "Understand JavaScript syntax and fundamental concepts",
+        "Write JavaScript code for dynamic web content",
+        "Manipulate the DOM using JavaScript",
+        "Implement basic interactivity in web pages"
+      ],
+      "rating": 2.5,
+      "reviews_count": 3,
+      "reviews": [
+        {
+          "userId": "1",
+          "userName": "Alice Smith",
+          "comment": "Great course for beginners!",
+          "rating": 5
+        },
+        {
+          "userId": "2",
+          "userName": "Bob Johnson",
+          "comment": "Clear explanations, but could use more examples.",
+          "rating": 4
+        },
+        {
+          "userId": "3",
+          "userName": "Carol Davis",
+          "comment": "Good introduction, but a bit too basic for me.",
+          "rating": 4
+        }
+      ],
+      "includes": {
+        "hours_of_video": 20,
+        "articles": 15,
+        "downloadable_resources": 5,
+        "access": ["mobile", "TV"],
+        "certificate_of_completion": true
+      },
+      "typeOfCourse": "FREE"
+    },
+    {
+
       "id": "2",
       "title": "Advanced CSS Techniques",
       "description": "Deep dive into advanced CSS techniques and responsive design.",
@@ -341,10 +397,7 @@
         "hours_of_video": 18,
         "articles": 12,
         "downloadable_resources": 7,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
@@ -395,10 +448,7 @@
         "hours_of_video": 22,
         "articles": 10,
         "downloadable_resources": 6,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
@@ -449,10 +499,7 @@
         "hours_of_video": 24,
         "articles": 8,
         "downloadable_resources": 4,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
@@ -515,10 +562,7 @@
         "hours_of_video": 30,
         "articles": 20,
         "downloadable_resources": 8,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
@@ -530,7 +574,7 @@
       "discount": 15,
       "instructor": "Michael Green",
       "category": "Programming",
-      "duration": "6 weeks",
+      "duration": "3 weeks",
       "image": "https://th.bing.com/th/id/OIP.HcgyylJvM47owd1M1qWKqwHaD3?rs=1&pid=ImgDetMain",
       "free": true,
       "paid": false,
@@ -569,10 +613,7 @@
         "hours_of_video": 21,
         "articles": 13,
         "downloadable_resources": 6,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
@@ -584,7 +625,9 @@
       "discount": 20,
       "instructor": "Sophia Garcia",
       "category": "Data Science",
-      "duration": "7 weeks",
+
+      "duration": "1 week",
+
       "image": "https://www.fsm.ac.in/blog/wp-content/uploads/2022/07/FUqHEVVUsAAbZB0-1024x580.jpg",
       "free": false,
       "paid": true,
@@ -629,10 +672,7 @@
         "hours_of_video": 19,
         "articles": 11,
         "downloadable_resources": 5,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
@@ -657,7 +697,7 @@
         "Perform data aggregations and manipulations",
         "Apply SQL in real-world scenarios"
       ],
-      "rating": 4.6,
+      "rating": 5.0,
       "reviews_count": 3,
       "reviews": [
         {
@@ -683,10 +723,7 @@
         "hours_of_video": 15,
         "articles": 9,
         "downloadable_resources": 4,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
@@ -743,10 +780,7 @@
         "hours_of_video": 40,
         "articles": 25,
         "downloadable_resources": 10,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
@@ -758,7 +792,8 @@
       "discount": 10,
       "instructor": "Robert Harris",
       "category": "Cloud Computing",
-      "duration": "5 weeks",
+      "duration": "1 week",
+
       "image": "https://th.bing.com/th/id/OIP.mYf55M8ZyzWrWGJ5ZiN2YQHaE7?rs=1&pid=ImgDetMain",
       "free": false,
       "paid": false,
@@ -803,7 +838,7 @@
       "prerequisites": "Basic programming knowledge",
       "level": "Intermediate",
       "syllabus": "Unity Basics, Game Mechanics, Asset Management, Scripting, Game Publishing",
-      "rating": 4.7,
+      "rating": 5.0,
       "reviews": [
         {
           "userId": "3",
@@ -816,15 +851,12 @@
         "hours_of_video": 16,
         "articles": 10,
         "downloadable_resources": 3,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
     {
-      "id": "11",
+      "id": "12",
       "title": "Introduction to Cybersecurity",
       "description": "Basics of cybersecurity and how to protect information systems.",
       "price": 140,
@@ -870,15 +902,12 @@
         "hours_of_video": 20,
         "articles": 14,
         "downloadable_resources": 5,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
     {
-      "id": "12",
+      "id": "13",
       "title": "Introduction to Docker",
       "description": "Learn how to use Docker for containerization and deploying applications.",
       "price": 130,
@@ -924,15 +953,13 @@
         "hours_of_video": 18,
         "articles": 12,
         "downloadable_resources": 4,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
     {
-      "id": "14",
+      "id": "133",
+
       "title": "Introduction to Mobile App Development",
       "description": "Learn the basics of mobile app development for iOS and Android.",
       "price": 140,
@@ -978,10 +1005,7 @@
         "hours_of_video": 22,
         "articles": 11,
         "downloadable_resources": 6,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
@@ -1032,10 +1056,7 @@
         "hours_of_video": 20,
         "articles": 13,
         "downloadable_resources": 5,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
@@ -1092,10 +1113,7 @@
         "hours_of_video": 25,
         "articles": 15,
         "downloadable_resources": 7,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
@@ -1146,15 +1164,12 @@
         "hours_of_video": 16,
         "articles": 10,
         "downloadable_resources": 4,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
     {
-      "id": "16",
+      "id": "17",
       "title": "Introduction to Python",
       "description": "Learn the basics of Python programming.",
       "price": 150,
@@ -1174,7 +1189,7 @@
         "Use modules and libraries",
         "Develop simple Python applications"
       ],
-      "rating": 4.6,
+      "rating": 3.8,
       "reviews_count": 6,
       "reviews": [
         {
@@ -1218,15 +1233,12 @@
         "hours_of_video": 20,
         "articles": 10,
         "downloadable_resources": 5,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
     {
-      "id": "17",
+      "id": "18",
       "title": "Advanced JavaScript",
       "description": "Dive deep into advanced JavaScript concepts and techniques.",
       "price": 200,
@@ -1238,7 +1250,7 @@
       "free": false,
       "paid": true,
       "prerequisites": "Basic JavaScript knowledge",
-      "level": "Intermediate",
+      "level": "Advanced",
       "syllabus": "Asynchronous JavaScript, Closures, Prototypes, Design Patterns",
       "what_you_will_learn": [
         "Understand asynchronous JavaScript techniques",
@@ -1284,15 +1296,12 @@
         "hours_of_video": 32,
         "articles": 15,
         "downloadable_resources": 6,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
     {
-      "id": "18",
+      "id": "19",
       "title": "Responsive Web Design",
       "description": "Learn how to create responsive and adaptive web designs.",
       "price": 170,
@@ -1312,7 +1321,7 @@
         "Develop mobile-first design strategies",
         "Optimize designs for various screen sizes"
       ],
-      "rating": 4.7,
+      "rating": 3.7,
       "reviews_count": 4,
       "reviews": [
         {
@@ -1344,15 +1353,12 @@
         "hours_of_video": 22,
         "articles": 12,
         "downloadable_resources": 4,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
     {
-      "id": "19",
+      "id": "20",
       "title": "Data Visualization with D3.js",
       "description": "Learn how to create interactive data visualizations using D3.js.",
       "price": 190,
@@ -1370,15 +1376,16 @@
         "Use scales and axes for visualization",
         "Create interactive SVG graphics"
       ],
-      "rating": 4.9,
+      "rating": 3.4,
       "reviews_count": 5,
+
       "image": "https://th.bing.com/th/id/R.5f9f75bbcd0124783d9c9e3bcb48c405?rik=wHy9Pk2oD50Tiw&pid=ImgRaw&r=0",
       "reviews": [
         {
           "userId": "68",
           "userName": "Aiden Clark",
           "comment": "Excellent for learning D3.js.",
-          "rating": 5
+          "rating": 3.8
         },
         {
           "userId": "69",
@@ -1409,15 +1416,12 @@
         "hours_of_video": 28,
         "articles": 14,
         "downloadable_resources": 7,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
     {
-      "id": "20",
+      "id": "21",
       "title": "Introduction to Cybersecurity",
       "description": "Learn the fundamentals of cybersecurity and protecting systems.",
       "price": 160,
@@ -1427,6 +1431,7 @@
       "duration": "7 weeks",
       "free": false,
       "paid": true,
+
       "image": "https://th.bing.com/th/id/R.bb4b6d39ecba3391801269cff357f1bb?rik=CBZmOH9Ii%2bVMog&pid=ImgRaw&r=0",
       "prerequisites": "None",
       "level": "Beginner",
@@ -1437,7 +1442,7 @@
         "Manage risk and respond to incidents",
         "Protect systems and data from attacks"
       ],
-      "rating": 4.7,
+      "rating": 3.7,
       "reviews_count": 6,
       "reviews": [
         {
@@ -1481,15 +1486,12 @@
         "hours_of_video": 24,
         "articles": 11,
         "downloadable_resources": 5,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
     {
-      "id": "21",
+      "id": "22",
       "title": "Building RESTful APIs with Node.js",
       "description": "Learn to build RESTful APIs using Node.js and Express.",
       "price": 180,
@@ -1501,7 +1503,7 @@
       "free": false,
       "paid": true,
       "prerequisites": "Basic Node.js knowledge",
-      "level": "Intermediate",
+      "level": "Advanced",
       "syllabus": "Express.js Basics, REST Principles, Middleware, Authentication",
       "what_you_will_learn": [
         "Understand REST principles and API design",
@@ -1553,15 +1555,12 @@
         "hours_of_video": 26,
         "articles": 10,
         "downloadable_resources": 5,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
     {
-      "id": "22",
+      "id": "23",
       "title": "Mastering Git and GitHub",
       "description": "Learn how to use Git and GitHub for version control and collaboration.",
       "price": 140,
@@ -1613,15 +1612,12 @@
         "hours_of_video": 18,
         "articles": 8,
         "downloadable_resources": 3,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
     {
-      "id": "23",
+      "id": "24",
       "title": "Introduction to SQL",
       "description": "Learn the fundamentals of SQL and database management.",
       "price": 130,
@@ -1679,15 +1675,12 @@
         "hours_of_video": 16,
         "articles": 7,
         "downloadable_resources": 4,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
     {
-      "id": "24",
+      "id": "25",
       "title": "Java Programming for Beginners",
       "description": "Learn the basics of Java programming and object-oriented concepts.",
       "price": 160,
@@ -1745,15 +1738,12 @@
         "hours_of_video": 30,
         "articles": 13,
         "downloadable_resources": 5,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
     {
-      "id": "25",
+      "id": "26",
       "title": "Web Development with PHP",
       "description": "Learn how to develop dynamic web applications using PHP.",
       "price": 175,
@@ -1805,22 +1795,21 @@
         "hours_of_video": 25,
         "articles": 12,
         "downloadable_resources": 4,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
     {
-      "id": "26",
+      "id": "27",
       "title": "Introduction to Machine Learning",
       "description": "Learn the basics of machine learning and data analysis.",
       "price": 220,
       "discount": 15,
       "instructor": "Alice Walker",
       "category": "Data Science",
-      "duration": "8 weeks",
+      "duration": "2 weeks",
+
+
       "image": "https://th.bing.com/th/id/OIP.rX3M3fKa_tfS9EEBqz1RkgHaF-?rs=1&pid=ImgDetMain",
       "free": false,
       "paid": true,
@@ -1877,15 +1866,12 @@
         "hours_of_video": 34,
         "articles": 16,
         "downloadable_resources": 8,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
     {
-      "id": "27",
+      "id": "28",
       "title": "Frontend Development with Vue.js",
       "description": "Learn how to build modern web applications using Vue.js.",
       "price": 170,
@@ -1896,7 +1882,7 @@
       "free": false,
       "paid": true,
       "prerequisites": "Basic HTML, CSS, and JavaScript knowledge",
-      "level": "Intermediate",
+      "level": "Advanced",
       "syllabus": "Vue.js Basics, Components, Vuex, Vue Router",
       "what_you_will_learn": [
         "Understand Vue.js basics and components",
@@ -1906,7 +1892,10 @@
       ],
       "rating": 4.7,
       "reviews_count": 5,
+
       "image": "https://th.bing.com/th/id/OIP.1m9Y-lPmkKdiBakcWxT32wHaEK?rs=1&pid=ImgDetMain",
+
+
       "reviews": [
         {
           "userId": "109",
@@ -1943,15 +1932,12 @@
         "hours_of_video": 27,
         "articles": 13,
         "downloadable_resources": 6,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
     {
-      "id": "28",
+      "id": "29",
       "title": "Digital Marketing Fundamentals",
       "description": "Learn the essentials of digital marketing and online advertising.",
       "price": 190,
@@ -2009,10 +1995,7 @@
         "hours_of_video": 22,
         "articles": 10,
         "downloadable_resources": 5,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       }
     },
