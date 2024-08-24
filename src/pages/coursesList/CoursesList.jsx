@@ -163,11 +163,12 @@ function CoursesList() {
             </div>
           ) : (
             <div
-              className={`grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 ${filteredCourses.length > 0
+              className={` grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 ${filteredCourses.length > 0
                 ? "opacity-100 transition-opacity duration-500 ease-in"
                 : "opacity-0"
                 }`}
             >
+
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -214,21 +215,16 @@ function CoursesList() {
             )}
           </div>
         </div>
-        {show && <>
-          <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} courses={coursess} />
-          <div className="mt-8">
-            <button className="btn btn-primary mx-2">
-              <Link to="../cart">Go to Cart</Link>
-            </button>
-            <button className="btn btn-primary mx-2">
-              <Link to="../wishlist">Go to Wishlist</Link>
-            </button>
-          </div>
-        </>
-        }
 
 
       </div>
+      {show && <>
+      <div className="py-8">
+
+        <Pagination  currentPage={currentPage} setCurrentPage={setCurrentPage} courses={coursess} />    
+      </div>
+      </>
+      }
     </>
   );
 }

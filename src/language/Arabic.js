@@ -65,4 +65,67 @@ export const Ar = {
   areYouSure: "هل أنت متأكد؟",
   yes: "نعم",
   no: "لا",
+
+// حول
+about: "حول",
+aboutUs: "من نحن",
+aboutDesc: `لوريم إيبسوم دولار سيت أميت، كونسيكتيتور أديبيسيسينغ إيليت. أليكود، كومودي
+    دولوريمكي، فوغات إلوم ماغني ماينس نيزي نولا نومكوام أوبكياتي بلاسيت كوا،
+    ريبلات تمبور فولوبتاتوم.`,
+aboutOurCompany: "شركتنا",
+
+  // الاتصال
+contactUs: "اتصل بنا",
+contactTitle: "يرجى استخدام النموذج أدناه للاتصال بنا. شكرًا لك!",
+contactName: "الاسم",
+contactEmail: "البريد الإلكتروني",
+contactMessage: "الرسالة",
+contactSend: "إرسال الرسالة",
+
+// تفاصيل الدورة
+detailsHome: "الصفحة الرئيسية",
+detailsCourses: "الدورات",
+detailsCoursesDetial: "تفاصيل الدورات",
+detailsHome: "الصفحة الرئيسية",
+whatLearn: "ما ستتعلمه",
+courseInclude: "تشمل هذه الدورة:",
+hourVedio: "ساعات من الفيديو حسب الطلب",
+articles: "مقالات",
+download: "موارد قابلة للتنزيل",
+certificate: "شهادة إتمام",
+access: "الوصول إلى",
+
+// الفوتر
+footerName: "SkillQuest",
+footerResources: "الموارد",
+footerDoc: "التوثيق",
+footerTutorials: "الدروس",
+footerSupport: "الدعم",
+footerNew: "جديد",
+footerSupport: "الدعم",
+footerHelp: "مركز المساعدة",
+footerPrivacy: "سياسة الخصوصية",
+footerContact: "اتصل بنا",
+footerConditions: "الشروط",
+footerLocation: "XXX XXXX، الطابق 4، سان فرانسيسكو، كاليفورنيا",
+footerEmail: "contact@company.com",
+footerEnd: "© حقوق الطبع والنشر 2020. جميع الحقوق محفوظة",
+// hero
+heroTitlel1: "أطلق إمكانياتك مع ",
+heroTitlel2: "التعلم عبر الإنترنت المرن",
+heroDesc: "أطلق إمكانياتك من خلال دورات يقودها خبراء ومسارات تعليمية مرنة مصممة لتناسب جدولك. انضم إلى مجتمع المتعلمين وابدأ رحلتك نحو النجاح اليوم.",
+heroJoin: "انضم إلينا",
+heroTop: "أفضل الدورات",
+heroSeeMore: "عرض المزيد",
+
+// سلة التسوق
+cartShop: "سلة التسوق الخاصة بك",
+cartEmpty: "سلتك فارغة.",
+cartPromote: "العروض",
+cartApply: "تطبيق",
+// قائمة الرغبات
+wish: "قائمة رغباتك",
+wishEmpty: "قائمة رغباتك فارغة.",
+wishClear: "مسح قائمة الرغبات"
+
 };

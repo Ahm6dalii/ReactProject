@@ -132,6 +132,7 @@ export default function CardOfCourses(props) {
             )}
           </div>
           {/* -------------Wishlist Button ------------*/}
+
           <div className="absolute bottom-6 right-4">
             <button
               className="btn-md  btn glass bg-amber-300 flex flex-col items-center justify-center text-sm font-semibold py-2 px-4 hover:animate-bounce "
@@ -156,7 +157,7 @@ export default function CardOfCourses(props) {
   );
 }
 
-// // Wishlist Button
+// Wishlist Button
 {
   /* <span className="text-s mt-1">
   Wishlist

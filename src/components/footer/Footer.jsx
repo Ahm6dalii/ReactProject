@@ -1,28 +1,34 @@
 
+import { useSelector } from 'react-redux'
 import { useLocation } from 'react-router-dom'
 
 export default function Footer() {
+  
+  const {translation}=useSelector(state=>state.lang)
+
   const location = useLocation()
   const { pathname } = location
   return <>
+  <div className={pathname.startsWith('/admin/') || pathname.startsWith('/admin') ? 'hidden' : ''}>
+
 <div className='dark:bg-slate-800 '>
   <div className="bg-gray-100 py5 ">
     <div className="max-w-screen-lg px-4 sm:px-6 text-gray-800 sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto">
       <div className="p-5">
-        <h3 className="font-bold text-xl text-indigo-600">Company Name</h3>
+        <h3 className="font-bold text-xl text-indigo-600">{translation.footerName}</h3>
       </div>
       <div className="p-5">
-        <div className="text-sm uppercase text-indigo-600 font-bold">Resources</div>
-        <a className="my-3 block" href="/#">Documentation <span className="text-teal-600 text-xs p-1" /></a><a className="my-3 block" href="/#">Tutorials <span className="text-teal-600 text-xs p-1" /></a><a className="my-3 block" href="/#">Support <span className="text-teal-600 text-xs p-1">New</span></a>
+        <div className="text-sm uppercase text-indigo-600 font-bold">{translation.footerResources}</div>
+        <a className="my-3 block" href="/#">{translation.footerDoc} <span className="text-teal-600 text-xs p-1" /></a><a className="my-3 block" href="/#">{translation.footerTutorials} <span className="text-teal-600 text-xs p-1" /></a><a className="my-3 block" href="/#">{translation.footerSupport} <span className="text-teal-600 text-xs p-1">{translation.footerNew}</span></a>
       </div>
       <div className="p-5">
-        <div className="text-sm uppercase text-indigo-600 font-bold">Support</div>
-        <a className="my-3 block" href="/#">Help Center <span className="text-teal-600 text-xs p-1" /></a><a className="my-3 block" href="/#">Privacy Policy <span className="text-teal-600 text-xs p-1" /></a><a className="my-3 block" href="/#">Conditions <span className="text-teal-600 text-xs p-1" /></a>
+        <div className="text-sm uppercase text-indigo-600 font-bold">{translation.Support}</div>
+        <a className="my-3 block" href="/#">{translation.footerHelp} <span className="text-teal-600 text-xs p-1" /></a><a className="my-3 block" href="/#">{translation.footerPrivacy}<span className="text-teal-600 text-xs p-1" /></a><a className="my-3 block" href="/#">{translation.footerConditions}<span className="text-teal-600 text-xs p-1" /></a>
       </div>
       <div className="p-5">
-        <div className="text-sm uppercase text-indigo-600 font-bold">Contact us</div>
-        <a className="my-3 block" href="/#">XXX XXXX, Floor 4 San Francisco, CA
-          <span className="text-teal-600 text-xs p-1" /></a><a className="my-3 block" href="/#">contact@company.com
+        <div className="text-sm uppercase text-indigo-600 font-bold">{translation.footerContact}</div>
+        <a className="my-3 block" href="/#">{translation.footerLocation}
+          <span className="text-teal-600 text-xs p-1" /></a><a className="my-3 block" href="/#">{translation.footerEmail}
           <span className="text-teal-600 text-xs p-1" /></a>
       </div>
     </div>
@@ -108,10 +114,11 @@ max-w-screen-lg items-center">
           </svg>
         </a>
       </div>
-      <div className="my-5">© Copyright 2020. All Rights Reserved.</div>
+      <div className="my-5">{translation.footerEnd}</div>
     </div>
   </div>
 </div>
+  </div>
 
 
  </>
