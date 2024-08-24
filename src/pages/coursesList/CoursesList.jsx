@@ -167,7 +167,7 @@ function CoursesList() {
             </div>
           ) : (
             <div
-              className={`grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 ${filteredCourses.length > 0
+              className={`grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4  gap-2 space-y-4 ${filteredCourses.length > 0
                 ? "opacity-100 transition-opacity duration-500 ease-in"
                 : "opacity-0"
                 }`}
