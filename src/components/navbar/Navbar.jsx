@@ -10,6 +10,7 @@ import { logOutUser } from '../../redux/reducers/userAuthSlice'
 import UploadDialog from '../uploadImgDialog/UploadDialog'
 import { clearWishlist } from '../../redux/reducers/wishlistSlice'
 import { clearCart } from '../../redux/reducers/cartSlice'
+import { clearMyCourses } from '../../redux/reducers/myCourseSlice'
 
 export default function Navbar() {
   const location = useLocation()
@@ -35,6 +36,7 @@ dispatch(changeLang(e.target.value.toLowerCase()))
  const logOut=()=>{
   dispatch( logOutUser())
   dispatch(clearWishlist())
+  dispatch(clearMyCourses())
   dispatch(clearCart())
   
  }

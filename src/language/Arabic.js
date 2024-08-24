@@ -4,6 +4,7 @@ export const Ar = {
   signUp: "اشتراك",
   home: "الرئيسية",
   courses: "الدورات",
+  accountMyCourses:"دوراتي",
   contact: "اتصل بنا",
   about: "معلومات عنا",
   favorite: "المفضلة",

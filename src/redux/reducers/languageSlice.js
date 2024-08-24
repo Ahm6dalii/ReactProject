@@ -8,6 +8,7 @@ const storageTrans =JSON.parse(localStorage.getItem("trans"))
 const translation={
     ar:Ar,
     en:En
+    
 }
 const  initialState={
     language:storageLang?storageLang:'en',

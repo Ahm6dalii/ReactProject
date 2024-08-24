@@ -17,6 +17,7 @@ import CoursesList from "./pages/coursesList/CoursesList";
 import Wishlist from "./pages/wishlist/Wishlist";
 import Login from './pages/login/login'
 import Contact from './pages/cotact/Contact'
+import MyCourses from './pages/setting/myCourses/MyCourses'
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
     <Route path='/setting' element={<ProtectedRoot><Setting></Setting></ProtectedRoot>}>
         <Route path='/setting' element={ <ProtectedRoot> <ProfileSetting></ProfileSetting></ProtectedRoot>}></Route>
         <Route path='/setting/account' element={<ProtectedRoot><AccountSetting></AccountSetting></ProtectedRoot> }></Route>
+        <Route path='/setting/mycourses' element={<ProtectedRoot><MyCourses></MyCourses></ProtectedRoot> }></Route>
     </Route>
               <Route path="/cart" element={<ProtectedRoot><CoursesCart /></ProtectedRoot>}></Route>
               <Route path="/courses" element={<CoursesList />}></Route>

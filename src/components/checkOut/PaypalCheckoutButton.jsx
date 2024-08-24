@@ -4,11 +4,11 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { clearCart } from '../../redux/reducers/cartSlice';
 import swal from 'sweetalert';
+import { addMyCourses } from '../../redux/reducers/myCourseSlice';
 
 const PaypalCheckoutButton = ({show}) => {
 
-
-
+    const cart = useSelector((state) => state.cart);
     // let[key,setKey]=useState(0)
     const dispatch= useDispatch()
     const total= localStorage.getItem('total')
@@ -57,8 +57,8 @@ const PaypalCheckoutButton = ({show}) => {
                 onApprove = { async (data, action) => {
                     const order = await action.order.capture();
                     console.log("order", order);
-                    dispatch(clearCart())
-                    
+                    dispatch(addMyCourses(cart))
+                    dispatch(clearCart())                   
                     handleApprove(data.orderID);
                 }}
                 onCancel={() => {}}
