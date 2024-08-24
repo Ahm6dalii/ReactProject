@@ -8,6 +8,7 @@ import Pagination from './../../admin/components/Pagination/pagination';
 import useCourses from "../../admin/hooks/useCourses";
 
 import { useSelector } from "react-redux";
+import { Toaster } from "react-hot-toast";
 
 function CoursesList() {
 
@@ -117,6 +118,10 @@ function CoursesList() {
   ////////////////////////////////////////////////////////////////////////
   return (
     <>
+    <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
       <SearchSidebar
         isSidebarOpen={isSidebarOpen}
         setSidebarOpen={setSidebarOpen}
