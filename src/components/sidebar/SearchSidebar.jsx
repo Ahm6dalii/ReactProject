@@ -34,7 +34,7 @@ function SearchSidebar(props) {
   return (
     <div>
       <div
-        className={`fixed inset-y-0 z-10 flex w-80 transform transition-transform duration-300 ${
+        className={`fixed z-[10000] inset-y-0 z-10 flex w-80 transform transition-transform duration-300 ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >

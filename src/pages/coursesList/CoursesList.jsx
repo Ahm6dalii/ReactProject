@@ -27,7 +27,7 @@ function CoursesList() {
 
   const getAllCourses = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/courses?_page=${currentPage}&_per_page=4`);
+      const response = await axios.get(`http://localhost:5000/courses?_page=${currentPage}&_per_page=6`);
       setCoursess(response.data)
       return response.data;
     } catch (error) {
@@ -111,7 +111,6 @@ function CoursesList() {
   ////////////////////////////////////////////////////////////////////////
   return (
     <>
-      {/* Sidebar */}
       <SearchSidebar
         isSidebarOpen={isSidebarOpen}
         setSidebarOpen={setSidebarOpen}
@@ -126,27 +125,23 @@ function CoursesList() {
       />
 
       <div
-        className={`min-h-screen w-screen flex flex-col items-center py-10 transition-all duration-300 ease-in-out ${
-          isSidebarOpen ? "pl-80" : "pl-0"
-        }`}
+        className={`mt-12 min-h-screen w-screen flex flex-col items-center py-10 transition-all duration-300 ease-in-out ${isSidebarOpen ? "pl-80" : "pl-0"
+          }`}
       >
-        <div className="mb-6 w-full max-w-md">
-      <div className="min-h-screen w-screen flex flex-col items-center py-10">
-        {show && <div className="mb-6 w-full max-w-md">
+        {show && (
+          <div className="mb-6 w-full max-w-md">
+            <Searchbar
+              searchQuery={searchQuery}
+              onSearchChange={setSearchQuery}
+            />
+          </div>
+        )}
 
-
-          <Searchbar
-            searchQuery={searchQuery}
-            onSearchChange={setSearchQuery}
-          />
-        </div>
-        <div className="flex flex-col md:flex-row md:items-start w-full max-w-6xl">
-          {/* Sidebar Toggle Button */}
+{show &&  <div className="flex flex-col md:flex-row md:items-start w-full max-w-6xl">
           <button
             onClick={() => setSidebarOpen(!isSidebarOpen)}
-            className={`fixed top-20 left-5 p-3 text-white bg-black rounded-lg z-50 transition-transform duration-300 ease-in-out ${
-              isSidebarOpen ? "invisible" : ""
-            }`}
+            className={`fixed top-20 left-5 p-3 text-white bg-black rounded-lg z-50 transition-transform duration-300 ease-in-out ${isSidebarOpen ? "invisible" : ""
+              }`}
           >
             <svg
               className="w-6 h-6"
@@ -154,21 +149,7 @@ function CoursesList() {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-        </div>}
-        <div className="md:px-4 w-full max-w-6xl">
-          {isLoading ? (
-            // ----Loading spinner----
-            <div className="flex items-center justify-center w-full h-48">
-              <span className="loading loading-dots loading-lg"></span>
-            </div>
-          ) : (
-            <div
-              className={` grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 ${filteredCourses.length > 0
-                ? "opacity-100 transition-opacity duration-500 ease-in"
-                : "opacity-0"
-                }`}
             >
-
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -177,56 +158,56 @@ function CoursesList() {
               />
             </svg>
           </button>
+        </div>}
 
-          {/* Main Content */}
-          <div className="flex-1 px-4 md:px-0 transition-transform duration-300 ease-in-out">
-            {isLoading ? (
-              <div className="flex items-center justify-center w-full h-48">
-                <span className="loading loading-dots loading-lg"></span>
-              </div>
-            ) : (
-              <div
-                className={`grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 ${
-                  filteredCourses.length > 0
-                    ? "opacity-100 transition-opacity duration-500 ease-in"
-                    : "opacity-0"
+        <div className="flex-1 px-4 md:px-0 transition-transform duration-300 ease-in-out">
+          {isLoading ? (
+            <div className="flex items-center justify-center w-full h-48">
+              <span className="loading loading-dots loading-lg"></span>
+            </div>
+          ) : (
+            <div
+              className={`grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 ${filteredCourses.length > 0
+                ? "opacity-100 transition-opacity duration-500 ease-in"
+                : "opacity-0"
                 }`}
-              >
-                {filteredCourses.map((course) => (
-                  <div
-                    key={course.id}
-                    className="transition-transform transform hover:scale-105 duration-300 ease-in-out"
-                  >
-                    <CardOfCourses
-                      course={course}
-                      title={course.title}
-                      price={course.price}
-                      image={course.image}
-                      level={course.level}
-                      rating={course.rating}
-                      instructor={course.instructor}
-                      isInCart={false}
-                      discount={course.discount}
-                      id={course.id}
-                    />
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
+            >
+              {filteredCourses.map((course) => (
+                <div
+                  key={course.id}
+                  className="transition-transform transform hover:scale-105 duration-300 ease-in-out"
+                >
+                  <CardOfCourses
+                    course={course}
+                    title={course.title}
+                    price={course.price}
+                    image={course.image}
+                    level={course.level}
+                    rating={course.rating}
+                    instructor={course.instructor}
+                    isInCart={false}
+                    discount={course.discount}
+                    id={course.id}
+                  />
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
-
+        {show && (
+          <div className="py-8">
+            <Pagination
+              currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
+              courses={coursess}
+            />
+          </div>
+        )}
       </div>
-      {show && <>
-      <div className="py-8">
-
-        <Pagination  currentPage={currentPage} setCurrentPage={setCurrentPage} courses={coursess} />    
-      </div>
-      </>
-      }
     </>
   );
 }
+
 
 export default CoursesList;
