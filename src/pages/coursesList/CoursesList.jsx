@@ -7,7 +7,11 @@ import SearchSidebar from "../../components/sidebar/SearchSidebar";
 import Pagination from './../../admin/components/Pagination/pagination';
 import useCourses from "../../admin/hooks/useCourses";
 
+import { useSelector } from "react-redux";
+
 function CoursesList() {
+
+
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredCourses, setFilteredCourses] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -127,7 +131,7 @@ function CoursesList() {
       />
 
       <div
-        className={`mt-12 min-h-screen w-screen flex flex-col items-center py-10 transition-all duration-300 ease-in-out ${isSidebarOpen ? "pl-80" : "pl-0"
+        className={`overflow-hidden mt-12 min-h-screen flex flex-col items-center py-10 transition-all duration-300 ease-in-out ${isSidebarOpen ? "pl-80" : "pl-0"
           }`}
       >
         {show && (
@@ -139,7 +143,8 @@ function CoursesList() {
           </div>
         )}
 
-        {show && <div className="flex flex-col md:flex-row md:items-start w-full max-w-6xl">
+
+{show &&  <div className="flex flex-col md:flex-row md:items-start w-full max-w-6xl overflow-hidden ">
           <button
             onClick={() => setSidebarOpen(!isSidebarOpen)}
             className={`fixed top-20 left-5 p-3 text-white bg-black rounded-lg z-50 transition-transform duration-300 ease-in-out ${isSidebarOpen ? "invisible" : ""
@@ -168,8 +173,8 @@ function CoursesList() {
               <span className="loading loading-dots loading-lg"></span>
             </div>
           ) : (
-            <div
-              className={`grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 ${filteredCourses.length > 0
+            <div 
+              className={` grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3  lg:grid-cols-4  gap-2 px-4  ${filteredCourses.length > 0
                 ? "opacity-100 transition-opacity duration-500 ease-in"
                 : "opacity-0"
                 }`}
@@ -177,7 +182,7 @@ function CoursesList() {
               {filteredCourses.map((course) => (
                 <div
                   key={course.id}
-                  className="transition-transform transform hover:scale-105 duration-300 ease-in-out"
+                  className="transition-transform transform hover:scale-105 duration-300 ease-in-out "
                 >
                   <CardOfCourses
                     course={course}

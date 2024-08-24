@@ -4,6 +4,7 @@ export const En={
     signUp:'Sign Up',
     home:"Home",
     courses:"Courses",
+    accountMyCourses:"My Courses",
     contact:"Contact",
     about:"About",
     favorit:"Favorite" ,
@@ -129,5 +130,7 @@ cartApply:"Apply",
 wish:"Your Wishlist",
 wishEmpty:"Your wishlist is empty.",
 wishClear:" Clear Wishlist",
+loginFirst:"You should Login first",
+addToCart:"Add to Card"
 
 }   

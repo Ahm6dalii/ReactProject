@@ -4,6 +4,7 @@ export const Ar = {
   signUp: "اشتراك",
   home: "الرئيسية",
   courses: "الدورات",
+  accountMyCourses:"دوراتي",
   contact: "اتصل بنا",
   about: "معلومات عنا",
   favorite: "المفضلة",
@@ -126,6 +127,7 @@ cartApply: "تطبيق",
 // قائمة الرغبات
 wish: "قائمة رغباتك",
 wishEmpty: "قائمة رغباتك فارغة.",
-wishClear: "مسح قائمة الرغبات"
-
+wishClear: "مسح قائمة الرغبات",
+loginFirst:"يجب عليك تسجيل الدخول أولاً",
+addToCart:"أضف إلى السلة"
 };

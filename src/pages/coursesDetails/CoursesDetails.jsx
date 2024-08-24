@@ -1,17 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
+import { addToWishlist, removeFromWishlist } from "../../redux/reducers/wishlistSlice";
+import { addToCart, removeFromCart } from "../../redux/reducers/cartSlice";
+import ShouldLogin from "../../components/shouldLogin/ShouldLogin";
 
 const CoursesDetails = () => {
-    const { translation } = useSelector(state => state.lang)
 
+    const {translation}=useSelector(state=>state.lang)
+    const dispatch =useDispatch()
     const { id } = useParams()
-    // const courseDetails=useGetCourseById(5)
-    // console.log(courseDetails);
     const apiLink = useSelector((state) => state.apiLink.link)
     const [courseData, setCourseData] = useState(null)
     const [courseAccess, setCourseAccess] = useState(null)
+    const coursesInWislist = useSelector((state) => state.wishlist);
+    const coursesInCart = useSelector((state) => state.cart);
+    const {user}=useSelector(state=>state.auth)
+    const [isLoading, setIsLoading] = useState(false);
 
     const getCourseById = async (userId) => {
         try {
@@ -29,6 +35,32 @@ const CoursesDetails = () => {
         getCourseById(id)
     }, [])
 
+    const alreadyInWish = coursesInWislist.some(
+        (course) => course?.id === courseData?.id
+      );
+      const alreadyInCart = coursesInCart.some(
+        (course) => course?.id === courseData?.id
+      );
+
+    const wishlistActions = () => {
+        if (alreadyInWish) {
+          dispatch(removeFromWishlist(courseData));
+        } else {
+          dispatch(addToWishlist(courseData));
+        }
+      };
+    
+      const handleCartActions = () => {
+        if (alreadyInCart) {
+          dispatch(removeFromCart(courseData));
+        } else {
+          setIsLoading(true);
+          setTimeout(() => {
+            dispatch(addToCart(courseData));
+            setIsLoading(false);
+          }, 1000);
+        }
+      };
     return <>
 
         {courseData == null ? <p>loading..</p> : <div className="mt-12 2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 ">
@@ -82,7 +114,32 @@ const CoursesDetails = () => {
                     }
 
                     <p className="pt-2">Created by <span className="text-blue-400 ">{courseData.instructor}</span></p>
-                    <button className="focus:outline-none focus:ring-2 hover:bg-black focus:ring-offset-2 focus:ring-gray-800 font-medium text-base leading-4 text-white bg-gray-800 w-full py-5 lg:mt-12 mt-6">Add to Card</button>
+                   <div className="flex gap-2 items-end">
+                
+                    <button 
+                  onClick={!user? ()=>document.getElementById(`shouldLogin`).showModal():handleCartActions} 
+                    className="focus:outline-none bg-black focus:ring-2 bg-gray-500 hover:bg-black focus:ring-offset-2 focus:ring-gray-800 font-medium text-base leading-4 text-white bg-gray-800 w-full py-5 lg:mt-12 mt-6">
+                       {translation.addToCart}
+                    </button>
+
+                    <button
+            onClick={!user? ()=>document.getElementById(`shouldLogin`).showModal():wishlistActions} 
+              className="btn-md  btn glass bg-amber-300 flex flex-col items-center justify-center text-sm font-semibold py-2 px-4 hover:animate-bounce "
+             
+            >
+              <span className="text-m mt-1">
+                
+                <i
+
+                  className={`fa-${
+                    !alreadyInWish ? "regular" : `solid`
+                  } fa-heart `}
+                  style={alreadyInWish ? { color: "#e01010" } : {}}
+                ></i>
+              </span>
+                   </button>
+                   </div>
+                
                 </div>
 
                 {/* <!-- Preview Images Div For larger Screen--> */}
@@ -169,7 +226,9 @@ const CoursesDetails = () => {
 
                 </div>
             </div>
-        </div >}
+
+        </div>}
+<ShouldLogin></ShouldLogin>
 
 
     </>

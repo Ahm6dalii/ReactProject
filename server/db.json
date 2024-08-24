@@ -56,13 +56,13 @@
     },
     {
       "id": "87b2",
-      "name": "Ahmed Ali",
+      "name": "mohamed hassan",
       "phone": "01018184111",
       "email": "ali@gmail.com",
       "role": "user",
-      "password": "1234567",
+      "password": "123456",
       "image": "https://firebasestorage.googleapis.com/v0/b/e-learing-6119b.appspot.com/o/files%2Fd72711b7-8152-40b1-bf7d-5ab4f297dc29?alt=media&token=5f589c95-499f-4830-89d0-927bd7b28774",
-      "rePassword": "1234567"
+      "rePassword": "123456"
     },
     {
       "id": "af32",

@@ -6,9 +6,12 @@ import {
 import { addToCart, removeFromCart } from "../../redux/reducers/cartSlice";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import ShouldLogin from "../shouldLogin/ShouldLogin";
 
 /* eslint-disable react/prop-types */
 export default function CardOfCourses(props) {
+  const {user}=useSelector(state=>state.auth)
+
   const dispatch = useDispatch();
   const coursesInWislist = useSelector((state) => state.wishlist);
   const coursesInCart = useSelector((state) => state.cart);
@@ -43,8 +46,10 @@ export default function CardOfCourses(props) {
   return (
     <>
 
-      <div className="dark:bg-slate-200 dark:text-slate-700 rounded-md relative  flex flex-col justify-between h-full max-w-xs">
-        <div className=" max-w-sm  bg-gray-100 px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500">
+
+      <div dir={'ltr'} className="dark:bg-slate-200 dark:text-slate-700 rounded-md relative  flex flex-col justify-between h-full max-w-xs">
+        <div className=" max-w-sm  bg-gray-100 px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-100 transition duration-500">
+
           <h3 className="mb-3 text-xl font-bold text-indigo-600">
             {props.level}
           </h3>
@@ -71,7 +76,9 @@ export default function CardOfCourses(props) {
               </>)
             }
           </div>
-          <h1 className="mt-4 text-gray-800 text-2xl font-bold cursor-pointer line-clamp-1">
+
+          <h1 className="mt-4 text-gray-800 text-md font-bold cursor-pointer line-clamp-1">
+
             {props.title}
           </h1>
 
@@ -127,7 +134,8 @@ export default function CardOfCourses(props) {
                   ? "bg-purple-700 hover:bg-[#dc2626]"
                   : "bg-purple-700 hover:bg-[#10b981]"
                   } text-white btn-md`}
-                onClick={handleCartActions}
+                  onClick={!user? ()=>document.getElementById(`shouldLogin`).showModal():handleCartActions} 
+
                 disabled={isLoading}
               >
                 {isLoading ? (
@@ -144,15 +152,24 @@ export default function CardOfCourses(props) {
             )}
           </div>
           {/* -------------Wishlist Button ------------*/}
-          <div className="absolute bottom-6 right-4">
+
+
+          <div className="absolute bottom-6 end-4">
+
             <button
+            onClick={!user? ()=>document.getElementById(`shouldLogin`).showModal():wishlistActions} 
               className="btn-md  btn glass bg-amber-300 flex flex-col items-center justify-center text-sm font-semibold py-2 px-4 hover:animate-bounce "
-              onClick={wishlistActions}
+             
             >
               <span className="text-m mt-1">
+
+                
                 <i
-                  className={`fa-${!alreadyInWish ? "regular" : `solid`
-                    } fa-heart `}
+
+                  className={`fa-${
+                    !alreadyInWish ? "regular" : `solid`
+                  } fa-heart `}
+
                   style={alreadyInWish ? { color: "#e01010" } : {}}
                 ></i>
               </span>
@@ -160,6 +177,9 @@ export default function CardOfCourses(props) {
           </div>
         </div>
       </div>
+
+      <ShouldLogin></ShouldLogin>
+
     </>
   );
 }
