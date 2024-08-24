@@ -1,22 +1,28 @@
-import React from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
-import "./navebar.css";
-import { useDispatch, useSelector } from "react-redux";
-import { changeLang } from "../../redux/reducers/languageSlice";
-import { changeMode } from "../../redux/reducers/modeSlice";
-import SignInDialog from "../signInDialog/signInDialog";
-import SignUpDialog from "../signUpDialog/SignUpDialog";
-import { logOutUser } from "../../redux/reducers/userAuthSlice";
-import UploadDialog from "../uploadImgDialog/UploadDialog";
+
+import React, { useEffect, useState } from 'react'
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
+import './navebar.css'
+import { useDispatch, useSelector } from 'react-redux'
+import { changeLang } from '../../redux/reducers/languageSlice'
+import { changeMode } from '../../redux/reducers/modeSlice'
+import SignInDialog from '../signInDialog/signInDialog'
+import SignUpDialog from '../signUpDialog/SignUpDialog'
+import { logOutUser } from '../../redux/reducers/userAuthSlice'
+import UploadDialog from '../uploadImgDialog/UploadDialog'
 
 export default function Navbar() {
-  const location = useLocation();
-  const { pathname } = location;
-  const { user } = useSelector((state) => state.auth);
-  const { language } = useSelector((state) => state.lang);
-  const { translation } = useSelector((state) => state.lang);
-  const { mode } = useSelector((state) => state.mode);
-  console.log(mode);
+  const location = useLocation()
+  const { pathname } = location
+ const {user}=useSelector(state=>state.auth)
+ const {language}=useSelector(state=>state.lang)
+ const {translation}=useSelector(state=>state.lang)
+ const {mode}=useSelector(state=>state.mode);
+ const {cart}=useSelector(state=>state);
+ const {wishlist}=useSelector(state=>state);
+ let[total,setTotal]=useState()
+ const navigate=useNavigate()
+ console.log(mode);
+ 
 
   const dispatch = useDispatch();
 
@@ -28,6 +34,14 @@ export default function Navbar() {
   const logOut = () => {
     dispatch(logOutUser());
   };
+
+
+ const calcTotals = () => {
+  setTotal(cart?.reduce((total, course) => total + course.price, 0).toFixed(2))
+};
+useEffect(()=>{
+  calcTotals()
+},[cart])
 
   return (
     <div
@@ -43,23 +57,23 @@ export default function Navbar() {
             <a className="btn btn-ghost text-xl">daisyUI</a>
           </div>
 
-          {/* navbar links large screen */}
-          <div className="   ms-auto hidden sm:flex">
-            <ul className="flex gap-4 font-light menu-horizontal px-1">
-              <li>
-                <NavLink to="/">{translation.home}</NavLink>
-              </li>
-              <li>
-                <NavLink to="/courses">{translation.courses}</NavLink>
-              </li>
-              <li>
-                <NavLink to="/contact">{translation.contact}</NavLink>
-              </li>
-              <li>
-                <NavLink to="/about">{translation.about}</NavLink>
-              </li>
-            </ul>
-          </div>
+
+    <div className='dark:bg-slate-800 dark:text-white bg-base-100 shadow fixed end-0 start-0 top-0 z-[9999]'>
+    <div className="max-w-screen-xl m-auto navbar   ">
+    <div className="flex-none">
+      <a className="btn btn-ghost text-xl">daisyUI</a>
+    </div>
+    
+    {/* navbar links large screen */}
+    <div className="   ms-auto hidden sm:flex">
+    <ul className="flex gap-4 font-light menu-horizontal px-1">
+      <li><NavLink to='/'>{translation.home}</NavLink></li>
+      <li><NavLink to='/courses'>{translation.courses}</NavLink></li>
+      <li><NavLink to='/contact'>{translation.contact}</NavLink></li>
+      <li><NavLink to='/about'>{translation.about}</NavLink></li>
+      
+    </ul>
+  </div>
 
           {/* Language */}
           <select
@@ -156,66 +170,59 @@ export default function Navbar() {
                 </div>
               </div>
 
-              {/* avatar */}
-              <div className="    sm:flex dark:text-black">
-                <div className="dropdown dropdown-end ">
-                  <div
-                    tabIndex={0}
-                    role="button"
-                    className="btn btn-ghost btn-circle avatar"
-                  >
-                    <div className="w-10 rounded-full">
-                      <img
-                        alt="Tailwind CSS Navbar component"
-                        src={user?.image}
-                      />
-                    </div>
-                  </div>
-                  <ul
-                    tabIndex={0}
-                    className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow dark:bg-slate-200"
-                  >
-                    <span>
-                      <p className="flex justify-between uppercase font-semibold">
-                        {user?.name}
-                        <span className="badge">{translation?.new}</span>
-                      </p>
-                    </span>
-                    <li>
-                      <Link to="/setting">{translation?.setting}</Link>
-                    </li>
-                    {/* <li  onClick={()=>document.getElementById(`upload`).showModal()}>{translation?.setting}</li> */}
-                    {/* <button className="btn btnMain mx-1" onClick={()=>document.getElementById(`signUp`).showModal()}>{translation.signUp}</button> */}
-                    <UploadDialog></UploadDialog>
-                    <li>
-                      <Link to="/" onClick={logOut}>
-                        {translation?.logout}
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </>
-          ) : (
-            <>
-              <div className="hidden sm:flex">
-                <button
-                  className="btn bg-transparent shadow-none border-0 mx-1 dark:text-white dark:hover:text-[#7c5cff] hover:text-[#7c5cff] hover:bg-[#d9d2f8]"
-                  onClick={() => document.getElementById(`signIn`).showModal()}
-                >
-                  {translation.signIn}
-                </button>
-                <button
-                  className="btn btnMain mx-1"
-                  onClick={() => document.getElementById(`signUp`).showModal()}
-                >
-                  {translation.signUp}
-                </button>
-              </div>
-              <SignInDialog></SignInDialog>
-              <SignUpDialog></SignUpDialog>
-            </>
-          )}
+
+}
+  
+  
+ 
+</label>
+{
+user?
+ <>
+ {/* Wish */}
+        
+      <button className="dropdown dropdown-end   "  onClick={()=>navigate('/wishlist')}>
+     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+       <div className="indicator ">
+       <i className="fa-solid dark:text-white fa-heart text-sm text-black fa-xl"></i>
+         <span className="badge badge-sm indicator-item top-[-8px]">{wishlist.length }</span>
+       </div>
+     </div>
+   
+     
+   </button>
+ {/* Cart */}
+     <div className="dropdown dropdown-end   ">
+     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+       <div className="indicator">
+         <svg
+           xmlns="http://www.w3.org/2000/svg"
+           className="h-5 w-5"
+           fill="none"
+           viewBox="0 0 24 24"
+           stroke="currentColor">
+           <path
+             strokeLinecap="round"
+             strokeLinejoin="round"
+             strokeWidth="2"
+             d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+         </svg>
+         <span className="badge badge-sm indicator-item">{cart.length}</span>
+       </div>
+     </div>
+     <div
+       tabIndex={0}
+       className="card card-compact dropdown-content bg-base-100 z-[200] mt-3 w-52 shadow dark:bg-slate-200">
+       <div className="card-body ">
+         <span className="text-lg font-bold dark:text-black">{cart.length}Items</span>
+         <span className="text-info">Subtotal: ${total}</span>
+         <div className="card-actions">
+           <button onClick={()=>navigate('/cart')} className="btn btn-primary btn-block">View cart</button>
+           
+         </div>
+       </div>
+     </div>
+   </div>
 
           {/* Mobile navbat menu */}
           <div className=" sm:hidden">
@@ -283,6 +290,24 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+
+      <ul
+        tabIndex={0}
+        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow dark:bg-slate-200 dark:text-black">
+            <li><NavLink to='/'>{translation.home}</NavLink></li>
+        <li><NavLink to='/courses'>{translation.courses}</NavLink></li>
+      <li><NavLink to='/contact'>{translation.contact}</NavLink></li>
+      <li><NavLink to='/about'>{translation.about}</NavLink></li>
+      
+       {!user&& <>
+        <li className='sm:hidden'><button className="btn btnMain mx-1" onClick={()=>document.getElementById(`signUp`).showModal()}>{translation.signUp}</button></li>
+        <li className='sm:hidden'><button className="btn bg-transparent shadow-none border-0 mx-1 dark:text-white dark:hover:text-[#7c5cff] hover:text-[#7c5cff] hover:bg-[#d9d2f8]" onClick={()=>document.getElementById(`signIn`).showModal()}>{translation.signIn}</button></li>
+       </>} 
+      </ul>
+    </div>
+  </div>
+  </div>
+    </div>
     </div>
   );
 }

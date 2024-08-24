@@ -28,7 +28,7 @@ const CardOfWishlist = (props) => {
   };
 
   return (
-    <div className="bg-white mt-6 shadow-lg rounded-lg overflow-hidden transform hover:translate-y-4 hover:shadow-2xl transition-transform duration-300 mx-3">
+    <div className=" dark:bg-slate-200 dark:text-slate-700 bg-white mt-6 shadow-lg rounded-lg overflow-hidden transform hover:translate-y-4 hover:shadow-2xl transition-transform duration-300 mx-3">
       <img className="w-full h-32 sm:h-48 object-cover" src={props.image} />
       <div className="p-4">
         <h2 className="text-xl font-semibold text-gray-800">{props.title}</h2>

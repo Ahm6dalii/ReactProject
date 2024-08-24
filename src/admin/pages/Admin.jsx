@@ -9,7 +9,7 @@ import Settings from './Settings';
 import Profile from './Profile';
 import DefaultLayout from './../layout/DefaultLayout';
 import Loader from './../common/Loader/index';
-import '../css/style.css';
+// import '../css/style.css';
 import '../css/satoshi.css';
 import 'jsvectormap/dist/css/jsvectormap.css';
 import 'flatpickr/dist/flatpickr.min.css';

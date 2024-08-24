@@ -14,8 +14,8 @@ let store=configureStore({
         auth:userAuthReducer,
         lang:languageReducer,
         mode:modeReducer,
-        cart: cartReducer,
-          wishlist: wishlistReducer,
+        cart:cartReducer,
+          wishlist:wishlistReducer,
     }
 })
 

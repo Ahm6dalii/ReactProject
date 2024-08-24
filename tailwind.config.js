@@ -14,12 +14,12 @@ export default {
     fontFamily: {
       satoshi: ['Satoshi', 'sans-serif'],
     },
-    screens: {
-      '2xsm': '375px',
-      xsm: '425px',
-      '3xl': '2000px',
-      ...defaultTheme.screens,
-    },
+    // screens: {
+    //   '2xsm': '375px',
+    //   xsm: '425px',
+    //   '3xl': '2000px',
+    //   ...defaultTheme.screens,
+    // },
     extend: {
       colors: {
         Main: "#967dff",

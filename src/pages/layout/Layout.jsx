@@ -12,9 +12,9 @@ export default function () {
   return (
     <>
     <div className={`${mode=='light'?'':'dark'}`}>
-    <div dir={language=='ar'?'rtl':'ltr'}  className={`   dark:bg-slate-500 dark:text-white` } >
+    <div dir={language=='ar'?'rtl':'ltr'}  className={`   dark:bg-slate-900 dark:text-white` } >
     <Navbar></Navbar>
-    <div className='min-h-screen'>
+    <div className='min-h-screen mt-12'>
     <Toaster 
   position="top-center"
   reverseOrder={false}

@@ -42,8 +42,9 @@ export default function CardOfCourses(props) {
   };
   return (
     <>
-      <div className="relative   flex flex-col justify-between h-full max-w-xs ms-8">
-        <div className=" max-w-sm  bg-gray-100 px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-103 transition duration-500">
+
+      <div className="dark:bg-slate-200 dark:text-slate-700 rounded-md relative h-90  flex flex-col justify-between h-full max-w-xs ms-8">
+        <div className=" max-w-sm  bg-gray-100 px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500">
           <h3 className="mb-3 text-xl font-bold text-indigo-600">
             {props.level}
           </h3>
@@ -53,6 +54,7 @@ export default function CardOfCourses(props) {
                 className="w-full rounded-xl h-40 object-cover"
                 src={props.image}
                 alt={props.title}
+
               />
             </Link>
 
@@ -109,11 +111,10 @@ export default function CardOfCourses(props) {
             {/* Cart Button */}
             {!props.isInCart && (
               <button
-                className={`btn glass mt-3 ${
-                  alreadyInCart
+                className={`btn glass mt-3 ${alreadyInCart
                     ? "bg-purple-700 hover:bg-[#dc2626]"
                     : "bg-purple-700 hover:bg-[#10b981]"
-                } text-white btn-md`}
+                  } text-white btn-md`}
                 onClick={handleCartActions}
                 disabled={isLoading}
               >
@@ -139,6 +140,7 @@ export default function CardOfCourses(props) {
               <span className="text-m mt-1">
                 Wishlist
                 <i
+
                   className={`fa-${
                     !alreadyInWish ? "regular" : `solid`
                   } fa-heart ms-2`}
@@ -149,6 +151,7 @@ export default function CardOfCourses(props) {
           </div>
         </div>
       </div>
+
     </>
   );
 }
