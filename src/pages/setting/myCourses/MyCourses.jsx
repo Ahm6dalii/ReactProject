@@ -56,18 +56,15 @@ export default function MyCourses() {
                     <div className="col-span-1 hidden sm:flex items-center">
                         <p
                             className='inline-flex rounded-full bg-opacity-10 py-1 px-1 text-sm font-medium'>
-                            {course.free ? (
-                                <span
-                                    className='inline-flex rounded-full bg-opacity-10 py-1 px-3 text-sm font-medium bg-blue-400 text-blue-800'>Free</span>
-                            ) : (
+                             
                                 <span
                                     className='inline-flex rounded-full bg-opacity-10 py-1 px-3 text-sm font-medium bg-success text-success'>Paid</span>
-                            )}
+                            
                         </p>
                     </div>
                     <div className="col-span-1 hidden sm:flex items-center">
                         <p className="text-sm text-black dark:text-white">
-                            {course.free ? 'No money' : `$${course?.price}`}
+                            { `$${course?.price}`}
                         </p>
                     </div>
 
