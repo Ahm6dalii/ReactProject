@@ -3,7 +3,7 @@ import CardDataStats from '../../components/CardDataStats';
 import ChartOne from '../../components/Charts/ChartOne';
 import ChartThree from '../../components/Charts/ChartThree';
 import ChartTwo from '../../components/Charts/ChartTwo';
-import MapOne from '../../components/Maps/MapOne';
+// import MapOne from '../../components/Maps/MapOne';
 import useCourses from '../../hooks/useCourses';
 import useFetchUser from '../../hooks/useFetchUser';
 const ECommerce = () => {
@@ -106,7 +106,7 @@ const ECommerce = () => {
         <ChartOne />
         <ChartTwo />
         <ChartThree />
-        <MapOne />
+        {/* <MapOne /> */}
       </div>
     </>
   );
