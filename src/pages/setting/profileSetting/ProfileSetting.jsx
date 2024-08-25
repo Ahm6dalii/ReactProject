@@ -7,7 +7,7 @@ import { useFormik } from "formik";
 import toast from "react-hot-toast";
 import { setUser } from "../../../redux/reducers/userAuthSlice";
 import AlertError from "../../../components/alertError/AlertError";
-import RemoveImgDialog from "../../../components/removeImgDialog/removeImgDialog";
+// import RemoveImgDialog from "../../../components/removeImgDialog/removeImgDialog";
 export default function ProfileSetting() {
   const { user } = useSelector((state) => state.auth);
   const dispatch=useDispatch()
@@ -287,7 +287,7 @@ export default function ProfileSetting() {
         </div>
       </div>
       <UploadDialog></UploadDialog>
-      <RemoveImgDialog></RemoveImgDialog>
+      {/* <RemoveImgDialog></RemoveImgDialog> */}
     </>
   );
 }
