@@ -64,7 +64,7 @@ const CardOfWishlist = (props) => {
           )}
         </div>
       </div>
-      <div className="absolute bottom-4 right-7">
+      <div className="absolute bottom-4 end-7">
         <button
           className="btn glass bg-red-500 hover:bg-red-600 text-white btn-sm"
           onClick={handleWishlistActions}

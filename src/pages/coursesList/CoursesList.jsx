@@ -1,18 +1,13 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { useLocation } from "react-router-dom";
 import CardOfCourses from "../../components/Cards/CardOfCourses";
 import Searchbar from "../../components/searchbar/Searchbar";
 import SearchSidebar from "../../components/sidebar/SearchSidebar";
-import Pagination from './../../admin/components/Pagination/pagination';
+import Pagination from "./../../admin/components/Pagination/pagination";
 import useCourses from "../../admin/hooks/useCourses";
-
-import { useSelector } from "react-redux";
 import { Toaster } from "react-hot-toast";
 
 function CoursesList() {
-
-
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredCourses, setFilteredCourses] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -25,14 +20,20 @@ function CoursesList() {
     free: false,
   });
 
-
   const location = useLocation();
   const show = location.pathname === "/courses";
-  const { courses, currentPage, setCurrentPage, setPerPage, perPage } = useCourses()
+  const { courses, currentPage, setCurrentPage, setPerPage, perPage } =
+    useCourses();
 
   useEffect(() => {
     setIsLoading(true);
-    const isFiltering = searchQuery || selectedLevel || selectedRating || selectedPrice.paid || selectedPrice.free || selectedDuration;
+    const isFiltering =
+      searchQuery ||
+      selectedLevel ||
+      selectedRating ||
+      selectedPrice.paid ||
+      selectedPrice.free ||
+      selectedDuration;
 
     if (isFiltering) {
       setPerPage(200);
@@ -58,18 +59,18 @@ function CoursesList() {
           if (selectedPrice.paid && selectedPrice.free) {
             return true;
           }
-          if (selectedPrice.paid) {
-            return course.paid;
-          }
-          if (selectedPrice.free) {
-            return course.free;
-          }
           // if (selectedPrice.paid) {
-          //   return course.typeOfCourse === 'PAID';
+          //   return course.paid;
           // }
           // if (selectedPrice.free) {
-          //   return course.typeOfCourse === 'FREE';
+          //   return course.free;
           // }
+          if (selectedPrice.paid) {
+            return course.typeOfCourse === "PAID";
+          }
+          if (selectedPrice.free) {
+            return course.typeOfCourse === "FREE";
+          }
           return true;
         })
         // -----Duration Filter -----
@@ -102,7 +103,7 @@ function CoursesList() {
     selectedDuration,
     perPage,
     currentPage,
-    setPerPage
+    setPerPage,
   ]);
 
   // Handle sidebar auto-close on resize
@@ -118,10 +119,7 @@ function CoursesList() {
   ////////////////////////////////////////////////////////////////////////
   return (
     <>
-    <Toaster
-  position="top-center"
-  reverseOrder={false}
-/>
+      <Toaster position="top-center" reverseOrder={false} />
       <SearchSidebar
         isSidebarOpen={isSidebarOpen}
         setSidebarOpen={setSidebarOpen}
@@ -136,8 +134,9 @@ function CoursesList() {
       />
 
       <div
-        className={`overflow-hidden mt-12 min-h-screen flex flex-col items-center py-10 transition-all duration-300 ease-in-out ${isSidebarOpen ? "pl-80" : "pl-0"
-          }`}
+        className={`overflow-hidden mt-12 min-h-screen flex flex-col items-center py-10 transition-all duration-300 ease-in-out ${
+          isSidebarOpen ? "pl-80" : "pl-0"
+        }`}
       >
         {show && (
           <div className="mb-6 w-full max-w-md">
@@ -148,29 +147,31 @@ function CoursesList() {
           </div>
         )}
 
-
-{show &&  <div className="flex flex-col md:flex-row md:items-start w-full max-w-6xl overflow-hidden ">
-          <button
-            onClick={() => setSidebarOpen(!isSidebarOpen)}
-            className={`fixed top-20 left-5 p-3 text-white bg-black rounded-lg z-50 transition-transform duration-300 ease-in-out ${isSidebarOpen ? "invisible" : ""
+        {show && (
+          <div className="flex flex-col md:flex-row md:items-start w-full max-w-6xl overflow-hidden ">
+            <button
+              onClick={() => setSidebarOpen(!isSidebarOpen)}
+              className={`fixed top-20 left-5 p-3 text-white bg-black rounded-lg z-50 transition-transform duration-300 ease-in-out ${
+                isSidebarOpen ? "invisible" : ""
               }`}
-          >
-            <svg
-              className="w-6 h-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
-        </div>}
+              <svg
+                className="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        )}
 
         <div className="flex-1 px-4 md:px-0 transition-transform duration-300 ease-in-out w-full">
           {isLoading ? (
@@ -178,8 +179,10 @@ function CoursesList() {
               <span className="loading loading-dots loading-lg"></span>
             </div>
           ) : (
-            <div 
-              className={` grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3  lg:grid-cols-4  gap-2 px-4  ${filteredCourses?.length > 0}
+            <div
+              className={` grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3  lg:grid-cols-4  gap-2 px-4  ${
+                filteredCourses?.length > 0
+              }
                 ? "opacity-100 transition-opacity duration-500 ease-in"
                 : "opacity-0"
                 }`}
@@ -201,6 +204,7 @@ function CoursesList() {
                     discount={course.discount}
                     id={course.id}
                     typeOfCourse={course.typeOfCourse}
+                    duration={course.duration}
                   />
                 </div>
               ))}
@@ -215,11 +219,12 @@ function CoursesList() {
               courses={courses}
             />
           </div>
-        ) : ''}
+        ) : (
+          ""
+        )}
       </div>
     </>
   );
 }
-
 
 export default CoursesList;

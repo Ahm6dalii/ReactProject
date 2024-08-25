@@ -11,7 +11,7 @@ import toast from "react-hot-toast";
 
 /* eslint-disable react/prop-types */
 export default function CardOfCourses(props) {
-  const {user}=useSelector(state=>state.auth)
+  const { user } = useSelector((state) => state.auth);
 
   const dispatch = useDispatch();
   const coursesInWislist = useSelector((state) => state.wishlist);
@@ -27,11 +27,11 @@ export default function CardOfCourses(props) {
 
   const wishlistActions = () => {
     if (alreadyInWish) {
-      toast.success("Removed Successful")
+      toast.success("Removed Successful");
 
       dispatch(removeFromWishlist(props.course));
     } else {
-      toast.success("Add Successful")
+      toast.success("Add Successful");
 
       dispatch(addToWishlist(props.course));
     }
@@ -40,11 +40,11 @@ export default function CardOfCourses(props) {
   const handleCartActions = () => {
     if (alreadyInCart) {
       dispatch(removeFromCart(props.course));
-      toast.success("Removed Successful")
+      toast.success("Removed Successful");
     } else {
       setIsLoading(true);
       setTimeout(() => {
-        toast.success("Add Successful")
+        toast.success("Add Successful");
         dispatch(addToCart(props.course));
         setIsLoading(false);
       }, 1000);
@@ -52,11 +52,11 @@ export default function CardOfCourses(props) {
   };
   return (
     <>
-
-
-      <div dir={'ltr'} className="dark:bg-slate-200 dark:text-slate-700 rounded-md relative  flex flex-col justify-between h-full max-w-xs">
+      <div
+        dir={"ltr"}
+        className="dark:bg-slate-200 dark:text-slate-700 rounded-md relative  flex flex-col justify-between h-full max-w-xs"
+      >
         <div className=" max-w-sm  bg-gray-100 px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-100 transition duration-500">
-
           <h3 className="mb-3 text-xl font-bold text-indigo-600">
             {props.level}
           </h3>
@@ -69,7 +69,9 @@ export default function CardOfCourses(props) {
               />
             </Link>
             {props.free || props.typeOfCourse === "FREE" ? (
-              <p className="absolute top-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">Free</p>
+              <p className="absolute top-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">
+                Free
+              </p>
             ) : (
               <>
                 <p className="absolute top-0 bg-yellow-300 text-gray-800 font-bold py-1 px-3 rounded-br-lg rounded-tl-lg ">
@@ -80,12 +82,11 @@ export default function CardOfCourses(props) {
                     {props.discount}% Discount
                   </p>
                 )}
-              </>)
-            }
+              </>
+            )}
           </div>
 
           <h1 className="mt-4 text-gray-800 text-md font-bold cursor-pointer line-clamp-1">
-
             {props.title}
           </h1>
 
@@ -125,24 +126,27 @@ export default function CardOfCourses(props) {
               <span>
                 <i className="fa-solid fa-sack-dollar me-1 mt-2"></i>
               </span>
-              {props.free || props.typeOfCourse === "FREE"
-                ? <p className="mt-1 font-bold text-2xl  ">
-                  Free
-                </p>
-                : <p className="mt-1 font-bold text-2xl  ">
+              {props.free || props.typeOfCourse === "FREE" ? (
+                <p className="mt-1 font-bold text-2xl  ">Free</p>
+              ) : (
+                <p className="mt-1 font-bold text-2xl  ">
                   {props.price - (props.price * props.discount) / 100}$
-                </p>}
-
+                </p>
+              )}
             </div>
             {/* Cart Button */}
             {!props.isInCart && (
               <button
-                className={`btn glass mt-3 ${alreadyInCart
-                  ? "bg-purple-700 hover:bg-[#dc2626]"
-                  : "bg-purple-700 hover:bg-[#10b981]"
-                  } text-white btn-md`}
-                  onClick={!user? ()=>document.getElementById(`shouldLogin`).showModal():handleCartActions} 
-
+                className={`btn glass mt-3 ${
+                  alreadyInCart
+                    ? "bg-purple-700 hover:bg-[#dc2626]"
+                    : "bg-purple-700 hover:bg-[#10b981]"
+                } text-white btn-md`}
+                onClick={
+                  !user
+                    ? () => document.getElementById(`shouldLogin`).showModal()
+                    : handleCartActions
+                }
                 disabled={isLoading}
               >
                 {isLoading ? (
@@ -160,23 +164,20 @@ export default function CardOfCourses(props) {
           </div>
           {/* -------------Wishlist Button ------------*/}
 
-
           <div className="absolute bottom-6 end-4">
-
             <button
-            onClick={!user? ()=>document.getElementById(`shouldLogin`).showModal():wishlistActions} 
+              onClick={
+                !user
+                  ? () => document.getElementById(`shouldLogin`).showModal()
+                  : wishlistActions
+              }
               className="btn-md  btn glass bg-amber-300 flex flex-col items-center justify-center text-sm font-semibold py-2 px-4 hover:animate-bounce "
-             
             >
               <span className="text-m mt-1">
-
-                
                 <i
-
                   className={`fa-${
                     !alreadyInWish ? "regular" : `solid`
                   } fa-heart `}
-
                   style={alreadyInWish ? { color: "#e01010" } : {}}
                 ></i>
               </span>
@@ -186,7 +187,6 @@ export default function CardOfCourses(props) {
       </div>
 
       <ShouldLogin></ShouldLogin>
-
     </>
   );
 }

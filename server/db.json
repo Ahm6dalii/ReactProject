@@ -302,13 +302,13 @@
       "id": "1",
       "title": "Introduction to JavaScript",
       "description": "Learn the basics of JavaScript, the most popular programming language for web development.",
-      "price": 100,
-      "discount": 20,
+      "price": 0,
+      "discount": 100,
       "instructor": "Jane Doe",
       "category": "Programming",
       "duration": "4 weeks",
       "image": "https://th.bing.com/th/id/R.ce60d93c5bcb148893dcf7cdc60912ee?rik=PwsGEk2FvWPE6w&pid=ImgRaw&r=0",
-      "free": false,
+      "free": true,
       "paid": false,
       "prerequisites": "None",
       "level": "Beginner",
@@ -345,10 +345,7 @@
         "hours_of_video": 20,
         "articles": 15,
         "downloadable_resources": 5,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
       },
       "typeOfCourse": "FREE"
@@ -363,8 +360,8 @@
       "category": "Web Design",
       "duration": "5 weeks",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvxKj6oJGIWbs_wQDXV7m92aB7CN2uJ6uWWQ&s",
-      "free": true,
-      "paid": false,
+      "free": false,
+      "paid": true,
       "prerequisites": "Basic understanding of HTML and CSS",
       "level": "Intermediate",
       "syllabus": "Flexbox, Grid Layout, Responsive Design, Advanced Selectors, Animations",
@@ -406,12 +403,10 @@
         "hours_of_video": 18,
         "articles": 12,
         "downloadable_resources": 7,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "PAID"
     },
     {
       "id": "3",
@@ -460,12 +455,10 @@
         "hours_of_video": 22,
         "articles": 10,
         "downloadable_resources": 6,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "PAID"
     },
     {
       "id": "4",
@@ -514,18 +507,16 @@
         "hours_of_video": 24,
         "articles": 8,
         "downloadable_resources": 4,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "PAID"
     },
     {
       "id": "5",
       "title": "React.js Essentials",
       "description": "A comprehensive guide to learning React.js and building modern web applications.",
-      "price": 130,
+      "price": 0,
       "discount": 20,
       "instructor": "Emily Davis",
       "category": "Marketing",
@@ -580,12 +571,10 @@
         "hours_of_video": 30,
         "articles": 20,
         "downloadable_resources": 8,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "FREE"
     },
     {
       "id": "6",
@@ -634,12 +623,10 @@
         "hours_of_video": 21,
         "articles": 13,
         "downloadable_resources": 6,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "PAID"
     },
     {
       "id": "7",
@@ -694,12 +681,10 @@
         "hours_of_video": 19,
         "articles": 11,
         "downloadable_resources": 5,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "PAID"
     },
     {
       "id": "8",
@@ -748,12 +733,10 @@
         "hours_of_video": 15,
         "articles": 9,
         "downloadable_resources": 4,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "PAID"
     },
     {
       "id": "9",
@@ -808,18 +791,16 @@
         "hours_of_video": 40,
         "articles": 25,
         "downloadable_resources": 10,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "PAID"
     },
     {
       "id": "10",
       "title": "Introduction to Cloud Computing",
       "description": "An overview of cloud computing concepts and services.",
-      "price": 110,
+      "price": 0,
       "discount": 10,
       "instructor": "Robert Harris",
       "category": "Cloud Computing",
@@ -851,7 +832,8 @@
           "comment": "Useful content but a bit basic.",
           "rating": 4
         }
-      ]
+      ],
+      "typeOfCourse": "PAID"
     },
     {
       "id": "11",
@@ -881,12 +863,10 @@
         "hours_of_video": 16,
         "articles": 10,
         "downloadable_resources": 3,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "PAID"
     },
     {
       "id": "12",
@@ -935,12 +915,10 @@
         "hours_of_video": 20,
         "articles": 14,
         "downloadable_resources": 5,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "PAID"
     },
     {
       "id": "13",
@@ -989,12 +967,10 @@
         "hours_of_video": 18,
         "articles": 12,
         "downloadable_resources": 4,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "PAID"
     },
     {
       "id": "133",
@@ -1043,12 +1019,10 @@
         "hours_of_video": 22,
         "articles": 11,
         "downloadable_resources": 6,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "PAID"
     },
     {
       "id": "14",
@@ -1097,12 +1071,10 @@
         "hours_of_video": 20,
         "articles": 13,
         "downloadable_resources": 5,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "PAID"
     },
     {
       "id": "15",
@@ -1157,12 +1129,10 @@
         "hours_of_video": 25,
         "articles": 15,
         "downloadable_resources": 7,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "PAID"
     },
     {
       "id": "16",
@@ -1211,12 +1181,10 @@
         "hours_of_video": 16,
         "articles": 10,
         "downloadable_resources": 4,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "PAID"
     },
     {
       "id": "17",
@@ -1283,12 +1251,10 @@
         "hours_of_video": 20,
         "articles": 10,
         "downloadable_resources": 5,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "PAID"
     },
     {
       "id": "18",
@@ -1349,18 +1315,16 @@
         "hours_of_video": 32,
         "articles": 15,
         "downloadable_resources": 6,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "PAID"
     },
     {
       "id": "19",
       "title": "Responsive Web Design",
       "description": "Learn how to create responsive and adaptive web designs.",
-      "price": 170,
+      "price": 0,
       "discount": 15,
       "instructor": "Michael Anderson",
       "category": "Design",
@@ -1409,12 +1373,10 @@
         "hours_of_video": 22,
         "articles": 12,
         "downloadable_resources": 4,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "FREE"
     },
     {
       "id": "20",
@@ -1474,12 +1436,10 @@
         "hours_of_video": 28,
         "articles": 14,
         "downloadable_resources": 7,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "PAID"
     },
     {
       "id": "21",
@@ -1546,12 +1506,10 @@
         "hours_of_video": 24,
         "articles": 11,
         "downloadable_resources": 5,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "PAID"
     },
     {
       "id": "22",
@@ -1618,18 +1576,16 @@
         "hours_of_video": 26,
         "articles": 10,
         "downloadable_resources": 5,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "PAID"
     },
     {
       "id": "23",
       "title": "Mastering Git and GitHub",
       "description": "Learn how to use Git and GitHub for version control and collaboration.",
-      "price": 140,
+      "price": 0,
       "discount": 10,
       "instructor": "Angela Martinez",
       "category": "DevOps",
@@ -1678,18 +1634,16 @@
         "hours_of_video": 18,
         "articles": 8,
         "downloadable_resources": 3,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "FREE"
     },
     {
       "id": "24",
       "title": "Introduction to SQL",
       "description": "Learn the fundamentals of SQL and database management.",
-      "price": 130,
+      "price": 0,
       "discount": 20,
       "instructor": "Brian Thompson",
       "category": "Database",
@@ -1744,12 +1698,10 @@
         "hours_of_video": 16,
         "articles": 7,
         "downloadable_resources": 4,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "FREE"
     },
     {
       "id": "25",
@@ -1810,12 +1762,10 @@
         "hours_of_video": 30,
         "articles": 13,
         "downloadable_resources": 5,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "PAID"
     },
     {
       "id": "26",
@@ -1870,12 +1820,10 @@
         "hours_of_video": 25,
         "articles": 12,
         "downloadable_resources": 4,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "PAID"
     },
     {
       "id": "27",
@@ -1942,12 +1890,10 @@
         "hours_of_video": 34,
         "articles": 16,
         "downloadable_resources": 8,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "PAID"
     },
     {
       "id": "28",
@@ -2008,12 +1954,10 @@
         "hours_of_video": 27,
         "articles": 13,
         "downloadable_resources": 6,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
+      },
+      "typeOfCourse": "PAID"
     },
     {
       "id": "29",
@@ -2074,66 +2018,10 @@
         "hours_of_video": 22,
         "articles": 10,
         "downloadable_resources": 5,
-        "access": [
-          "mobile",
-          "TV"
-        ],
+        "access": ["mobile", "TV"],
         "certificate_of_completion": true
-      }
-    },
-    {
-      "id": "b525",
-      "discount": "",
-      "price": 200,
-      "typeOfCourse": "PAID",
-      "syllabus": "faf",
-      "level": "Beginner",
-      "prerequisites": "momen",
-      "duration": "momen",
-      "category": "momen",
-      "instructor": "momen",
-      "description": "momen",
-      "title": "momen"
-    },
-    {
-      "id": "413b",
-      "instructor": "dqwid",
-      "title": "hiohoi",
-      "category": "dqwd",
-      "duration": "hiuhio",
-      "typeOfCourse": "FREE",
-      "syllabus": "qwdqwd",
-      "level": "Beginner",
-      "prerequisites": "dqwd",
-      "description": "huihiqhwid",
-      "image": "https://firebasestorage.googleapis.com/v0/b/e-learing-6119b.appspot.com/o/files%2Fcffa140a-1a9f-4ea8-acb7-35637d554002?alt=media&token=5f589c95-499f-4830-89d0-927bd7b28774"
-    },
-    {
-      "id": "3c18",
-      "discount": "20",
-      "price": 8000,
-      "typeOfCourse": "PAID",
-      "syllabus": "html css",
-      "level": "Beginner",
-      "prerequisites": "no",
-      "duration": " 8 week",
-      "category": "web",
-      "instructor": "moahemd",
-      "description": "",
-      "title": "fornt end"
-    },
-    {
-      "id": "4cae",
-      "instructor": "Natalie ",
-      "title": "sadasfasfs",
-      "category": "sdsfdsfds",
-      "duration": "5 week",
-      "typeOfCourse": "FREE",
-      "syllabus": "cdd",
-      "level": "Beginner",
-      "prerequisites": "dcdds",
-      "description": "",
-      "image": "https://firebasestorage.googleapis.com/v0/b/e-learing-6119b.appspot.com/o/files%2F56755692-85fb-4fb8-b9a2-3fb0cba4d4f2?alt=media&token=5f589c95-499f-4830-89d0-927bd7b28774"
+      },
+      "typeOfCourse": "PAID"
     }
   ],
   "carts": [

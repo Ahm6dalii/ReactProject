@@ -47,7 +47,12 @@ function CardOfCart(props) {
             </div>
           </div>
           <div className="text-right">
-            <p className="text-lg font-bold text-gray-800">${props.price}</p>
+            <p className="text-lg font-bold text-gray-800">
+              $
+              {props.price == 0
+                ? "Free"
+                : props.price - (props.price * props.discount) / 100}
+            </p>
 
             {/* Remove form cart button with delete confirmation */}
             {props.isInCart && (
