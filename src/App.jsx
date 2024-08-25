@@ -29,8 +29,8 @@ function App() {
       <QueryClientProvider client={queryClient}>
    <BrowserRouter>
    <Routes>
-    <Route path='/ReactProject/' element={<Layout ></Layout>}>
-    <Route path='/ReactProject/' element={<Home></Home>}></Route>
+    <Route path='/react-project/' element={<Layout ></Layout>}>
+    <Route path='/react-project/' element={<Home></Home>}></Route>
     <Route path='/about' element={ <About></About>}></Route>
     <Route path='/course/:id' element={ <CoursesDetails></CoursesDetails>}></Route>
     <Route path='/contact' element={ <Contact></Contact>}></Route>
