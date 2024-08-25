@@ -115,7 +115,7 @@ footerEmail:"contact@company.com",
 footerEnd:"© Copyright 2020. All Rights Reserved",
 // hero
 heroTitlel1:"Unlock Your Potential with ",
-heroTitel2:"Flexible Online Learning ",
+heroTitlel2:"Flexible Online Learning ",
 heroDesc:"Unlock your potential with expert-led courses and flexible learning paths designed to fit your schedule. Join a community of learners and start your journey to success today.",
 heroJoin:"Join Us",
 heroTop:"Top Courses",

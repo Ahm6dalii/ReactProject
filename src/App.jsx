@@ -27,7 +27,7 @@ function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-   <BrowserRouter>
+   <BrowserRouter  basename="E-learning-react">
    <Routes>
     <Route path='' element={<Layout ></Layout>}>
     <Route path='' element={<Home></Home>}></Route>
