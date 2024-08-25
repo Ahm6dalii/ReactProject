@@ -15,9 +15,9 @@ import AccountSetting from './pages/setting/accountSetting/AccountSetting'
 import CoursesCart from "./pages/cart/CoursesCart";
 import CoursesList from "./pages/coursesList/CoursesList";
 import Wishlist from "./pages/wishlist/Wishlist";
-import Login from './pages/login/login'
 import Contact from './pages/cotact/Contact'
 import MyCourses from './pages/setting/myCourses/MyCourses'
+// import Login from './pages/login/login'
 
 function App() {
 
@@ -45,7 +45,7 @@ function App() {
       <Route path='/admin/*' element={<ProtectedRoot><Admin /></ProtectedRoot> }></Route>
 
     <Route path='/register' element={<Register></Register>}></Route>
-    <Route path='/login' element={<Login></Login>}></Route>
+    {/* <Route path='/login' element={<Login></Login>}></Route> */}
     <Route path='*' element={<NotFound></NotFound>}></Route>
 
     </Route>
