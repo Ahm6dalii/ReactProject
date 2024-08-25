@@ -3,7 +3,7 @@ import Home from './pages/home/Home'
 import About from './pages/about/About'
 import NotFound from './pages/notFound/NotFound'
 import { QueryClient, QueryClientProvider } from 'react-query'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom'
 import Layout from './pages/layout/Layout'
 import Admin from './admin/pages/Admin'
 import Register from './pages/register/Register'
@@ -27,10 +27,10 @@ function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-   <BrowserRouter>
+   <HashRouter>
    <Routes>
-    <Route path='/react-project/' element={<Layout ></Layout>}>
-    <Route path='/react-project/' element={<Home></Home>}></Route>
+    <Route path='/ReactProject/' element={<Layout ></Layout>}>
+    <Route path='/ReactProject/' element={<Home></Home>}></Route>
     <Route path='/about' element={ <About></About>}></Route>
     <Route path='/course/:id' element={ <CoursesDetails></CoursesDetails>}></Route>
     <Route path='/contact' element={ <Contact></Contact>}></Route>
@@ -50,7 +50,7 @@ function App() {
 
     </Route>
    </Routes>
-   </BrowserRouter>
+   </HashRouter>
 
     </QueryClientProvider>
    
