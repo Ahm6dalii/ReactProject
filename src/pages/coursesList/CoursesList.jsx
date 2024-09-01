@@ -187,7 +187,7 @@ function CoursesList() {
                 : "opacity-0"
                 }`}
             >
-              {filteredCourses?.map((course) => (
+              {filteredCourses && filteredCourses?.map((course) => (
                 <div
                   key={course.id}
                   className="transition-transform transform hover:scale-105 duration-300 ease-in-out "
